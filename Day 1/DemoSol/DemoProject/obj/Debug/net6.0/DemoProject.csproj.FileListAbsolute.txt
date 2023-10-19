@@ -1,0 +1,14 @@
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.AssemblyInfoInputs.cache
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.AssemblyInfo.cs
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.csproj.CoreCompileInputs.cache
+E:\HEX\Day 1\DemoSol\DemoProject\bin\Debug\net6.0\DemoProject.exe
+E:\HEX\Day 1\DemoSol\DemoProject\bin\Debug\net6.0\DemoProject.deps.json
+E:\HEX\Day 1\DemoSol\DemoProject\bin\Debug\net6.0\DemoProject.runtimeconfig.json
+E:\HEX\Day 1\DemoSol\DemoProject\bin\Debug\net6.0\DemoProject.dll
+E:\HEX\Day 1\DemoSol\DemoProject\bin\Debug\net6.0\DemoProject.pdb
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.dll
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\refint\DemoProject.dll
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.pdb
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\DemoProject.genruntimeconfig.cache
+E:\HEX\Day 1\DemoSol\DemoProject\obj\Debug\net6.0\ref\DemoProject.dll

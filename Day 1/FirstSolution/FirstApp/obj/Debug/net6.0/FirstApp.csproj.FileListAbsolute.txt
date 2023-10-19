@@ -1,0 +1,14 @@
+E:\HEX\Day 1\FirstSolution\FirstApp\bin\Debug\net6.0\FirstApp.exe
+E:\HEX\Day 1\FirstSolution\FirstApp\bin\Debug\net6.0\FirstApp.deps.json
+E:\HEX\Day 1\FirstSolution\FirstApp\bin\Debug\net6.0\FirstApp.runtimeconfig.json
+E:\HEX\Day 1\FirstSolution\FirstApp\bin\Debug\net6.0\FirstApp.dll
+E:\HEX\Day 1\FirstSolution\FirstApp\bin\Debug\net6.0\FirstApp.pdb
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.AssemblyInfoInputs.cache
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.AssemblyInfo.cs
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.csproj.CoreCompileInputs.cache
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.dll
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\refint\FirstApp.dll
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.pdb
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\FirstApp.genruntimeconfig.cache
+E:\HEX\Day 1\FirstSolution\FirstApp\obj\Debug\net6.0\ref\FirstApp.dll
