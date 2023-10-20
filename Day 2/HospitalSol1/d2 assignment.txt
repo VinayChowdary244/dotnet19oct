@@ -1,0 +1,272 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalQ2
+{
+    internal class HospitalHome
+    {
+        DoctorsDB doctorsdb;
+        public HospitalHome()
+        {
+            doctorsdb = new DoctorsDB();
+        }
+        void DisplayAdminMenu()
+        {
+            Console.WriteLine("1. Add Doctor");
+            Console.WriteLine("2. Modify Doctor Phone");
+            Console.WriteLine("3. Modify Doctor Experience");
+            Console.WriteLine("4. Delete Doctor");
+            Console.WriteLine("5. Show All Doctors");
+            Console.WriteLine("0. Exit");
+        }
+        void StartAdminActivities()
+        {
+            int choice;
+            do
+            {
+                DisplayAdminMenu();
+                choice=Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 0:
+                        Console.WriteLine("Bye bye");
+                        break;
+                    case 1:
+                        doctorsdb.Add();
+                        break;
+                    case 2:
+                        doctorsdb.ModifyDoctorPhone();
+                        break;
+                    case 3:
+                        doctorsdb.ModifyDoctorExperience();
+                        break;
+                    case 4:
+                        doctorsdb.DeleteDoctor();
+                        break;
+
+                    case 5:
+                        doctorsdb.ShowAllDoctors();
+                        break;
+                }
+            } while (choice != 0);
+        }
+
+
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome");
+            HospitalHome home= new HospitalHome();
+            home.StartAdminActivities();
+        }
+
+    }
+}
+//*******************************************************************************************
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalQ2
+{
+    internal class Doctor
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Specialization { get; set; }
+        public int Experience { get; set; }
+        public long Phone {  get; set; }
+
+        public Doctor()
+        {
+            Name = null;
+            Experience = 0;
+            Phone = 0;
+        }
+        public Doctor(int id,string name, string specialization, int experience, long phone)
+        {
+            Id= id;
+            Name= name; 
+            Specialization= specialization;
+            Experience= experience;
+            Phone= phone;
+
+        }
+        public override string ToString()
+        {
+            
+            return $"Doctor Id : {Id}\nDoctor Name : {Name}\nDoctor Specialization : {Specialization}\nDoctor Phone : {Phone}\nDoctor Experience : {Experience}";
+        }
+    }
+}
+
+
+//***********************************************************************************
+
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalQ2
+{
+    internal class DoctorsDB
+    {
+        List<Doctor> doctors;
+
+        public DoctorsDB()
+        {
+            doctors = new List<Doctor>();
+        }
+        int GetNextId()
+        {
+            if (doctors.Count == 0)
+                return 1;
+            int id = doctors[doctors.Count - 1].Id;
+            return ++id;
+        }
+
+        public Doctor Add()
+        {
+            Doctor doctor = new Doctor();
+            int id= GetNextId();
+            doctor.Id = id;
+            TakeRemainingDoctorsDetails(doctor);
+            doctors.Add(doctor);
+            return doctor;
+        }
+
+        public List<Doctor> GetDoctors()
+        {
+            return doctors;
+        }
+        void TakeRemainingDoctorsDetails(Doctor doctor)
+        {
+            Console.WriteLine("Enter the Doctor name : ");
+            doctor.Name = Console.ReadLine();
+            Console.WriteLine("Enter the Doctors Specialization : ");
+            doctor.Specialization = Console.ReadLine();
+            Console.WriteLine("Enter Doctors Expeience : ");
+            doctor.Experience=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Doctors phone : ");
+            doctor.Phone=Convert.ToInt64(Console.ReadLine());
+
+        }
+        public int GetIdFromUser()
+        {
+            int id;
+            Console.WriteLine("Enter Doctor's id : ");
+            id = Convert.ToInt32(Console.ReadLine());
+            return id;
+        }
+        public void ModifyDoctorPhone()
+        {
+            int id=GetIdFromUser();
+            Console.WriteLine("Please enter the new phone : ");
+            long phone = Convert.ToInt64(Console.ReadLine());
+            Doctor doctor = new Doctor();
+            doctor.Phone = phone;
+            doctor.Id = id;
+            var result = Update(id, doctor, "phone");
+            if (result != null)
+                Console.WriteLine("Update success");
+        }
+
+        public void ModifyDoctorExperience()
+        {
+            int id = GetIdFromUser();
+            Console.WriteLine("Please enter the new experience : ");
+            int exp = Convert.ToInt32(Console.ReadLine());
+            Doctor doctor = new Doctor();
+            doctor.Experience = exp;
+            doctor.Id = id;
+            var result = Update(id, doctor, "exp");
+            if (result != null)
+                Console.WriteLine("Update success");
+        }
+
+        public Doctor GetDoctorById(int id)
+        {
+            for (int i = 0; i < doctors.Count; i++)
+            {
+                if (doctors[i].Id == id)
+                    return doctors[i];
+            }
+            return null;
+        }
+
+
+        public void ShowAllDoctors()
+        {
+            Console.WriteLine("***********************************");
+            var doctos = GetDoctors();
+            foreach (var item in doctors)
+            {
+                Console.WriteLine(item);
+                Console.WriteLine("-------------------------------");
+            }
+            Console.WriteLine("***********************************");
+        }
+        
+        Doctor Update(int id, Doctor doctor, string choice)
+        {
+            Doctor myDoctor = GetDoctorById(id);
+            if (myDoctor != null)
+            {
+
+                if (choice == "phone")
+                {
+                    if (doctor.Phone> 0)
+                    {
+                        myDoctor.Phone = doctor.Phone;
+                        return myDoctor;
+                    }
+                }
+                else if (choice == "exp")
+                {
+                    if (doctor.Experience > 0)
+                    {
+                        myDoctor.Experience = doctor.Experience;
+                        return myDoctor;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice");
+                }
+            }
+            Console.WriteLine("Could not update");
+            return null;
+        }
+        public void DeleteDoctor()
+        {
+            int id = GetIdFromUser();
+            if (Delete(id) != null)
+                Console.WriteLine("Doctor deleted");
+
+        }
+        public Doctor Delete(int id)
+        {
+            Doctor thisDoctor = GetDoctorById(id);
+            if (thisDoctor != null)
+            {
+                doctors.Remove(thisDoctor);
+                Console.WriteLine("Product deleted");
+                return thisDoctor;
+            }
+            return null;
+
+        }
+
+    }
+}
