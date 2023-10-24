@@ -1,0 +1,5 @@
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ClinicApp.csproj.AssemblyReference.cache
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ClinicApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ClinicApp.AssemblyInfoInputs.cache
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ClinicApp.AssemblyInfo.cs
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ClinicApp.csproj.CoreCompileInputs.cache

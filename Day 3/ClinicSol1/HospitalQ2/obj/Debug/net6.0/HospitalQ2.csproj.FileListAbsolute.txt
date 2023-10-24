@@ -1,0 +1,14 @@
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\bin\Debug\net6.0\HospitalQ2.exe
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\bin\Debug\net6.0\HospitalQ2.deps.json
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\bin\Debug\net6.0\HospitalQ2.runtimeconfig.json
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\bin\Debug\net6.0\HospitalQ2.dll
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\bin\Debug\net6.0\HospitalQ2.pdb
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.AssemblyInfoInputs.cache
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.AssemblyInfo.cs
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.csproj.CoreCompileInputs.cache
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.dll
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\refint\HospitalQ2.dll
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.pdb
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\HospitalQ2.genruntimeconfig.cache
+E:\HEX\Day 2\HospitalSol1\HospitalQ2\obj\Debug\net6.0\ref\HospitalQ2.dll

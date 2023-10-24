@@ -1,0 +1,11 @@
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.deps.json
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.dll
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\bin\Debug\net6.0\ClassLibrary1.pdb
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.AssemblyInfoInputs.cache
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.AssemblyInfo.cs
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.dll
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\refint\ClassLibrary1.dll
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ClassLibrary1.pdb
+E:\HEX\Day 2\HospitalSol1\ClassLibrary1\obj\Debug\net6.0\ref\ClassLibrary1.dll
