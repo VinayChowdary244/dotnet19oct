@@ -2,21 +2,21 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "ClassLibrary1/1.0.0": {
+      "ClassLibrary2/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/ClassLibrary1.dll": {}
+          "bin/placeholder/ClassLibrary2.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ClassLibrary1.dll": {}
+          "bin/placeholder/ClassLibrary2.dll": {}
         }
       },
       "ClinicBLLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ClassLibrary1": "1.0.0",
+          "ClassLibrary2": "1.0.0",
           "ClinicDALLibrary": "1.0.0"
         },
         "compile": {
@@ -30,7 +30,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ClassLibrary1": "1.0.0"
+          "ClassLibrary2": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ClinicDALLibrary.dll": {}
@@ -42,10 +42,10 @@
     }
   },
   "libraries": {
-    "ClassLibrary1/1.0.0": {
+    "ClassLibrary2/1.0.0": {
       "type": "project",
-      "path": "../ClassLibrary1/ClassLibrary1.csproj",
-      "msbuildProject": "../ClassLibrary1/ClassLibrary1.csproj"
+      "path": "../ClassLibrary2/ClassLibrary2.csproj",
+      "msbuildProject": "../ClassLibrary2/ClassLibrary2.csproj"
     },
     "ClinicBLLibrary/1.0.0": {
       "type": "project",
@@ -60,7 +60,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ClassLibrary1 >= 1.0.0",
+      "ClassLibrary2 >= 1.0.0",
       "ClinicBLLibrary >= 1.0.0",
       "ClinicDALLibrary >= 1.0.0"
     ]
@@ -92,8 +92,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClassLibrary1.csproj"
+            "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary2\\ClassLibrary2.csproj": {
+              "projectPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary2\\ClassLibrary2.csproj"
             },
             "E:\\HEX\\Day 2\\HospitalSol1\\ClinicBLLayer\\ClinicBLLibrary.csproj": {
               "projectPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClinicBLLayer\\ClinicBLLibrary.csproj"

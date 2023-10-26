@@ -3,12 +3,12 @@
 namespace ClinicBLLibrary
 {
     [Serializable]
-    public class NotAddedException : Exception
+    public class NotImplementedExceptio : Exception
     {
         string message;
-        public NotAddedException()
+        public NotImplementedExceptio()
         {
-            message = "Doctor not added ";
+            message = "Not Implemented ";
         }
 
         public override string Message => message;

@@ -2,11 +2,11 @@
 
 namespace ShoppingDALLibrary
 {
-    public class ProductRepository : IRepository
+    public class ProductRepository : IRepository<int, Product>
     {
         Dictionary<int, Product> products = new Dictionary<int, Product>();
         /// <summary>
-        /// c
+        /// Adds the given product to the dictionary 
         /// </summary>
         /// <param name="product">Product object that has to be added</param>
         /// <returns>The product that has been added</returns>

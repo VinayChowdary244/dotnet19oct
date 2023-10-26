@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicDALLibrary;
-using ClassLibrary1;
+
 using HospitalQ2;
 using System.Diagnostics;
 using System.Numerics;
+
 
 namespace ClinicBLLibrary
 {
@@ -20,13 +21,13 @@ namespace ClinicBLLibrary
         }
         public Doctor AddDoctor(Doctor doctor)
         {
-            var result = doctordb.Equals(doctor);
+            var result = doctordb.Add(doctor);
             if (result != null)
                 return result;
             throw new NotAddedException();
         }
 
-        public Doctor DeleteDoctor(int id)
+        public Doctor Delete(int id)
 
         {
             var result = GetDoctor(id);
@@ -41,7 +42,7 @@ namespace ClinicBLLibrary
         public Doctor GetDoctor(int id)
         {
             var result = doctordb.GetById(id);
-            return result == null ? throw new NoSuchDoctorException();
+            return result == null ? throw new NoSuchDoctorException() : result;
 
         }
         public List<Doctor> GetAllDoctors()

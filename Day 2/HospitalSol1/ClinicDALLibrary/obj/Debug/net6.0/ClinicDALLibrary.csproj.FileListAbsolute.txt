@@ -1,5 +1,15 @@
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\bin\Debug\net6.0\ClinicDALLibrary.deps.json
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\bin\Debug\net6.0\ClinicDALLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\bin\Debug\net6.0\ClinicDALLibrary.pdb
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\bin\Debug\net6.0\ClassLibrary2.dll
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\bin\Debug\net6.0\ClassLibrary2.pdb
 E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.csproj.AssemblyReference.cache
 E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.GeneratedMSBuildEditorConfig.editorconfig
 E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.AssemblyInfoInputs.cache
 E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.AssemblyInfo.cs
 E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.csproj.CoreCompileInputs.cache
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.csproj.CopyComplete
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\refint\ClinicDALLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ClinicDALLibrary.pdb
+E:\HEX\Day 2\HospitalSol1\ClinicDALLibrary\obj\Debug\net6.0\ref\ClinicDALLibrary.dll

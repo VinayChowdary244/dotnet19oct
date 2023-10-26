@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ClinicBLLibrary/1.0.0": {
+        "dependencies": {
+          "ClassLibrary2": "1.0.0",
+          "ClinicDALLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ClinicBLLibrary.dll": {}
+        }
+      },
+      "ClassLibrary2/1.0.0": {
+        "runtime": {
+          "ClassLibrary2.dll": {}
+        }
+      },
+      "ClinicDALLibrary/1.0.0": {
+        "dependencies": {
+          "ClassLibrary2": "1.0.0"
+        },
+        "runtime": {
+          "ClinicDALLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClinicBLLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibrary2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClinicDALLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

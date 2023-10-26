@@ -1,5 +1,17 @@
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClinicBLLibrary.deps.json
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClinicBLLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClinicBLLibrary.pdb
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClassLibrary2.dll
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClinicDALLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClassLibrary2.pdb
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\bin\Debug\net6.0\ClinicDALLibrary.pdb
 E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.csproj.AssemblyReference.cache
 E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.GeneratedMSBuildEditorConfig.editorconfig
 E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.AssemblyInfoInputs.cache
 E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.AssemblyInfo.cs
 E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.csproj.CoreCompileInputs.cache
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.csproj.CopyComplete
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\refint\ClinicBLLibrary.dll
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ClinicBLLibrary.pdb
+E:\HEX\Day 2\HospitalSol1\ClinicBLLayer\obj\Debug\net6.0\ref\ClinicBLLibrary.dll

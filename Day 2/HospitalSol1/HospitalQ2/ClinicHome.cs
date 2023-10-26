@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using ClinicBLLibrary;
 using ClinicDALLibrary;
-using ClassLibrary1;
+
 
 namespace HospitalQ2
 {
     public class ClinicHome
     {
-        DoctorDB doctorsdb;
+        IClinicServices clinicServices;
         public ClinicHome()
         {
-            doctorsdb = new DoctorDB();
+            clinicServices = new ClinicServices();
         }
         void DisplayAdminMenu()
         {
@@ -38,33 +38,148 @@ namespace HospitalQ2
                         Console.WriteLine("Bye bye");
                         break;
                     case 1:
-                        doctorsdb.Add();
+                        AddDoctor();
                         break;
                     case 2:
-                        doctorsdb.ModifyDoctorPhone();
+                        UpdateDoctorPhone();
                         break;
                     case 3:
-                        doctorsdb.ModifyDoctorExperience();
+                        UpdateDoctorExperience();
                         break;
                     case 4:
-                        doctorsdb.DeleteDoctor();
+                        DeleteDoctor();
                         break;
 
                     case 5:
-                        doctorsdb.ShowAllDoctors();
+                        ShowAllDoctors();
                         break;
                 }
             } while (choice != 0);
         }
+        private void ShowAllDoctors()
+        {
+            Console.WriteLine("***********************************");
+            var doctors = clinicServices.GetAllDoctors();
+            foreach (var item in doctors)
+            {
+                Console.WriteLine(item);
+                Console.WriteLine("-------------------------------");
+            }
+            Console.WriteLine("***********************************");
+        }
+
+        void AddDoctor()
+        {
+            try
+            {
+                Doctor doctor = TakeDoctorsDetails();
+                var result = clinicServices.AddDoctor(doctor);
+                if (result != null)
+                {
+                    Console.WriteLine("Doctor added");
+                }
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+
+            }
+            catch (NotAddedException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
+        Doctor TakeDoctorsDetails()
+        {
+            Doctor doctor=new Doctor();
+            Console.WriteLine("Enter the Doctor name : ");
+            doctor.Name = Console.ReadLine();
+            Console.WriteLine("Enter the Doctors Specialization : ");
+            doctor.Specialization = Console.ReadLine();
+            Console.WriteLine("Enter Doctors Expeience : ");
+            doctor.Experience = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Doctors phone : ");
+            doctor.PhoneNum = Convert.ToInt64(Console.ReadLine());
+            return doctor;
+        }
+
+        int GetDoctorIdFromUser()
+        {
+            int id;
+            Console.WriteLine("Please enter the Doctor's id :");
+            id = Convert.ToInt32(Console.ReadLine());
+            return id;
+        }
+
+        private void DeleteDoctor()
+        {
+            try
+            {
+                int id = GetDoctorIdFromUser();
+                if (clinicServices.Delete(id) != null)
+                    Console.WriteLine("Product deleted");
+            }
+            catch (NoSuchDoctorException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
 
+        private void UpdateDoctorPhone()
+        {
+            var id = GetDoctorIdFromUser();
+            Console.WriteLine("Please enter the new phone");
+            int phone = (int)Convert.ToInt64(Console.ReadLine());
+            Doctor doctor = new Doctor();
+            doctor.PhoneNum = phone;
+            doctor.Id = id;
+            try
+            {
+                var result = clinicServices.UpdateDoctorPhone(id, phone);
+                if (result != null)
+                    Console.WriteLine("Update success");
+            }
+            catch (NoSuchDoctorException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
 
 
-        static void Main(string[] args)
+        private void UpdateDoctorExperience()
+        {
+            var id = GetDoctorIdFromUser();
+            Console.WriteLine("Please enter doctors new experience :");
+            int exp = Convert.ToInt32(Console.ReadLine());
+            Doctor doctor = new Doctor();
+            doctor.Experience = exp;
+            doctor.Id = id;
+            try
+            {
+                var result = clinicServices.UpdateDoctorExperience(id, exp);
+                if (result != null)
+                    Console.WriteLine("Update success");
+            }
+            catch (NoSuchDoctorException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+        static int Main(string[] args)
         {
             Console.WriteLine("Welcome");
             ClinicHome home= new ClinicHome();
             home.StartAdminActivities();
+            return 0;
         }
 
     }

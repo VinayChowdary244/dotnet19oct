@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClassLibrary1.csproj",
-      "projectName": "ClassLibrary1",
-      "projectPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClassLibrary1.csproj",
+      "projectUniqueName": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClinicModelLibrary.csproj",
+      "projectName": "ClinicModelLibrary",
+      "projectPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClinicModelLibrary.csproj",
       "packagesPath": "C:\\Users\\vinay\\.nuget\\packages\\",
       "outputPath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",

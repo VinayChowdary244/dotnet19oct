@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+    <ProjectReference Include="..\ClassLibrary2\ClassLibrary2.csproj" />
     <ProjectReference Include="..\ClinicBLLayer\ClinicBLLibrary.csproj" />
     <ProjectReference Include="..\ClinicDALLibrary\ClinicDALLibrary.csproj" />
   </ItemGroup>

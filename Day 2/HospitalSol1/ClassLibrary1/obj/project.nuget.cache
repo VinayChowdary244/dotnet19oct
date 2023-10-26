@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YznWEVfeEdXun1/0+Sn+fcOQYIc5mcqtT/Dl44FUprTHypG0VCn7JmJnwghvS0H/AhvUZHAS+fO2kq4aDt27ew==",
+  "dgSpecHash": "+IidJq3S7tls3vnKrjEJ9yeEcC/M6n5qlzWDqdEW32JbG8BKPpNygU9aMxLKBBw1javF9uXbPUQcblgPvfpn2g==",
   "success": true,
-  "projectFilePath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClassLibrary1.csproj",
+  "projectFilePath": "E:\\HEX\\Day 2\\HospitalSol1\\ClassLibrary1\\ClinicModelLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
