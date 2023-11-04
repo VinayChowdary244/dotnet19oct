@@ -3,7 +3,11 @@ E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingApp.deps.json
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingApp.runtimeconfig.json
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingApp.dll
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingApp.pdb
+E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingBLLibrary.dll
+E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingDALLibrary.dll
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingModelLibrary.dll
+E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingBLLibrary.pdb
+E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingDALLibrary.pdb
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingModelLibrary.pdb
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\ShoppingApp.csproj.AssemblyReference.cache
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\ShoppingApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,7 +20,3 @@ E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\refint\ShoppingApp.dl
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\ShoppingApp.pdb
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\ShoppingApp.genruntimeconfig.cache
 E:\HEX\Day 3\ShoppingSolution\ShoppingApp\obj\Debug\net6.0\ref\ShoppingApp.dll
-E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingBLLibrary.dll
-E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingDALLibrary.dll
-E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingBLLibrary.pdb
-E:\HEX\Day 3\ShoppingSolution\ShoppingApp\bin\Debug\net6.0\ShoppingDALLibrary.pdb

@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingApp", "ShoppingApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingModelLibrary", "ShoppingModelLibrary\ShoppingModelLibrary.csproj", "{B97C8AFB-1BCB-423A-AF83-566A487363B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingDALLibrary", "ShoppingDALLibrary\ShoppingDALLibrary.csproj", "{72F2E395-B778-429D-98E9-5F53E5FC18F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingDALLibrary", "ShoppingDALLibrary\ShoppingDALLibrary.csproj", "{72F2E395-B778-429D-98E9-5F53E5FC18F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBLLibrary", "ShoppingBLLibrary\ShoppingBLLibrary.csproj", "{530A4427-056C-4305-8EE8-F815759F4807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingBLLibrary", "ShoppingBLLibrary\ShoppingBLLibrary.csproj", "{530A4427-056C-4305-8EE8-F815759F4807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALTest", "DALTest\DALTest.csproj", "{03557D28-8AB8-4A67-8FC4-D17C89BAA4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLTest", "BLTest\BLTest.csproj", "{DB62591F-BF76-43FD-ABCE-BD7041C5D328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{530A4427-056C-4305-8EE8-F815759F4807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{530A4427-056C-4305-8EE8-F815759F4807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{530A4427-056C-4305-8EE8-F815759F4807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03557D28-8AB8-4A67-8FC4-D17C89BAA4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03557D28-8AB8-4A67-8FC4-D17C89BAA4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03557D28-8AB8-4A67-8FC4-D17C89BAA4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03557D28-8AB8-4A67-8FC4-D17C89BAA4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB62591F-BF76-43FD-ABCE-BD7041C5D328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB62591F-BF76-43FD-ABCE-BD7041C5D328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB62591F-BF76-43FD-ABCE-BD7041C5D328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB62591F-BF76-43FD-ABCE-BD7041C5D328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

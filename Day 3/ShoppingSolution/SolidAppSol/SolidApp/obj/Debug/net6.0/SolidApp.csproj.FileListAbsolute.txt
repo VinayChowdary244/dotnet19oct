@@ -1,0 +1,14 @@
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\bin\Debug\net6.0\SolidApp.exe
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\bin\Debug\net6.0\SolidApp.deps.json
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\bin\Debug\net6.0\SolidApp.runtimeconfig.json
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\bin\Debug\net6.0\SolidApp.dll
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\bin\Debug\net6.0\SolidApp.pdb
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.AssemblyInfoInputs.cache
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.AssemblyInfo.cs
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.csproj.CoreCompileInputs.cache
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.dll
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\refint\SolidApp.dll
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.pdb
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\SolidApp.genruntimeconfig.cache
+E:\HEX\Day 3\ShoppingSolution\SolidAppSol\SolidApp\obj\Debug\net6.0\ref\SolidApp.dll

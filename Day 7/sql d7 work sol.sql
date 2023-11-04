@@ -1,9 +1,21 @@
-print the store name, title name,, quantity, sale amount, pulisher name, author name for all the sales.
-Also print those books which have not been sold and authors who have not written.
 
-select s.stor_name,t.title,sa.qty,sa.qty*t.price sale_amount,p.pub_name,a.au_fname+' '+a.au_lname author_name 
-from publishers p full join titles t on p.pub_id=t.title_id full outer join titleauthor ta on t.title_id=ta.title_id 
-full outer join authors a on ta.au_id=a.au_id full join sales sa on t.title_id=sa.title_id full join stores s on sa.stor_id=s.stor_id 
+select st.stor_name StoreName,t.title Title,s.qty Quantity,s.qty * t.price SaleAmount,p.pub_name PublisherName,
+concat(au.au_fname, ' ', au.au_lname) as AuthorName,'Sold' as 'Status'
+from sales s join stores st ON s.stor_id = st.stor_id join titles t ON s.title_id = t.title_id join 
+publishers p ON t.pub_id = p.pub_id left join titleauthor ta ON t.title_id = ta.title_id left join authors au ON ta.au_id = au.au_id
+union all
+select t.title Title,p.pub_name PublisherName,null Quantity,null SaleAmount,null StoreName,concat(au.au_fname, ' ', au.au_lname) 
+AuthorName,'Not Sold' as 'Status'
+from titles t join publishers p ON t.pub_id = p.pub_id left join titleauthor ta ON t.title_id = ta.title_id 
+left join authors au ON ta.au_id = au.au_id
+union all
+select null StoreName,null Title,null Quantity,null SaleAmount,null PublisherName,concat(au.au_fname, ' ', au.au_lname) AuthorName,
+    'Not Written' as 'Status'
+from authors au left join titleauthor ta ON au.au_id = ta.au_id;
+
+
+
+
 
 create proc  pr_TotalSales(@au_fname varchar(60))
 as
@@ -31,14 +43,20 @@ select count(title) 'No of Books Under The Given Price' from titles where price<
 end
 exec pr_countOfBooksByPrice 10.0
 
-Find a way to ensure that the price of books are not updated if the price is below 7
-create proc
 
-
-
-
-
-
+create proc pr_update(@title_id varchar(10),@price float)
+as
+begin
+if((select price from titles where title_id =@title_id)<7)
+begin
+print'Price not updated as it is below 7'
+end
+else begin
+update titles set price=@price where title_id=@title_id
+end
+end
+exec pr_update 'bu2075' ,100
+select * from titles
 
 
 select title from titles where title like '%e%a%';
