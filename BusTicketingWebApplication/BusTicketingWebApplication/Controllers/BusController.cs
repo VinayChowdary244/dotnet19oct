@@ -8,7 +8,7 @@ namespace BusTicketingWebApplication.Controllers
         {
             return View();
         }
-        public IActionResult Create()
+        public IActionResult Register()
         {
             return View();
         }

@@ -1,1 +1,14 @@
-﻿<h1>Hello!! Welcome to BUS TICKETING SYSTEM</h1>
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">BusTicketingWebApp</h1>
+    <p>Book your bus tickets.</p>
+    @if (TempData.ContainsKey("username"))
+    {
+        <div class="alert alert-success">
+            Welcome @TempData["username"]
+        </div>
+    }
+</div>
