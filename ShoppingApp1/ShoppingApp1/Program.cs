@@ -33,7 +33,7 @@ namespace ShoppingApp1
 
             builder.Services.AddDbContext<ShoppingContext>(opts =>
             {
-                opts.UseSqlServer(builder.Configuration.GetConnectionString("shoppingCon"));
+                opts.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
             });
 
             builder.Services.AddScoped<IRepository<string, User>, UserRepository>();

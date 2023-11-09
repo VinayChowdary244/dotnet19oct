@@ -15,14 +15,11 @@ namespace ShoppingApp1.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 
         public IActionResult Privacy()
-        {
-            return View();
-        }
-        public IActionResult Vinay()
         {
             return View();
         }

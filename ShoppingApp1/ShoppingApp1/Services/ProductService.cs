@@ -4,6 +4,7 @@ using ShoppingApp1.Models;
 
 namespace ShoppingApp1.Services
 {
+
     public class ProductService : IProductService
     {
         private readonly IRepository<int, Product> _productRepository;

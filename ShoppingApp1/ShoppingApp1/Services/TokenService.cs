@@ -1,4 +1,6 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿
+using Microsoft.IdentityModel.Tokens;
+
 using ShoppingApp1.Interfaces;
 using ShoppingApp1.Models.DTOs;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,7 +22,8 @@ namespace ShoppingApp1.Services
         {
             var claims = new List<Claim>()
             {
-                new Claim(JwtRegisteredClaimNames.NameId,user.Username)
+                new Claim(JwtRegisteredClaimNames.NameId,user.Username),
+                new Claim("role",user.Role)
             };
             var cred = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
             var tokenDescription = new SecurityTokenDescriptor

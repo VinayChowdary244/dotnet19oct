@@ -5,7 +5,7 @@ using ShoppingApp1.Models;
 
 namespace ShoppingApp1.Repositories
 {
-    
+
     public class CartItemsRepository : IRepository<int, CartItems>
     {
         private readonly ShoppingContext _context;

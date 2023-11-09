@@ -9,6 +9,7 @@ E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\ShoppingApp1.pdb
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Humanizer.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\MessagePack.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\MessagePack.Annotations.dll
+E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Microsoft.Build.dll
@@ -247,4 +248,3 @@ E:\HEX\ShoppingApp1\ShoppingApp1\obj\Debug\net6.0\refint\ShoppingApp1.dll
 E:\HEX\ShoppingApp1\ShoppingApp1\obj\Debug\net6.0\ShoppingApp1.pdb
 E:\HEX\ShoppingApp1\ShoppingApp1\obj\Debug\net6.0\ShoppingApp1.genruntimeconfig.cache
 E:\HEX\ShoppingApp1\ShoppingApp1\obj\Debug\net6.0\ref\ShoppingApp1.dll
-E:\HEX\ShoppingApp1\ShoppingApp1\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -12,7 +12,7 @@ using ShoppingApp1.Contexts;
 namespace ShoppingApp1.Migrations
 {
     [DbContext(typeof(ShoppingContext))]
-    [Migration("20231107165416_Initial")]
+    [Migration("20231108175557_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,7 +80,6 @@ namespace ShoppingApp1.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("Price")

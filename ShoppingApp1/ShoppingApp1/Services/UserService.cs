@@ -1,12 +1,14 @@
 ﻿using ShoppingApp1.Interfaces;
-
+using ShoppingApp1.Repositories;
 using ShoppingApp1.Models;
 using ShoppingApp1.Models.DTOs;
 using System.Security.Cryptography;
 using System.Text;
+using System.Diagnostics;
 
 namespace ShoppingApp1.Services
 {
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
     public class UserService : IUserService
     {
         private readonly IRepository<string, User> _repository;
@@ -17,6 +19,12 @@ namespace ShoppingApp1.Services
             _repository = repository;
             _tokenService = tokenService;
         }
+
+        private static object GetDebuggerDisplay()
+        {
+            throw new NotImplementedException();
+        }
+
         public UserDTO Login(UserDTO userDTO)
         {
             var user = _repository.GetById(userDTO.Username);
@@ -55,5 +63,7 @@ namespace ShoppingApp1.Services
             return null;
 
         }
+
+        
     }
 }

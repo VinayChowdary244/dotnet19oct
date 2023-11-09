@@ -10,5 +10,6 @@ namespace ShoppingApp1.Models
         public byte[] Password { get; set; }
         public string Role { get; set; }
         public byte[] Key { get; set; }
+
     }
 }

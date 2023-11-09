@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using ShoppingApp1.Exceptions;
 using ShoppingApp1.Interfaces;
 using ShoppingApp1.Models;
@@ -16,6 +18,7 @@ namespace ShoppingApp1.Controllers
         {
             _productService = productService;
         }
+        [Authorize]
         [HttpGet]
         public ActionResult Get()
         {
@@ -31,6 +34,7 @@ namespace ShoppingApp1.Controllers
             }
             return BadRequest(errorMessage);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Create(Product product)
         {
