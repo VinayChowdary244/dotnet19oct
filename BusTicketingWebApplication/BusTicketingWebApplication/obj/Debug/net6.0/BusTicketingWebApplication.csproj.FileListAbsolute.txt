@@ -248,3 +248,4 @@ E:\HEX\BusTicketingWebApplication\BusTicketingWebApplication\bin\Debug\net6.0\ru
 E:\HEX\BusTicketingWebApplication\BusTicketingWebApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\HEX\BusTicketingWebApplication\BusTicketingWebApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\HEX\BusTicketingWebApplication\BusTicketingWebApplication\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\HEX\BusTicketingWebApplication\BusTicketingWebApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
