@@ -51,7 +51,7 @@ namespace BusTicketingWebApplication.Controllers
             var result = _userService.Login(userDTO);
             if (result != null)
             {
-                TempData.Add("username", userDTO.Username);
+                TempData.Add("username", userDTO.UserName);
                 return RedirectToAction("Index", "Home");
             }
             ViewData["Message"] = "Invalid username or password";

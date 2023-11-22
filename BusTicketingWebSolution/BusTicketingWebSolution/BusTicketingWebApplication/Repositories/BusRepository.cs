@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusTicketingWebApplication.Repositories
 {
-    public class BusRepository : IRepository<int, Bus>
+    public class BusRepository : IBusRepository
     {
         private readonly TicketingContext _context;
         public BusRepository(TicketingContext context)

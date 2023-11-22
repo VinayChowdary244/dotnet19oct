@@ -1,5 +1,6 @@
 ﻿using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -51,6 +52,63 @@ namespace BusTicketingWebApplication.Controllers
                 return Ok(result);
             }
             return Unauthorized("Invalid username or password");
+        }
+
+        [HttpPost]
+        [Route("BusSearch")]
+        public ActionResult BusSearch(BusDTO busDTO) 
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _userService.BusSearch(busDTO);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+
+        }
+        
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public ActionResult GetAllUsers()
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _userService.GetAllUsers();
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+
+        }
+
+        
+        [HttpPost]
+        [Route("BookTickets")]
+        public ActionResult BookTickets(BusDTO busDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _userService.BookSeat(busDTO);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+
         }
     }
 }

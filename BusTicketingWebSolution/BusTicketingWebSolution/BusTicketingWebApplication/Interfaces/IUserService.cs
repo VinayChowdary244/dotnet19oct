@@ -1,4 +1,6 @@
-﻿using BusTicketingWebApplication.Models.DTOs;
+﻿using BusModelLibrary;
+using BusTicketingWebApplication.Models;
+using BusTicketingWebApplication.Models.DTOs;
 
 namespace BusTicketingWebApplication.Interfaces
 {
@@ -6,5 +8,8 @@ namespace BusTicketingWebApplication.Interfaces
     {
         UserDTO Login(UserDTO userDTO);
         UserDTO Register(UserDTO userDTO);
+        List<Bus> BusSearch(BusDTO busDTO);
+        BusDTO BookSeat(BusDTO busDTO);
+        List<User> GetAllUsers();
     }
 }

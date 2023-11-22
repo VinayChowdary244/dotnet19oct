@@ -30,7 +30,10 @@ namespace BusTicketingWebApplication.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Capacity")
+                    b.Property<int>("AvailableSeats")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookedSeats")
                         .HasColumnType("int");
 
                     b.Property<float>("Cost")
@@ -74,10 +77,42 @@ namespace BusTicketingWebApplication.Migrations
                     b.ToTable("Bookings");
                 });
 
+            modelBuilder.Entity("BusTicketingWebApplication.Models.BusRoute", b =>
+                {
+                    b.Property<int>("RouteId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RouteId"), 1L, 1);
+
+                    b.Property<int>("Bus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("End")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Start")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RouteId");
+
+                    b.ToTable("BusRoutes");
+                });
+
             modelBuilder.Entity("BusTicketingWebApplication.Models.User", b =>
                 {
-                    b.Property<string>("Username")
+                    b.Property<string>("UserName")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("Key")
                         .IsRequired()
@@ -87,11 +122,18 @@ namespace BusTicketingWebApplication.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Pincode")
+                        .HasColumnType("int");
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Username");
+                    b.HasKey("UserName");
 
                     b.ToTable("Users");
                 });

@@ -5,6 +5,8 @@ using BusTicketingWebApplication.Exceptions;
 using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models;
 using BusModelLibrary;
+using BusTicketingWebApplication.Models.DTOs;
+using BusTicketingWebApplication.Services;
 
 namespace BusTicketingWebApplication.Controllers
 {
@@ -20,7 +22,7 @@ namespace BusTicketingWebApplication.Controllers
         }
       [Authorize]
       [HttpGet]
-        public ActionResult Get()
+        public ActionResult GetAllBusses()
         {
             string errorMessage = string.Empty;
             try
@@ -50,6 +52,45 @@ namespace BusTicketingWebApplication.Controllers
             }
             return BadRequest(errorMessage);
         }
+
+
+        [Authorize(Roles = "Admin")]
+        [Route("DeleteBus")]
+        [HttpDelete]
+        public ActionResult DeleteBus(BusIdDTO busIdDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _busService.RemoveBus(busIdDTO);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [Route("UpdateBus")]
+        [HttpPut]
+        public ActionResult UpdateBus(BusDTO busDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _busService.UpdateBus( busDTO);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+        }
+
+
     }
 
 }

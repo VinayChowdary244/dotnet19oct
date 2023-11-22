@@ -20,7 +20,7 @@ namespace BusTicketingWebApplication.Services
         {
             var claims = new List<Claim>()
             {
-                new Claim(JwtRegisteredClaimNames.NameId,user.Username),
+                new Claim(JwtRegisteredClaimNames.NameId,user.UserName),
                 new Claim("role",user.Role)
             };
             var cred = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);

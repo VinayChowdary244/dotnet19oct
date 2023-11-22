@@ -13,5 +13,6 @@ namespace BusTicketingWebApplication.Contexts
         public DbSet<User> Users { get; set; }
         public DbSet<Bus>Buses { get; set; }
         public DbSet<Booking>Bookings { get; set; }
+        public DbSet<BusRoute>BusRoutes { get; set; }
     }
 }

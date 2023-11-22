@@ -67,16 +67,18 @@ namespace BusTicketingWebApplication
 
             builder.Services.AddDbContext<TicketingContext>(opts =>
             {
-                opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
+                opts.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
             });
 
             builder.Logging.AddLog4Net();
 
-            builder.Services.AddScoped<IRepository<string, User>, UserRepository>();
-            builder.Services.AddScoped<IRepository<int, Bus>, BusRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IBusRepository, BusRepository>();
+            builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IBusService, BusService>();
+            builder.Services.AddScoped<IBusRouteService, BusRouteService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusTicketingWebApplication.Reposittories
 {
-    public class UserRepository : IRepository<string, User>
+    public class UserRepository : IUserRepository
     {
         private readonly TicketingContext _context;
 
@@ -41,13 +41,13 @@ namespace BusTicketingWebApplication.Reposittories
 
         public User GetById(string key)
         {
-            var user = _context.Users.SingleOrDefault(u => u.Username == key);
+            var user = _context.Users.SingleOrDefault(u => u.UserName == key);
             return user;
         }
 
         public User Update(User entity)
         {
-            var user = GetById(entity.Username);
+            var user = GetById(entity.UserName);
             if (user != null)
             {
                 _context.Entry<User>(user).State = EntityState.Modified;

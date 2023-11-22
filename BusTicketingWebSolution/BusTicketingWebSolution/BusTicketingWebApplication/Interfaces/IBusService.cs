@@ -1,4 +1,5 @@
 ﻿using BusModelLibrary;
+using BusTicketingWebApplication.Models.DTOs;
 
 namespace BusTicketingWebApplication.Interfaces
 {
@@ -6,5 +7,7 @@ namespace BusTicketingWebApplication.Interfaces
     {
         List<Bus> GetBuses();
         Bus Add(Bus bus);
+        BusIdDTO RemoveBus( BusIdDTO busIdDTO);
+        BusDTO UpdateBus(BusDTO busDTO);
     }
 }
