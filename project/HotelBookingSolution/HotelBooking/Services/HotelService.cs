@@ -28,7 +28,7 @@ namespace HotelBooking.Services
             {
                 return hotels.ToList();
             }
-            throw new NoHotelsAvailableException();
+            throw new NoHotelAvailableException();
         }
 
         public Hotel Update(Hotel hotel)

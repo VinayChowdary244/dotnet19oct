@@ -1,4 +1,6 @@
-﻿using HotelBooking.Interfaces;
+﻿using HotelBooking.Exceptions;
+using HotelBooking.Interfaces;
+using HotelBooking.Models;
 using HotelBooking.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -12,10 +14,12 @@ namespace HotelBooking.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IBookingService _bookingService;
 
-        public CustomerController(IUserService userService)
+        public CustomerController(IUserService userService, IBookingService bookingService)
         {
             _userService = userService;
+            _bookingService = bookingService;
         }
         [HttpPost]
         public ActionResult Register(UserDTO viewModel)
@@ -56,12 +60,12 @@ namespace HotelBooking.Controllers
 
         [HttpPost]
         [Route("HotelSearch")]
-        public ActionResult HotelSearch(HotelDTO busDTO) 
+        public ActionResult HotelSearch(HotelDTO hotelDTO)
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _userService.HotelSearch(busDTO);
+                var result = _userService.HotelSearch(hotelDTO);
                 return Ok(result);
             }
             catch (Exception e)
@@ -71,7 +75,7 @@ namespace HotelBooking.Controllers
             return BadRequest(errorMessage);
 
         }
-        
+
 
         [Authorize(Roles = "Admin")]
         [HttpGet]
@@ -91,5 +95,40 @@ namespace HotelBooking.Controllers
             return BadRequest(errorMessage);
 
         }
+        [HttpGet]
+        [Route("ViewBooking")]
+        public ActionResult GetBookings()
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+
+                var result = _bookingService.GetBookings();
+                return Ok(result);
+            }
+            catch (NoRoomsAvailableException e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+        }
+
+        [HttpPost]
+        [Route("RoomBooking")]
+        public ActionResult Create(Booking booking)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _bookingService.Add(booking);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+        }
     }
+
 }

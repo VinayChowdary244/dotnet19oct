@@ -9,7 +9,7 @@ namespace HotelBooking.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string City { get; set; }
-        public string? Role { get; set; }
+        public string Role { get; set; }
         public byte[] Password { get; set; }
         public byte[] Key { get; set; }
 

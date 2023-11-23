@@ -22,6 +22,34 @@ namespace HotelBooking.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("HotelBooking.Models.Booking", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CheckIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CheckOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Bookings");
+                });
+
             modelBuilder.Entity("HotelBooking.Models.Hotel", b =>
                 {
                     b.Property<int>("HotelId")
@@ -30,9 +58,6 @@ namespace HotelBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HotelId"), 1L, 1);
 
-                    b.Property<int>("AvailableRooms")
-                        .HasColumnType("int");
-
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -40,9 +65,6 @@ namespace HotelBooking.Migrations
                     b.Property<string>("HotelName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NoOfRooms")
-                        .HasColumnType("int");
 
                     b.HasKey("HotelId");
 
@@ -57,6 +79,9 @@ namespace HotelBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoomId"), 1L, 1);
 
+                    b.Property<bool>("AvailableStatus")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Charge")
                         .HasColumnType("int");
 
@@ -64,7 +89,6 @@ namespace HotelBooking.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RoomId");
@@ -100,11 +124,23 @@ namespace HotelBooking.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserName");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("HotelBooking.Models.Booking", b =>
+                {
+                    b.HasOne("HotelBooking.Models.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("HotelBooking.Models.Room", b =>

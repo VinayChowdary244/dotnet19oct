@@ -71,7 +71,7 @@ namespace HotelBooking.Services
             {
                 return busses.ToList();
             }
-            throw new NoHotelsAvailableException();
+            throw new NoHotelAvailableException();
         }
         public List<Hotel> HotelSearch(HotelDTO HotelDto)
         {
@@ -91,7 +91,7 @@ namespace HotelBooking.Services
 
                 }
                 if (HotelList.Count > 0) return HotelList;
-                else throw new NoHotelsAvailableException();
+                else throw new NoHotelAvailableException();
 
 
 

@@ -1,16 +1,13 @@
-using System.Text;
 using HotelBooking.Contexts;
 using HotelBooking.Interfaces;
-using HotelBooking.Models;
 using HotelBooking.Repositories;
+using HotelBooking.Reposittories;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using HotelBooking.Services;
-using HotelBooking.Reposittories;
+using System.Text;
 
 namespace HotelBooking
 {
@@ -70,14 +67,16 @@ namespace HotelBooking
                 opts.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
             });
 
-            
 
-           builder.Services.AddScoped<IUserRepository, UserRepository>();
-           builder.Services.AddScoped<IHotelRepository, HotelRepository>();
 
-             builder.Services.AddScoped<IUserService, UserService>();
-             builder.Services.AddScoped<ITokenService, TokenService>();
-             builder.Services.AddScoped<IHotelService, HotelService>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+            builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IBookingService, BookingService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IHotelService, HotelService>();
 
             var app = builder.Build();
 
