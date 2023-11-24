@@ -75,10 +75,13 @@ namespace BusTicketingWebApplication
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IBusRepository, BusRepository>();
             builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();
+            builder.Services.AddScoped<IBookingRepository, BookingRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IBusService, BusService>();
             builder.Services.AddScoped<IBusRouteService, BusRouteService>();
+            builder.Services.AddScoped<IBookingService, BookingService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -20,7 +20,7 @@ namespace BusTicketingWebApplication.Controllers
         {
             _busService = busService;
         }
-      [Authorize]
+      //[Authorize]
       [HttpGet]
         public ActionResult GetAllBusses()
         {
@@ -36,7 +36,7 @@ namespace BusTicketingWebApplication.Controllers
             }
             return BadRequest(errorMessage);
         }
-      [Authorize(Roles = "Admin")]
+     // [Authorize(Roles = "Admin")]
       [HttpPost]
         public ActionResult Create(Bus bus)
         {
@@ -54,7 +54,7 @@ namespace BusTicketingWebApplication.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
+       // [Authorize(Roles = "Admin")]
         [Route("DeleteBus")]
         [HttpDelete]
         public ActionResult DeleteBus(BusIdDTO busIdDTO)
@@ -72,7 +72,7 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         [Route("UpdateBus")]
         [HttpPut]
         public ActionResult UpdateBus(BusDTO busDTO)

@@ -14,12 +14,14 @@ namespace BusTicketingWebApplication.Services
         private readonly IUserRepository _userrepository;
         private readonly IBusRepository _busrepository;
         private readonly ITokenService _tokenService;
+        private readonly IBookingRepository _bookingRepository;
 
-        public UserService(IUserRepository userrepository, ITokenService tokenService, IBusRepository busrepository)
+        public UserService(IUserRepository userrepository, ITokenService tokenService, IBusRepository busrepository,IBookingRepository bookingRepository)
         {
             _userrepository = userrepository;
             _tokenService = tokenService;
             _busrepository = busrepository;
+            _bookingRepository = bookingRepository;
         }
         public UserDTO Login(UserDTO userDTO)
         {
@@ -126,6 +128,24 @@ namespace BusTicketingWebApplication.Services
                 {
                     return busDTO;
                 }
+            }
+            return null;
+        }
+        public List<Booking> GetBookingHistory(UserIdDTO userIdDTO)
+        {
+            var booking = _bookingRepository.GetAll();
+            if (booking != null)
+            {
+                List<Booking> BookingHistory = new List<Booking>();
+                for (int i = 0;i<booking.Count;i++)
+                {
+                    if (booking[i].UserId == userIdDTO.Id)
+                    {
+                        BookingHistory.Add(booking[i]);
+                    }
+                }
+                if (BookingHistory.Count > 0) return BookingHistory;
+                else throw new NoBookingsYetException();
             }
             return null;
         }

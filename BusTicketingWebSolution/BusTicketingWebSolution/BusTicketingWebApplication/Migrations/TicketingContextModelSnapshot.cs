@@ -64,13 +64,20 @@ namespace BusTicketingWebApplication.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"), 1L, 1);
 
-                    b.Property<string>("User")
-                        .IsRequired()
+                    b.Property<int>("BusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Date")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("NoOfSeats")
+                        .HasColumnType("int");
+
+                    b.Property<float>("TotalFare")
+                        .HasColumnType("real");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("BookingId");
 

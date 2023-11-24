@@ -11313,11 +11313,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinay\\OneDrive\\Desktop\\whole not hole\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
+      "projectUniqueName": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
       "projectName": "BusTicketingWebApplication",
-      "projectPath": "C:\\Users\\vinay\\OneDrive\\Desktop\\whole not hole\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
+      "projectPath": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
       "packagesPath": "C:\\Users\\vinay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinay\\OneDrive\\Desktop\\whole not hole\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\obj\\",
+      "outputPath": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",

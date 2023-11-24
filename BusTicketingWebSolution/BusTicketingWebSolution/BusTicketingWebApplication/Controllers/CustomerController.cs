@@ -12,10 +12,12 @@ namespace BusTicketingWebApplication.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IBookingService _bookingService;
 
-        public CustomerController(IUserService userService)
+        public CustomerController(IUserService userService, IBookingService bookingService)
         {
             _userService = userService;
+            _bookingService = bookingService;
         }
         [HttpPost]
         public ActionResult Register(UserDTO viewModel)
@@ -71,7 +73,25 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
 
         }
-        
+
+        [HttpPost]
+        [Route("UserBookingHistory")]
+        public ActionResult BookingHistory(UserIdDTO userIdDTO )
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _userService.GetBookingHistory(userIdDTO);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+
+        }
+
 
         [Authorize(Roles = "Admin")]
         [HttpGet]
