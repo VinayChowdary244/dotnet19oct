@@ -17,10 +17,14 @@ namespace BusTicketingWebApplication.Controllers
     public class BusController : ControllerBase
     {
         private readonly IBusService _busService;
+        private readonly ILogger<BusController> _logger;
 
-        public BusController(IBusService busService)
+
+
+        public BusController(IBusService busService, ILogger<BusController> logger)
         {
             _busService = busService;
+            _logger = logger;
         }
       //[Authorize]
       [HttpGet]
@@ -30,11 +34,14 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _busService.GetBuses();
+                _logger.LogInformation("Busses listed");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Error Occured,Product not listed");
             }
             return BadRequest(errorMessage);
         }

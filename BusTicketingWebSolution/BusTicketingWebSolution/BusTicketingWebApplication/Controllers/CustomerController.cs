@@ -1,4 +1,5 @@
-﻿using BusTicketingWebApplication.Interfaces;
+﻿using BusModelLibrary;
+using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -15,11 +16,14 @@ namespace BusTicketingWebApplication.Controllers
     {
         private readonly IUserService _userService;
         private readonly IBookingService _bookingService;
+        private readonly ILogger<CustomerController> _logger;
 
-        public CustomerController(IUserService userService, IBookingService bookingService)
+
+        public CustomerController(IUserService userService, IBookingService bookingService, ILogger<CustomerController> logger)
         {
             _userService = userService;
             _bookingService = bookingService;
+            _logger = logger;
         }
         [HttpPost]
         public ActionResult Register(UserDTO viewModel)
@@ -122,11 +126,16 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _userService.GetAllUsers();
+                _logger.LogInformation("All Users listed");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError(" Users not listed");
+
+
             }
             return BadRequest(errorMessage);
 

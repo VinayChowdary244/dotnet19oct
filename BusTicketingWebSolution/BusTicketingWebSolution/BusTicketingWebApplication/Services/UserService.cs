@@ -91,16 +91,11 @@ namespace BusTicketingWebApplication.Services
                             BusList.Add(search[i]);
                         }
                     }
-
                 }
                 if (BusList.Count > 0) return BusList;
                 else throw new NoBusesAvailableException();
-
-
-
             }
             return null;
-
         }
 
         public List<User> GetAllUsers()

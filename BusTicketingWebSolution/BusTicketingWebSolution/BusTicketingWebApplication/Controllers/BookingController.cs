@@ -15,10 +15,13 @@ namespace BusTicketingWebApplication.Controllers
     public class BookingController : Controller
     {
         private readonly IBookingService _bookingService;
+        private readonly ILogger<BookingController> _logger;
 
-        public BookingController(IBookingService bookingService)
+
+        public BookingController(IBookingService bookingService, ILogger<BookingController> logger)
         {
             _bookingService = bookingService;
+            _logger = logger;
         }
 
        // [Authorize(Roles = "Admin")]
@@ -29,6 +32,8 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _bookingService.Add(bookingDTO);
+                _logger.LogInformation("Booking created");
+
                 return Ok(result);
             }
             catch (Exception e)
@@ -46,11 +51,14 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _bookingService.GetBookings();
+                _logger.LogInformation("Bookings listed");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Error Occured,Bookings not listed");
             }
             return BadRequest(errorMessage);
         }
