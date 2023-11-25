@@ -7,11 +7,13 @@ using BusTicketingWebApplication.Models;
 using BusModelLibrary;
 using BusTicketingWebApplication.Models.DTOs;
 using BusTicketingWebApplication.Services;
+using Microsoft.AspNetCore.Cors;
 
 namespace BusTicketingWebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("reactApp")]
     public class BusController : ControllerBase
     {
         private readonly IBusService _busService;

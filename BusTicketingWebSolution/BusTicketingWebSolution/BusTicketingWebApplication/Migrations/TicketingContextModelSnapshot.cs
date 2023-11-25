@@ -70,8 +70,9 @@ namespace BusTicketingWebApplication.Migrations
                     b.Property<string>("Date")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NoOfSeats")
-                        .HasColumnType("int");
+                    b.Property<string>("SelectedSeats")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("TotalFare")
                         .HasColumnType("real");

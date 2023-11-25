@@ -1,6 +1,7 @@
 ﻿using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ namespace BusTicketingWebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("reactApp")]
     public class CustomerController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -92,8 +94,26 @@ namespace BusTicketingWebApplication.Controllers
 
         }
 
+        [HttpPut]
+        [Route("UserProfile")]
+        public ActionResult UserProfile(UserDTO userDTO)
+        {
+            string msg = "";
+            try
+            {
+                var res = _userService.UpdateUser(userDTO);
+                return Ok(res);
+            }
+            catch (Exception e)
+            {
+                msg = e.Message;
+            }
+            return BadRequest(msg);
+        }
 
-        [Authorize(Roles = "Admin")]
+
+
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("GetAllUsers")]
         public ActionResult GetAllUsers()

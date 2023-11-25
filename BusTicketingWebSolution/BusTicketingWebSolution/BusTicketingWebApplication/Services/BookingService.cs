@@ -25,15 +25,15 @@ namespace BusTicketingWebApplication.Services
         public BookingDTO Add(BookingDTO bookingDTO)
         {
             var bus = _busRepository.GetById(bookingDTO.BusId);
-            if (bookingDTO.NoOfSeats <= 0 && bookingDTO.NoOfSeats > 40) throw new InvalidNoOfTicketsEnteredException();
-            if (bookingDTO.NoOfSeats <= bus.AvailableSeats && bus.AvailableSeats > 0) {
+            if (bookingDTO.SelectedSeats.Count <= 0 && bookingDTO.SelectedSeats.Count > 40) throw new InvalidNoOfTicketsEnteredException();
+            if (bookingDTO.SelectedSeats.Count <= bus.AvailableSeats && bus.AvailableSeats > 0) {
                 float Fare = 0;
 
                 if (bus != null)
                 {
                     Fare = bus.Cost;
-                    bus.AvailableSeats -= bookingDTO.NoOfSeats;
-                    bus.BookedSeats += bookingDTO.NoOfSeats;
+                    bus.AvailableSeats -= bookingDTO.SelectedSeats.Count;
+                    bus.BookedSeats += bookingDTO.SelectedSeats.Count;
                     _busRepository.Update(bus);
                 }
                 else
@@ -45,8 +45,8 @@ namespace BusTicketingWebApplication.Services
                     UserId = bookingDTO.UserId,
                     BusId = bookingDTO.BusId,
                     Date = bookingDTO.Date,
-                    NoOfSeats = bookingDTO.NoOfSeats,
-                    TotalFare = bookingDTO.NoOfSeats * Fare
+                    SelectedSeats = bookingDTO.SelectedSeats,
+                    TotalFare = bookingDTO.SelectedSeats.Count * Fare
                 };
                 var result = _bookingRepository.Add(booking);
             }

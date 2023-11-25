@@ -14,5 +14,14 @@ namespace BusTicketingWebApplication.Contexts
         public DbSet<Bus>Buses { get; set; }
         public DbSet<Booking>Bookings { get; set; }
         public DbSet<BusRoute>BusRoutes { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Booking>()
+                .Property(b => b.SelectedSeats)
+                .HasConversion(
+                    v => string.Join(',', v),
+                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()
+                );
+        }
     }
 }

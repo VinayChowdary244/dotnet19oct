@@ -53,6 +53,17 @@ namespace BusTicketingWebApplication
                  });
             });
 
+          
+            #region CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("reactApp", opts =>
+                {
+                    opts.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
+            #endregion
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -93,7 +104,7 @@ namespace BusTicketingWebApplication
             }
             app.UseStaticFiles();
             app.UseRouting();
-
+            app.UseCors("reactApp");
             app.UseAuthentication();
             app.UseAuthorization();
 

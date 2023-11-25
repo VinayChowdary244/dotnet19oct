@@ -17,7 +17,7 @@ namespace BusTicketingWebApplication.Models.DTOs
 
         public string? City { get; set; }
 
-        public int? Pincode { get; set; }
+        public int Pincode { get; set; }
         
     }
 }
