@@ -2275,3 +2275,18 @@ VALUES (@p0, @p1, @p2, @p3, @p4);
 SELECT [BookingId]
 FROM [Bookings]
 WHERE @@ROWCOUNT = 1 AND [BookingId] = scope_identity();
+2023-11-26 14:10:45,368 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5110
+2023-11-26 14:10:45,613 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2023-11-26 14:10:45,621 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2023-11-26 14:10:45,624 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\
+2023-11-26 14:11:21,375 [.NET ThreadPool Worker] WARN Microsoft.EntityFrameworkCore.Model.Validation.?[?] - The property 'Booking.SelectedSeats' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2023-11-26 14:11:21,750 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.24 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2023-11-26 14:11:24,474 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (200ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2023-11-26 14:11:25,165 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Logged in successfully
+2023-11-26 14:12:43,803 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5110
+2023-11-26 14:12:43,996 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2023-11-26 14:12:44,057 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2023-11-26 14:12:44,072 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\

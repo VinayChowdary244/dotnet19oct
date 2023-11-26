@@ -32,13 +32,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _bookingService.Add(bookingDTO);
-                _logger.LogInformation("Booking created");
+                _logger.LogInformation("Booking done");
 
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Booking not done");
+
             }
             return BadRequest(errorMessage);
         }
@@ -72,11 +74,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _bookingService.RemoveBooking(bookingDTO);
+                _logger.LogInformation("Booking deleted");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Booking not deleted");
+
             }
             return BadRequest(errorMessage);
         }

@@ -50,14 +50,14 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _busRouteService.Add(busRoute);
-                _logger.LogInformation("All Bus Route added listed");
+                _logger.LogInformation("Bus Route added");
 
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
-                _logger.LogError("All Bus Route not added listed");
+                _logger.LogError(" Bus Route not added");
 
             }
             return BadRequest(errorMessage);

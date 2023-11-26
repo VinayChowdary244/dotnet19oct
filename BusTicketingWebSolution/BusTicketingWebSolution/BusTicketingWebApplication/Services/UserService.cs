@@ -149,15 +149,15 @@ namespace BusTicketingWebApplication.Services
         public UserDTO UpdateUser(UserDTO userDTO)
         {
             var userData = _userrepository.GetById(userDTO.UserName);
-            userData.UserName = userDTO.UserName;
-
-            userData.Role = userDTO.Role;
-            userData.Email = userDTO.Email;
-            userData.City = userDTO.City;
-            userData.Phone = userDTO.Phone;
-            userData.Pincode = userDTO.Pincode;
+           
             if (userData != null)
             {
+                userData.UserName = userDTO.UserName;
+                userData.Role = userDTO.Role;
+                userData.Email = userDTO.Email;
+                userData.City = userDTO.City;
+                userData.Phone = userDTO.Phone;
+                userData.Pincode = userDTO.Pincode;
                 var res = _userrepository.Update(userData);
                 if (res != null)
                 {

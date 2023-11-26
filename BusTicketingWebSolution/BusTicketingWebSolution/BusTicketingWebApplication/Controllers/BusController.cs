@@ -53,11 +53,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _busService.Add(bus);
+                _logger.LogInformation("Bus added");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Bus not added");
+
             }
             return BadRequest(errorMessage);
         }
@@ -72,11 +76,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _busService.RemoveBus(busIdDTO);
+                _logger.LogInformation("Bus deleted");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Bus not deleted");
+
             }
             return BadRequest(errorMessage);
         }
@@ -90,11 +98,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _busService.UpdateBus( busDTO);
+                _logger.LogInformation("Bus updated");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Bus not updated");
+
             }
             return BadRequest(errorMessage);
         }

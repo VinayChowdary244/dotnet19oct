@@ -45,14 +45,15 @@ namespace BusTicketingWebApplication.Services
         public BusDTO UpdateBus(BusDTO busDTO)
         {
             var busData = _busRepository.GetById(busDTO.Id);
-            busData.Type = busDTO.Type;
-            busData.AvailableSeats = busDTO.AvailableSeats;
-            busData.BookedSeats = busDTO.BookedSeats;
-            busData.Cost = busDTO.Cost;
-            busData.Start = busDTO.Start;
-            busData.End = busDTO.End;
+           
             if (busData != null)
             {
+                busData.Type = busDTO.Type;
+                busData.AvailableSeats = busDTO.AvailableSeats;
+                busData.BookedSeats = busDTO.BookedSeats;
+                busData.Cost = busDTO.Cost;
+                busData.Start = busDTO.Start;
+                busData.End = busDTO.End;
                 var result = _busRepository.Update(busData);
                 if (result != null)
                 {

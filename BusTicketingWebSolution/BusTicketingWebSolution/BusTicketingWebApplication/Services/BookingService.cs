@@ -1,9 +1,7 @@
-﻿using BusModelLibrary;
-using BusTicketingWebApplication.Exceptions;
+﻿using BusTicketingWebApplication.Exceptions;
 using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models;
 using BusTicketingWebApplication.Models.DTOs;
-using BusTicketingWebApplication.Repositories;
 
 namespace BusTicketingWebApplication.Services
 {
@@ -11,7 +9,6 @@ namespace BusTicketingWebApplication.Services
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly IBusRepository _busRepository;
-
         private readonly IUserRepository _userRepository;
 
 
@@ -26,9 +23,9 @@ namespace BusTicketingWebApplication.Services
         {
             var bus = _busRepository.GetById(bookingDTO.BusId);
             if (bookingDTO.SelectedSeats.Count <= 0 && bookingDTO.SelectedSeats.Count > 40) throw new InvalidNoOfTicketsEnteredException();
-            if (bookingDTO.SelectedSeats.Count <= bus.AvailableSeats && bus.AvailableSeats > 0) {
+            if (bookingDTO.SelectedSeats.Count <= bus.AvailableSeats && bus.AvailableSeats > 0)
+            {
                 float Fare = 0;
-
                 if (bus != null)
                 {
                     Fare = bus.Cost;
@@ -54,10 +51,6 @@ namespace BusTicketingWebApplication.Services
             {
                 throw new NotEnoughBusSeatsAvailableException();
             }
-           
-            
-
-           
             return bookingDTO;
         }
 
@@ -71,7 +64,7 @@ namespace BusTicketingWebApplication.Services
             throw new NoBookingsAvailableException();
         }
 
-        
+
 
         public BookingDTO RemoveBooking(BookingDTO bookingDTO)
         {

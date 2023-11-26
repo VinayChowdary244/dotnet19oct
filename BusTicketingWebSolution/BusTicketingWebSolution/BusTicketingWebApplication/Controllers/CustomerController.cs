@@ -34,6 +34,8 @@ namespace BusTicketingWebApplication.Controllers
                 var user = _userService.Register(viewModel);
                 if (user != null)
                 {
+                    _logger.LogInformation("Register done.");
+
                     return Ok(user);
                 }
             }
@@ -57,6 +59,7 @@ namespace BusTicketingWebApplication.Controllers
             var result = _userService.Login(userDTO);
             if (result != null)
             {
+                _logger.LogInformation("Logged in successfully");
                 return Ok(result);
             }
             return Unauthorized("Invalid username or password");
@@ -70,11 +73,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _userService.BusSearch(busDTO);
+                _logger.LogInformation("Busses listed");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Busses not listed");
+
             }
             return BadRequest(errorMessage);
 
@@ -88,11 +95,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _userService.GetBookingHistory(userIdDTO);
+                _logger.LogInformation("Booking history listed");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogInformation("Booking history not listed.");
+
             }
             return BadRequest(errorMessage);
 
@@ -106,11 +117,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var res = _userService.UpdateUser(userDTO);
+                _logger.LogInformation("Profile updated");
+
                 return Ok(res);
             }
             catch (Exception e)
             {
                 msg = e.Message;
+                _logger.LogError("Profile not updated");
+
             }
             return BadRequest(msg);
         }
@@ -150,11 +165,15 @@ namespace BusTicketingWebApplication.Controllers
             try
             {
                 var result = _userService.BookSeat(busDTO);
+                _logger.LogInformation("Booking done");
+
                 return Ok(result);
             }
             catch (Exception e)
             {
                 errorMessage = e.Message;
+                _logger.LogError("Booking not done");
+
             }
             return BadRequest(errorMessage);
 
