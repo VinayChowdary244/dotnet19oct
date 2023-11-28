@@ -1,42 +1,57 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
 
-import AddProduct from './Components/AddProduct';
-import Products from './Components/Products';
-import BusSeatSelection from './Components/SeatSelection';
-import { useState } from "react";
-import RegisterUser from './Components/RegisterUser';
+
+import Cart from './Components/Cart';
+import ProductListing from './Components/ProductListing';
+
+
+
+
 
 function App() {
-  //var scores = [90,100,56,89,73];
+  var products =[
+    {
+       "id":101,
+       "name":"Pencil",
+       "quantity":10,
+       "price":5
+   },
+   {
+       "id":102,
+       "name":"Pen",
+       "quantity":3,
+       "price":25
+   },
+   {
+       "id":103,
+       "name":"Eraser",
+       "quantity":7,
+       "price":3
+   }
+]
+var [cart,setCart]=useState([]);
+var addToCart=(pid)=>{
+  setCart([...cart,pid])
+  console.log(cart)
+  
+}
+
   return (
-    <div className="App">
-          {/* <div className="container text-center">
-          ------------------------------------------------------ Add and view products
+    <div>
+    <div className="container">
         <div className="row">
-          <div className="col">
-            <Products/> 
+          <div class="col">
+           <ProductListing products={products} onAddClick={addToCart}/>
           </div>
           <div className="col">
-            <AddProduct/>
+           <Cart cartItems={cart} />
           </div>
         </div>
-        -----------------------------
-    </div>
-       <div>
-          
-      </div> 
-      <br/> <br/> <br/> <br/>
-      <div>
-        <BusSeatSelection/>
-      </div> */}
-      <div><RegisterUser/></div>
+      </div>
     </div>
   );
 }
-
-
-
-
 
 export default App;
