@@ -56,6 +56,26 @@ namespace BusTicketingWebApplication.Migrations
                     b.ToTable("Buses");
                 });
 
+            modelBuilder.Entity("BusTicketingWebApplication.Models.BookedSeat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("BookedSeats")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BookedSeats");
+                });
+
             modelBuilder.Entity("BusTicketingWebApplication.Models.Booking", b =>
                 {
                     b.Property<int>("BookingId")

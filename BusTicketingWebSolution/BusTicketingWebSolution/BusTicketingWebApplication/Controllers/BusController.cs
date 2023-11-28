@@ -89,7 +89,9 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
 
-      //  [Authorize(Roles = "Admin")]
+        
+
+        //  [Authorize(Roles = "Admin")]
         [Route("UpdateBus")]
         [HttpPut]
         public ActionResult UpdateBus(BusDTO busDTO)

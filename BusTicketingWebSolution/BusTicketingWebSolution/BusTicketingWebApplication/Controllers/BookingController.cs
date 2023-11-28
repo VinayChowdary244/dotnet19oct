@@ -15,16 +15,18 @@ namespace BusTicketingWebApplication.Controllers
     public class BookingController : Controller
     {
         private readonly IBookingService _bookingService;
+        private readonly IBookedSeatService _bookedSeatService;
         private readonly ILogger<BookingController> _logger;
 
 
-        public BookingController(IBookingService bookingService, ILogger<BookingController> logger)
+        public BookingController(IBookingService bookingService, ILogger<BookingController> logger, IBookedSeatService bookedSeatService)
         {
             _bookingService = bookingService;
             _logger = logger;
+            _bookedSeatService = bookedSeatService;
         }
 
-       // [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Create(BookingDTO bookingDTO)
         {
@@ -45,7 +47,28 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
 
-       // [Authorize]
+        [HttpPost]
+        [Route("BookedSeatsList")]
+        public ActionResult BookedSeatsList(BusIdDTO busIdDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _bookedSeatService.GetSeatsById(busIdDTO);
+                _logger.LogInformation("Booking done");
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+                _logger.LogError("Booking not done");
+
+            }
+            return BadRequest(errorMessage);
+        }
+
+        // [Authorize]
         [HttpGet]
         public ActionResult GetAllBookings()
         {

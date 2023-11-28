@@ -1,10 +1,14 @@
-
+                   
 import { useState } from 'react';
 import './App.css';
-
-
-import Cart from './Components/Cart';
 import ProductListing from './Components/ProductListing';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import RegisterUser from './Components/RegisterUser';
+import Products from './Components/Products';
+import Protected from './Protected';
+import Menu from './Components/Menu';
+import Cart from './Components/Cart';
 
 
 
@@ -37,19 +41,28 @@ var addToCart=(pid)=>{
   console.log(cart)
   
 }
+var [IsLoggedIn,setLoggedIn]=useState(false);
+var changeState=()=>{
+  var token = localStorage.getItem("token");
+  if(token){
+    setLoggedIn(true);
+  }
+}
 
   return (
     <div>
-    <div className="container">
-        <div className="row">
-          <div class="col">
-           <ProductListing products={products} onAddClick={addToCart}/>
-          </div>
-          <div className="col">
-           <Cart cartItems={cart} />
-          </div>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Menu/>
+        <Routes>
+          <Route path='/' element={<RegisterUser/>}/>
+          <Route path="products" element={<ProductListing products={products}/>}/>
+          <Route path="shop" element={<Protected>
+              <Products/>
+            </Protected>
+          }/>
+          <Route path="cart" element={<Cart/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

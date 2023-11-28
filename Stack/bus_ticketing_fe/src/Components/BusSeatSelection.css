@@ -4,6 +4,19 @@
   margin: 20px;
   border-radius: 8px;
 }
+.booked {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
+}
+/* Add this style for booked seats */
+.seat.booked {
+  background-color: #ff6464; /* Red color for booked seats */
+  color: #fff;
+  border: 1px solid #ff4646;
+  cursor: not-allowed; /* Change cursor to indicate that the seat is not selectable */
+}
+
 
 .bus-seats {
   display: flex;

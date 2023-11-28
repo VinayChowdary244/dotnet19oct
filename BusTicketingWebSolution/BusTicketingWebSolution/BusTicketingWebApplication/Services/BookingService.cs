@@ -2,6 +2,7 @@
 using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models;
 using BusTicketingWebApplication.Models.DTOs;
+using System.Linq;
 
 namespace BusTicketingWebApplication.Services
 {
@@ -10,14 +11,15 @@ namespace BusTicketingWebApplication.Services
         private readonly IBookingRepository _bookingRepository;
         private readonly IBusRepository _busRepository;
         private readonly IUserRepository _userRepository;
+        private readonly IBookedSeatRepository _bookedSeatRepository;
 
 
-        public BookingService(IBookingRepository bookingRepository, IBusRepository busRepository, IUserRepository userRepository)
+        public BookingService(IBookingRepository bookingRepository, IBusRepository busRepository, IUserRepository userRepository, IBookedSeatRepository bookedSeatRepository)
         {
             _bookingRepository = bookingRepository;
             _userRepository = userRepository;
             _busRepository = busRepository;
-
+            _bookedSeatRepository = bookedSeatRepository;
         }
         public BookingDTO Add(BookingDTO bookingDTO)
         {
@@ -32,6 +34,29 @@ namespace BusTicketingWebApplication.Services
                     bus.AvailableSeats -= bookingDTO.SelectedSeats.Count;
                     bus.BookedSeats += bookingDTO.SelectedSeats.Count;
                     _busRepository.Update(bus);
+                    if (bookingDTO.SelectedSeats != null)
+                    {
+                        var bookedBusSeats = _bookedSeatRepository.GetById(bookingDTO.BusId);
+                        if (bookedBusSeats == null)
+                        {
+                            BookedSeat bookedSeat = new BookedSeat();
+                            bookedSeat.BusId = bus.Id;
+                            bookedSeat.BookedSeats = bookingDTO.SelectedSeats;
+                            _bookedSeatRepository.Add(bookedSeat);
+                        }
+                        else
+                        {
+
+                            //bookedBusSeats.BookedSeats  = new List<int>(bookedBusSeats.BookedSeats.Count +
+                            //      bookingDTO.SelectedSeats.Count );
+
+                            bookedBusSeats.BookedSeats.AddRange(bookingDTO.SelectedSeats);
+                           
+                           // bookedBusSeats.BookedSeats= bookedBusSeats.BookedSeats.Concat(bookingDTO.SelectedSeats).ToList;
+
+                            _bookedSeatRepository.Update(bookedBusSeats);
+                        }
+                    }
                 }
                 else
                 {

@@ -87,11 +87,14 @@ namespace BusTicketingWebApplication
             builder.Services.AddScoped<IBusRepository, BusRepository>();
             builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();
             builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+            builder.Services.AddScoped<IBookedSeatRepository, BookedSeatRepository>();
+
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IBusService, BusService>();
             builder.Services.AddScoped<IBusRouteService, BusRouteService>();
             builder.Services.AddScoped<IBookingService, BookingService>();
+            builder.Services.AddScoped<IBookedSeatService,BookedSeatService>();
 
             var app = builder.Build();
 

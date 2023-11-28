@@ -14,6 +14,7 @@ namespace BusTicketingWebApplication.Contexts
         public DbSet<Bus>Buses { get; set; }
         public DbSet<Booking>Bookings { get; set; }
         public DbSet<BusRoute>BusRoutes { get; set; }
+        public DbSet<BookedSeat> BookedSeats { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Booking>()
@@ -22,6 +23,13 @@ namespace BusTicketingWebApplication.Contexts
                     v => string.Join(',', v),
                     v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()
                 );
+
+            modelBuilder.Entity<BookedSeat>()
+               .Property(b => b.BookedSeats)
+               .HasConversion(
+                   v => string.Join(',', v),
+                   v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()
+               );
         }
     }
 }
