@@ -5,6 +5,7 @@ import RegisterUser from './Components/RegisterUser';
 import GetBus from './Components/GetBusses';
 import UserLogin from './Components/UserLogin';
 import BusSeatSelection from './Components/BusSeatSelection';
+import SearchBus from './Components/SearchBus';
 
 function App() {
   return (
@@ -20,9 +21,19 @@ function App() {
 
 
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col">
             <BusSeatSelection/> 
+          </div>
+          <div className="col">
+            
+          </div>
+        </div> */}
+
+        
+        <div className="row">
+          <div className="col">
+            <SearchBus/> 
           </div>
           <div className="col">
             

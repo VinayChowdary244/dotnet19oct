@@ -67,12 +67,12 @@ namespace BusTicketingWebApplication.Controllers
 
         [HttpPost]
         [Route("BusSearch")]
-        public ActionResult BusSearch(BusDTO busDTO) 
+        public ActionResult BusSearch(BusSearchDTO busSearchDTO) 
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _userService.BusSearch(busDTO);
+                var result = _userService.BusSearch( busSearchDTO);
                 _logger.LogInformation("Busses listed");
 
                 return Ok(result);

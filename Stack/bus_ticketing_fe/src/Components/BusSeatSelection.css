@@ -1,5 +1,5 @@
 .seat-selection-container {
-  border: 1px solid #ccc;
+  border: 1px solid #422424;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
@@ -7,11 +7,13 @@
 .booked {
   background-color: red;
   color: white;
+  padding: 5px;
   cursor: not-allowed;
 }
-/* Add this style for booked seats */
+
+
 .seat.booked {
-  background-color: #ff6464; /* Red color for booked seats */
+  background-color: #f93838; /* Red color for booked seats */
   color: #fff;
   border: 1px solid #ff4646;
   cursor: not-allowed; /* Change cursor to indicate that the seat is not selectable */
@@ -37,14 +39,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #795f5f;
   cursor: pointer;
 }
 
 .selected {
   background-color: #3498db;
   color: #fff;
+  padding: 5px;
   border: 1px solid #2980b9;
+}
+
+.available {
+  background-color: #fff;
+
+  padding: 5px;
 }
 
 .total-price-and-button-container {
@@ -54,6 +63,26 @@
   text-align: center;
   margin-top: 10px;
 }
+
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border: 1px solid #422424;
+}
+
+
+.seat:hover {
+  filter: brightness(1.5);
+}
+
 
 .total-price-and-button {
   display: flex;

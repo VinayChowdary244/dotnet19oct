@@ -11,6 +11,7 @@ const BusSeatSelection = () => {
   const [bookedSeats, setBookedSeats] = useState([]);
   const [isBooked, setIsBooked] = useState(false);
 
+
   useEffect(() => {
     fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
       method: 'POST',
@@ -18,7 +19,7 @@ const BusSeatSelection = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: 3, // Replace with the actual bus ID you want to use
+        id: 4, 
       }),
     })
       .then((response) => {
@@ -28,12 +29,11 @@ const BusSeatSelection = () => {
         return response.json();
       })
       .then((data) => {
-        console.log('Server Response:', data); // Log the entire response
-        setBookedSeats(data.bookedSeats || []); // Ensure a default empty array if data.bookedSeats is undefined
+        console.log('Server Response:', data);
+        setBookedSeats(data || []);
       })
       .catch((error) => console.error('Error fetching booked seats:', error));
   }, []);
-  
 
   // Function to check if a seat is booked
   const isSeatBooked = (seatNumber) => {
@@ -53,12 +53,39 @@ const BusSeatSelection = () => {
   };
 
   // Handle booking
-  const handleBookClick = () => {
-    // Perform any necessary booking logic
-    // For example, you can update a backend database or show a confirmation message
-    setIsBooked(true);
-    alert('Booking successful!');
-  };
+  
+const handleBookClick = () => {
+  // booking logic
+
+  fetch('http://localhost:5110/api/Booking', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      busId: 4, 
+      userId: 1, 
+      selectedSeats: selectedSeats,
+      date: '2023-12-01', 
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Handle the response from the server, if needed
+      console.log('Booking response from server:', data);
+
+      // You may want to reset the selected seats state or perform other actions here
+      setSelectedSeats([]);
+      setIsBooked(true);
+      alert('Booking successful!');
+    })
+    .catch((error) => console.error('Error booking seats:', error));
+};
 
   // Calculate total price based on selected seats
   const calculateTotalPrice = () => {
@@ -68,6 +95,11 @@ const BusSeatSelection = () => {
   return (
     <div className="seat-selection-container">
       <h2>Bus Seat Selection</h2>
+      <div className="legend">
+        <div className="legend-item booked">Booked Seat</div>
+        <div className="legend-item selected">Selected Seat</div>
+        <div className="legend-item available">Available Seat</div>
+      </div>
       <div className="bus-seats">
         {[...Array(totalRows)].map((_, rowIndex) => (
           <div key={rowIndex} className="seat-row">
@@ -77,8 +109,8 @@ const BusSeatSelection = () => {
                 <div
                   key={seatNumber}
                   className={`seat ${
-                    selectedSeats.includes(seatNumber) ? 'selected' : ''
-                  } ${isSeatBooked(seatNumber) ? 'booked' : ''}`}
+                    selectedSeats.includes(seatNumber) ? 'selected' : isSeatBooked(seatNumber) ? 'booked' : 'available'
+                  }`}
                   onClick={() => handleSeatClick(seatNumber)}
                 >
                   {seatNumber}
@@ -94,8 +126,8 @@ const BusSeatSelection = () => {
               <div
                 key={seatNumber}
                 className={`seat ${
-                  selectedSeats.includes(seatNumber) ? 'selected' : ''
-                } ${isSeatBooked(seatNumber) ? 'booked' : ''}`}
+                  selectedSeats.includes(seatNumber) ? 'selected' : isSeatBooked(seatNumber) ? 'booked' : 'available'
+                }`}
                 onClick={() => handleSeatClick(seatNumber)}
               >
                 {seatNumber}

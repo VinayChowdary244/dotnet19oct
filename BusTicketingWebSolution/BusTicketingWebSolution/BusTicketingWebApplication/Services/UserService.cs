@@ -75,7 +75,7 @@ namespace BusTicketingWebApplication.Services
             }
             throw new NoBusesAvailableException();
         }
-        public List<Bus> BusSearch(BusDTO busDto)
+        public List<Bus> BusSearch(BusSearchDTO busSearchDto)
         {
             var search = _busrepository.GetAll();
             if (search != null)
@@ -84,9 +84,9 @@ namespace BusTicketingWebApplication.Services
 
                 for (int i = 0; i < search.Count; i++)
                 {
-                    if (search[i].Start == busDto.Start)
+                    if (search[i].Start == busSearchDto.Start)
                     {
-                        if (search[i].End == busDto.End)
+                        if (search[i].End == busSearchDto.End)
                         {
                             BusList.Add(search[i]);
                         }
