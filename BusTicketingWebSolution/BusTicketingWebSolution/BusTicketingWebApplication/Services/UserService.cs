@@ -126,7 +126,7 @@ namespace BusTicketingWebApplication.Services
             }
             return null;
         }
-        public List<Booking> GetBookingHistory(UserIdDTO userIdDTO)
+        public List<Booking> GetBookingHistory(UserNameDTO userNameDTO)
         {
             var booking = _bookingRepository.GetAll();
             if (booking != null)
@@ -134,7 +134,7 @@ namespace BusTicketingWebApplication.Services
                 List<Booking> BookingHistory = new List<Booking>();
                 for (int i = 0;i<booking.Count;i++)
                 {
-                    if (booking[i].UserId == userIdDTO.Id)
+                    if (booking[i].UserName == userNameDTO.UserName)
                     {
                         BookingHistory.Add(booking[i]);
                     }
@@ -146,22 +146,21 @@ namespace BusTicketingWebApplication.Services
         }
 
 
-        public UserDTO UpdateUser(UserDTO userDTO)
+        public UserUpdateDTO UpdateUser(UserUpdateDTO userUpdateDTO)
         {
-            var userData = _userrepository.GetById(userDTO.UserName);
+            var userData = _userrepository.GetById(userUpdateDTO.UserName);
            
             if (userData != null)
             {
-                userData.UserName = userDTO.UserName;
-                userData.Role = userDTO.Role;
-                userData.Email = userDTO.Email;
-                userData.City = userDTO.City;
-                userData.Phone = userDTO.Phone;
-                userData.Pincode = userDTO.Pincode;
+                userData.UserName = userUpdateDTO.UserName;
+                userData.Email = userUpdateDTO.Email;
+                userData.City = userUpdateDTO.City;
+                userData.Phone = userUpdateDTO.Phone;
+                userData.Pincode = userUpdateDTO.Pincode;
                 var res = _userrepository.Update(userData);
                 if (res != null)
                 {
-                    return userDTO;
+                    return userUpdateDTO;
                 }
             }
             throw new NoUsersAvailableException();

@@ -53,7 +53,7 @@ namespace BusTicketingWebApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Buses");
+                    b.ToTable("Busses");
                 });
 
             modelBuilder.Entity("BusTicketingWebApplication.Models.BookedSeat", b =>
@@ -97,8 +97,9 @@ namespace BusTicketingWebApplication.Migrations
                     b.Property<float>("TotalFare")
                         .HasColumnType("real");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BookingId");
 

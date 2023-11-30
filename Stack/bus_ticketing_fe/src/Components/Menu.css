@@ -1,0 +1,48 @@
+/* Basic Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Main Navigation Styling */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 15px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #443636;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  .nav-link-register {
+    text-decoration: none;
+    color: #231818;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-left: 1000px;
+  }
+  
+  .nav-link:hover {
+    color: #7e7171; /* Change the color on hover */
+  }
+  

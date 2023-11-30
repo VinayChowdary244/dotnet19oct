@@ -12,6 +12,7 @@ namespace BusTicketingWebApplication.Services
         private readonly IBusRepository _busRepository;
         private readonly IUserRepository _userRepository;
         private readonly IBookedSeatRepository _bookedSeatRepository;
+        
 
 
         public BookingService(IBookingRepository bookingRepository, IBusRepository busRepository, IUserRepository userRepository, IBookedSeatRepository bookedSeatRepository)
@@ -64,7 +65,7 @@ namespace BusTicketingWebApplication.Services
                 }
                 Booking booking = new Booking
                 {
-                    UserId = bookingDTO.UserId,
+                    UserName = bookingDTO.UserName,
                     BusId = bookingDTO.BusId,
                     Date = bookingDTO.Date,
                     SelectedSeats = bookingDTO.SelectedSeats,

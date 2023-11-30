@@ -89,12 +89,12 @@ namespace BusTicketingWebApplication.Controllers
 
         [HttpPost]
         [Route("UserBookingHistory")]
-        public ActionResult BookingHistory(UserIdDTO userIdDTO )
+        public ActionResult BookingHistory(UserNameDTO userNameDTO )
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _userService.GetBookingHistory(userIdDTO);
+                var result = _userService.GetBookingHistory(userNameDTO);
                 _logger.LogInformation("Booking history listed");
 
                 return Ok(result);
@@ -111,12 +111,12 @@ namespace BusTicketingWebApplication.Controllers
 
         [HttpPut]
         [Route("UserProfile")]
-        public ActionResult UserProfile(UserDTO userDTO)
+        public ActionResult UserProfile(UserUpdateDTO userUpdateDTO)
         {
             string msg = "";
             try
             {
-                var res = _userService.UpdateUser(userDTO);
+                var res = _userService.UpdateUser(userUpdateDTO);
                 _logger.LogInformation("Profile updated");
 
                 return Ok(res);

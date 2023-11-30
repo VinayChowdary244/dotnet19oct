@@ -9,12 +9,14 @@ function SearchBus() {
   const [startError, setStartError] = useState("");
   const [searchError, setSearchError] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [searchPerformed, setSearchPerformed] = useState(false);
 
   const checkUserData = () => {
     if (start === "") {
       setStartError("Start location cannot be empty");
       return false;
     }
+    
 
     if (end === "") {
       setStartError("End location cannot be empty");
@@ -50,6 +52,7 @@ function SearchBus() {
       .then((response) => {
         console.log(response.data);
         setSearchResults(response.data);
+        setSearchPerformed(true);
       })
       .catch((err) => {
         console.error(err);
@@ -59,40 +62,42 @@ function SearchBus() {
 
   return (
     <div>
-      <form className="StartEndInput">
-        <label className="Start_End_Form">From</label>
-        <input
-          type="text"
-          className="form-control"
-          value={start}
-          onChange={(e) => setStart(e.target.value)}
-        />
-        {startError && <p className="error-message">{startError}</p>}
+      {!searchPerformed && (
+        <form className="StartEndInput">
+          <label className="Start_End_Form">From</label>
+          <input
+            type="text"
+            className="form-control"
+            value={start}
+            onChange={(e) => setStart(e.target.value)}
+          />
+          {startError && <p className="error-message">{startError}</p>}
 
-        <label className="Start_End_Form">To</label>
-        <input
-          type="text"
-          className="form-control"
-          value={end}
-          onChange={(e) => setEnd(e.target.value)}
-        />
-        {searchError && <p className="error-message">{searchError}</p>}
+          <label className="Start_End_Form">To</label>
+          <input
+            type="text"
+            className="form-control"
+            value={end}
+            onChange={(e) => setEnd(e.target.value)}
+          />
+          {searchError && <p className="error-message">{searchError}</p>}
 
-        <label className="Start_End_Form">Date</label>
-        <input
-          type="date"
-          className="form-control"
-          value={selectedDate}
-          onChange={(e) => setSelectedDate(e.target.value)}
-        />
-        {searchError && <p className="error-message">{searchError}</p>}
+          <label className="Start_End_Form">Date</label>
+          <input
+            type="date"
+            className="form-control"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+          />
+          {searchError && <p className="error-message">{searchError}</p>}
 
-        <button className="btn btn-primary button" onClick={handleSearch}>
-          Search Bus
-        </button>
-      </form>
+          <button className="btn btn-primary button" onClick={handleSearch}>
+            Search Bus
+          </button>
+        </form>
+      )}
 
-      {searchResults.length > 0 && (
+      {searchPerformed && (
         <div>
           <h2>Search Results</h2>
           <table className="table">
@@ -115,7 +120,7 @@ function SearchBus() {
                   <td>{bus.type}</td>
                   <td>{bus.start}</td>
                   <td>{bus.end}</td>
-                  <td>{bus.date}</td>
+                  <td>{selectedDate}</td>
                   <td>{bus.cost}</td>
                 </tr>
               ))}

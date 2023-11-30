@@ -15,7 +15,7 @@ namespace BusTicketingWebApplication.Repositories
 
         public Bus Add(Bus item)
         {
-            _context.Buses.Add(item);
+            _context.Busses.Add(item);
             _context.SaveChanges();
             return item;
         }
@@ -25,7 +25,7 @@ namespace BusTicketingWebApplication.Repositories
             var bus = GetById(key);
             if (bus != null)
             {
-                _context.Buses.Remove(bus);
+                _context.Busses.Remove(bus);
                 _context.SaveChanges();
                 return bus;
             }
@@ -34,17 +34,17 @@ namespace BusTicketingWebApplication.Repositories
 
         public Bus GetById(int key)
         {
-            var cus=_context.Buses.SingleOrDefault(x => x.Id == key);
+            var cus=_context.Busses.SingleOrDefault(x => x.Id == key);
             return cus;
         }
 
         public IList<Bus> GetAll()
         {
-            if (_context.Buses.Count()==0)
+            if (_context.Busses.Count()==0)
             {
                 return null;
             }
-            return _context.Buses.ToList();
+            return _context.Busses.ToList();
 
         }
 

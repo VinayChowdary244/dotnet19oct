@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './BusSeatSelection.css';
+import { useLocation } from 'react-router-dom';
 
 const BusSeatSelection = () => {
   const totalRows = 8;
   const seatsPerRow = 4;
   const seatPrice = 200; // Set the price per seat
-
   // State for selected seats and booked seats
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [bookedSeats, setBookedSeats] = useState([]);
   const [isBooked, setIsBooked] = useState(false);
-
+  const location = useLocation();
+  //const thisBus = new URLSearchParams(location.search).get('id');
+  //const thisDate = new URLSearchParams(location.search).get('selectedDate');
+  //const { thisBus, thisDate } = location.state;
+  const thisBus = localStorage.getItem('thisBus');
+  const thisDate = localStorage.getItem('thisDate');
+  
 
   useEffect(() => {
     fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
@@ -19,7 +25,7 @@ const BusSeatSelection = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: 4, 
+        id: thisBus, 
       }),
     })
       .then((response) => {
@@ -62,17 +68,20 @@ const handleBookClick = () => {
     headers: {
       'Content-Type': 'application/json',
     },
+    
     body: JSON.stringify({
-      busId: 4, 
-      userId: 1, 
+      busId:thisBus, 
+      userName: "vinay", 
       selectedSeats: selectedSeats,
-      date: '2023-12-01', 
+      date: thisDate, 
     }),
   })
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+            
+
       return response.json();
     })
     .then((data) => {
