@@ -16,7 +16,8 @@ const BusSeatSelection = () => {
   //const { thisBus, thisDate } = location.state;
   const thisBus = localStorage.getItem('thisBus');
   const thisDate = localStorage.getItem('thisDate');
-  
+  const thisUserName = localStorage.getItem('thisUserName');
+  const thisToken = localStorage.getItem('thisToken');
 
   useEffect(() => {
     fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
@@ -71,7 +72,7 @@ const handleBookClick = () => {
     
     body: JSON.stringify({
       busId:thisBus, 
-      userName: "vinay", 
+      userName: thisUserName, 
       selectedSeats: selectedSeats,
       date: thisDate, 
     }),

@@ -8,6 +8,8 @@ body, ul, li {
   /* Main Navigation Styling */
   .navbar {
     background-color: #333;
+    background-color: rgba(51, 51, 51, 0.5); /* Transparent black background */
+
     color: #fff;
     display: flex;
     justify-content: space-between;

@@ -24,7 +24,8 @@ function RedBus() {
     return true;
   };
 
-  const swapLocations = () => {
+  const swapLocations = (event) => {
+    event.preventDefault();
     const temp = fromLocation;
     setFromLocation(toLocation);
     setToLocation(temp);
@@ -37,8 +38,8 @@ function RedBus() {
     setThisDate(selectedDate);
     console.log(thisBus,thisDate);
     localStorage.setItem('thisBus', id);
-localStorage.setItem('thisDate', selectedDate);
-
+    localStorage.setItem('thisDate', selectedDate);
+    
 
     // Additional logic for booking if needed
     // ...

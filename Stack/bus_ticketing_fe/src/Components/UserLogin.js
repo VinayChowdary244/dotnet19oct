@@ -6,6 +6,8 @@ function UserLogin(){
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     const [role,setRole] = useState("");
+    const [thisUserName, setThisUserName] = useState(null);
+    const [thisToken, setThisToken] = useState(null);
     var [usernameError,setUsernameError]=useState("");
     var checkUSerData = ()=>{
         if(username=='')
@@ -33,8 +35,13 @@ function UserLogin(){
             role:	role,
             password:password
     })
+    
     .then((userData)=>{
         console.log(userData)
+        localStorage.setItem('thisUserName', username);
+        //localStorage.setItem('thisToken',userData.data); have to work on this.
+        
+        
     })
     .catch((err)=>{
         console.log(err)

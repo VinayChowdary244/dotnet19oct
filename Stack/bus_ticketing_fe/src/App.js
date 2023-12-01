@@ -120,6 +120,8 @@ var bookSeat=(bNo)=>{
           <Route path="RedBus" element={<RedBus/>}/>
           <Route path="LoginUser" element={<UserLogin/>}/>
           <Route path="RegisterUser" element={<RegisterUser/>}/>
+          <Route path="RegisterUser" element={<RegisterUser/>}/>
+
         </Routes>
       </BrowserRouter> 
 
