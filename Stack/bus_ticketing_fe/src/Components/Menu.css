@@ -32,7 +32,7 @@ body, ul, li {
   
   .nav-link {
     text-decoration: none;
-    color: #443636;
+    color: rgb(20, 17, 17);
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -48,3 +48,29 @@ body, ul, li {
     color: #7e7171; /* Change the color on hover */
   }
   
+
+  /* Menu.css */
+
+/* Target the "Register/Login" link by its unique class */
+.register-login-item {
+  margin-left: auto; /* Pushes the "Register/Login" link to the right */
+  margin-right: 15px; /* Adjust the margin as needed */
+}
+
+/* If you want to align vertically in the center, you can add the following */
+/* Menu.css */
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right side */
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Ensure the navbar height is 100% */
+}
+
+.navbar-nav li {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.icon {
+  margin-right: 5px; /* Adjust the margin as needed */
+}

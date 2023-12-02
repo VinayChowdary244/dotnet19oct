@@ -1,47 +1,23 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import AddBus from './Components/Addbus';
 import RegisterUser from './Components/RegisterUser';
-import GetBus from './Components/GetBusses';
 import UserLogin from './Components/UserLogin';
 import BusSeatSelection from './Components/BusSeatSelection';
-import SearchBus from './Components/SearchBus';
-//import { Route, Router } from 'react-router-dom';
-import SearchForm from './Components/SearchForm';
-import SearchResults from './Components/SearchResults';
-
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import UpdateUser from './Components/UpdateUser';
 import Menu from './Components/Menu';
-import BusListing from './Components/BusListing';
 import RedBus from './Components/redBus';
+import Buses from './Components/Busses';
+import UserHistory from './Components/UserHistory';
+import Users from './Components/Users';
+import BookingList from './Components/BookingList';
 
 
 
 
 
 function App() {
-  var buses =[
-    {
-       "id":101,
-       "type":"A/c",
-       "seatNo":10,
-       "cost":500
-   },
-   {
-      "id":102,
-      "type":"Non-A/c",
-      "seatNo":2,
-      "cost":800
-   },
-   {
-      "id":103,
-      "type":"Super-Deluxe",
-      "seatNo":8,
-      "cost":700
-   }
-]
+ 
 var [seat,setSeat]=useState([]);
 var bookSeat=(bNo)=>{
   setSeat([...seat,bNo])
@@ -111,16 +87,20 @@ var bookSeat=(bNo)=>{
         
 
           <Route path='/' element={<RegisterUser/>}/>
-          <Route path="Buses" element={<BusListing buses={buses}/>}/>
+          <Route path="Buses" element={<Buses/>}/>
           
           <Route path="Seat" element={<seat/>}/>
           <Route path="BusSeatSelection" element={<BusSeatSelection/>}/>
           <Route path="UpdateUser" element={<UpdateUser/>}/>
-          <Route path="SearchBus" element={<SearchBus/>}/>
           <Route path="RedBus" element={<RedBus/>}/>
           <Route path="LoginUser" element={<UserLogin/>}/>
           <Route path="RegisterUser" element={<RegisterUser/>}/>
-          <Route path="RegisterUser" element={<RegisterUser/>}/>
+          <Route path="UserHistory" element={<UserHistory/>}/>
+
+          <Route path="Users" element={<Users/>}/>
+
+          <Route path="BookingList" element={<BookingList/>}/>
+
 
         </Routes>
       </BrowserRouter> 

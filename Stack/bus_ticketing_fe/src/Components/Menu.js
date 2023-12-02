@@ -16,15 +16,21 @@ function Menu(){
       <li className="nav-item">
         <Link className="nav-link" to="/updateUser" >UpdateUserDetails</Link>
       </li>
-     
+      <li className="nav-item">
+        <Link className="nav-link" to="/bookingList" >Bookings</Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/users" >Users</Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/userHistory" >UserHistory</Link>
+      </li>
       
      
       <li className="nav-item">
-        <Link className="nav-link" to="/registerUser" >Register</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/loginUser" >Login</Link>
-      </li>
+      <Link className="nav-link" to="/registerUser">Register</Link>
+</li>
+      
       
 
     </ul>
