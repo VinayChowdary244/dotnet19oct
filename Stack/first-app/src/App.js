@@ -41,13 +41,13 @@ var addToCart=(pid)=>{
   console.log(cart)
   
 }
-var [IsLoggedIn,setLoggedIn]=useState(false);
-var changeState=()=>{
-  var token = localStorage.getItem("token");
-  if(token){
-    setLoggedIn(true);
-  }
-}
+// var [IsLoggedIn,setLoggedIn]=useState(false);
+// var changeState=()=>{
+//   var token = localStorage.getItem("token");
+//   if(token){
+//     setLoggedIn(true);
+//   }
+// }
 
   return (
     <div>

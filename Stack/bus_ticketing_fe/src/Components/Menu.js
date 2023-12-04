@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Menu.css'
 function Menu(){
     return (
@@ -8,28 +8,26 @@ function Menu(){
     <ul className="navbar-nav">
      
     <li className="nav-item">
-        <Link className="nav-link" to="/redBus" >Home</Link>
+        <NavLink className="nav-link" to="/redBus" >Home</NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/buses" >Buses</Link>
+        <NavLink className="nav-link" to="/buses" >Buses</NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/updateUser" >UpdateUserDetails</Link>
+        <NavLink className="nav-link" to="/updateUser" >UpdateUserDetails</NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/bookingList" >Bookings</Link>
+        <NavLink className="nav-link" to="/bookingList" >Bookings</NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/users" >Users</Link>
+        <NavLink className="nav-link" to="/users" >Users</NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/userHistory" >UserHistory</Link>
+        <NavLink className="nav-link" to="/userHistory" >UserHistory</NavLink>
       </li>
-      
-     
       <li className="nav-item">
-      <Link className="nav-link" to="/registerUser">Register</Link>
-</li>
+       <NavLink className="nav-link" to="/registerUser">Register</NavLink>
+      </li>
       
       
 

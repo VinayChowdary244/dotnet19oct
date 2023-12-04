@@ -1,6 +1,6 @@
 /* Add these styles to your CSS file or component */
 
-.registerForm {
+.update {
     max-width: 400px;
     margin: auto;
     padding: 20px;
@@ -18,27 +18,9 @@
     border-radius: 4px;
   }
   
-  .label-input-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .label-input-container label {
-    margin-bottom: 5px;
-  }
-  
   .error-message {
     color: #ff0000;
     margin-bottom: 10px;
-  }
-  
-  .form-select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
   }
   
   .button {
@@ -63,19 +45,5 @@
   .btn-primary:hover,
   .btn-danger:hover {
     filter: brightness(90%);
-  }
-  
-  .signin {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .signin a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .signin a:hover {
-    text-decoration: underline;
   }
   

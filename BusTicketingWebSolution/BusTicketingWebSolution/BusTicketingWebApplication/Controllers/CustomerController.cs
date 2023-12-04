@@ -132,7 +132,7 @@ namespace BusTicketingWebApplication.Controllers
 
 
 
-        // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("GetAllUsers")]
         public ActionResult GetAllUsers()

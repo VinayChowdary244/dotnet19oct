@@ -26,7 +26,7 @@ namespace BusTicketingWebApplication.Controllers
             _busService = busService;
             _logger = logger;
         }
-      //[Authorize]
+      [Authorize]
       [HttpGet]
         public ActionResult GetAllBusses()
         {

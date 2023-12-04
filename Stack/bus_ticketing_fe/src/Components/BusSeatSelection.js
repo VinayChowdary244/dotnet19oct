@@ -17,13 +17,15 @@ const BusSeatSelection = () => {
   const thisBus = localStorage.getItem('thisBus');
   const thisDate = localStorage.getItem('thisDate');
   const thisUserName = localStorage.getItem('thisUserName');
-  const thisToken = localStorage.getItem('thisToken');
 
   useEffect(() => {
     fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Accept':'application/json',
+        'Content-Type':'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem("token")
+
       },
       body: JSON.stringify({
         id: thisBus, 
@@ -67,7 +69,9 @@ const handleBookClick = () => {
   fetch('http://localhost:5110/api/Booking', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Accept':'application/json',
+      'Content-Type':'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem("token")
     },
     
     body: JSON.stringify({
