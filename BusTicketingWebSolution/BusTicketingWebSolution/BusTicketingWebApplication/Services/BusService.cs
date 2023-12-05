@@ -18,6 +18,7 @@ namespace BusTicketingWebApplication.Services
             var result = _busRepository.Add(bus);
             return result;
         }
+        
         public BusIdDTO RemoveBus(BusIdDTO busIdDTO)
         {
             var BusToBeRemoved = _busRepository.GetById(busIdDTO.Id);
@@ -63,6 +64,13 @@ namespace BusTicketingWebApplication.Services
                 }
             }
             return null;
+        }
+
+        public Bus GetBusById(BusIdDTO busIdDTO)
+        {
+
+            var result = _busRepository.GetById(busIdDTO.Id);
+            return result;
         }
     }
 }

@@ -1,70 +1,65 @@
 import { useState } from "react";
 import axios from "axios";
-import './UserHistory.css';
+// import './UserHistory.css';
 
-function UserHistory(){
-    const [userName,setUserName]=useState("");
-    const [userNameError, setUserNameError] = useState("");
-    const [searchError,setSearchError]=useState("");
-    const [searchResults,setSearchResults]=useState("");
-    const [searchPerformed, setSearchPerformed] = useState(false);
+function UserHistory() {
+  const [searchError, setSearchError] = useState("");
+  const [searchResults, setSearchResults] = useState("");
+  const [searchPerformed, setSearchPerformed] = useState(false);
+  const thisUserName = localStorage.getItem("thisUserName");
+  const [userNameError, setUserNameError] = useState("");
 
-    const userData=()=>{
-        if(userName===""){
-        setUserNameError("Please enter your USerName!!");
-        return false;
-            
-        }
-        return true;
+  const userData = () => {
+    if (thisUserName === "") {
+      setUserNameError("Please Login first!");
+      return false;
     }
-    const handleSearch = (event) => {
-        event.preventDefault();
-        setUserNameError("");
-        setSearchError("");
-    
-        const isValidData = userData();
-    
-        if (!isValidData) {
-          setSearchError("Please check your data");
-          return;
-        }
-    
-        axios
-          .post("http://localhost:5110/api/Customer/UserBookingHistory", {
-            userName:userName,
-          })
-          .then((response) => {
-            console.log(response.data);
-            setSearchResults(response.data);
-            setSearchPerformed("true");
+    return true;
+  };
 
-          })
-          .catch((err) => {
-            console.error(err);
-            setSearchError("Error searching user. Please try again.");
-          });
-      };
-      
-      return(
-        <div className="history">
-        <form>
-        <label >UserName</label>
-          <input
-            type="text"
-            className="form-control"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-           {userNameError && <p className="error-message">{userNameError}</p>}
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setUserNameError("");
+    setSearchError("");
 
-          <button className="btn btn-primary button" onClick={handleSearch}>
-            History
-          </button>
-        </form>
-        {searchPerformed && (
-        <div>
-        <h2>Booking History</h2>
-        <table className="table">
+    const isValidData = userData();
+
+    if (!isValidData) {
+      setSearchError("Please check your data");
+      return;
+    }
+
+    axios
+      .post("http://localhost:5110/api/Customer/UserBookingHistory", {
+        userName: thisUserName,
+      })
+      .then((response) => {
+        console.log(response.data);
+        setSearchResults(response.data);
+        setSearchPerformed(true);
+      })
+      .catch((err) => {
+        console.error(err);
+        setSearchError("Error searching user. Please try again.");
+      });
+  };
+
+  return (
+    <div className="history">
+      <br />
+      {!searchPerformed && (
+        <button className="btn btn-primary button" onClick={handleSearch}>
+          Show User history
+        </button>
+      )}
+
+      {searchPerformed && (
+        <center>
+          <div>
+            <br />
+            <h2>Booking History</h2>
+            <br />
+            <table className="table">
           <thead>
             <tr>
             <th>S.No</th>
@@ -90,11 +85,11 @@ function UserHistory(){
              ))}
           </tbody>
         </table>
-      </div>
-        )}
-  </div>
-
-    );
-    
+          </div>
+        </center>
+      )}
+    </div>
+  );
 }
+
 export default UserHistory;

@@ -45,8 +45,28 @@ namespace BusTicketingWebApplication.Controllers
             }
             return BadRequest(errorMessage);
         }
-     // [Authorize(Roles = "Admin")]
-      [HttpPost]
+        [Route("api/[controller]/GetBusById")]
+
+        [HttpPost]
+        public ActionResult GetBusById(BusIdDTO busIdDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _busService.GetBusById( busIdDTO);
+                _logger.LogInformation("Busses listed");
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+                _logger.LogError("Error Occured,Product not listed");
+            }
+            return BadRequest(errorMessage);
+        }
+        // [Authorize(Roles = "Admin")]
+        [HttpPost]
         public ActionResult Create(Bus bus)
         {
             string errorMessage = string.Empty;

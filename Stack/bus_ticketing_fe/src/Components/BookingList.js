@@ -26,11 +26,13 @@ var checkBookings = bookingList.length>0?true:false;
 return(
     <div>
         <h1 className="alert alert-success">Bookings</h1>
+        {!searchPerformed && (
         <button className="btn btn-success" onClick={getBookings}>Get All Bookings</button>
+        )}
         {searchPerformed && (
         <div>
           <center>
-        <h2>Booking History</h2>
+        
         <table className="table">
           <thead>
             <tr>

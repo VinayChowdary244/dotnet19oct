@@ -1,4 +1,5 @@
 ﻿using BusModelLibrary;
+using BusTicketingWebApplication.Models.DTOs;
 
 namespace BusTicketingWebApplication.Interfaces
 {

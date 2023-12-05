@@ -5,19 +5,16 @@ import { useLocation } from 'react-router-dom';
 const BusSeatSelection = () => {
   const totalRows = 8;
   const seatsPerRow = 4;
-  const seatPrice = 200; // Set the price per seat
-  // State for selected seats and booked seats
+  //const seatPrice = 200; 
+  
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [bookedSeats, setBookedSeats] = useState([]);
   const [isBooked, setIsBooked] = useState(false);
   const location = useLocation();
-  //const thisBus = new URLSearchParams(location.search).get('id');
-  //const thisDate = new URLSearchParams(location.search).get('selectedDate');
-  //const { thisBus, thisDate } = location.state;
   const thisBus = localStorage.getItem('thisBus');
   const thisDate = localStorage.getItem('thisDate');
   const thisUserName = localStorage.getItem('thisUserName');
-
+  const price=localStorage.getItem('price');
   useEffect(() => {
     fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
       method: 'POST',
@@ -40,6 +37,7 @@ const BusSeatSelection = () => {
       .then((data) => {
         console.log('Server Response:', data);
         setBookedSeats(data || []);
+        
       })
       .catch((error) => console.error('Error fetching booked seats:', error));
   }, []);
@@ -103,7 +101,7 @@ const handleBookClick = () => {
 
   // Calculate total price based on selected seats
   const calculateTotalPrice = () => {
-    return selectedSeats.length * seatPrice;
+    return selectedSeats.length * price;
   };
 
   return (
@@ -153,7 +151,7 @@ const handleBookClick = () => {
       <div className="total-price-and-button-container">
         <p>Selected Seats: {selectedSeats.join(', ')}</p>
         <div className="total-price-and-button">
-          <p>Total Price: ${calculateTotalPrice()}</p>
+          <p>Total Price: ₹{calculateTotalPrice()}</p>
           <button onClick={handleBookClick}>Book</button>
         </div>
       </div>

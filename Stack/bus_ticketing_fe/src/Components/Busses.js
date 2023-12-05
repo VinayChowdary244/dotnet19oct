@@ -25,7 +25,9 @@ function Buses(){
 return(
     <div>
         <center><h1 className="alert alert-success"><center>Buses</center></h1></center>
+        {!searchPerformed && (
         <center><button className="btn btn-success" onClick={getbuses}>Get All Buses</button></center>
+        )}
         {searchPerformed && (
         <div>
           <center>

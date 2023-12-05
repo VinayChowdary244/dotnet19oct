@@ -14,13 +14,15 @@ namespace BusModelLibrary
         public float Cost { get; set; }
         public int AvailableSeats { get; set; }
         public int BookedSeats { get; set; }
-
-
-
         public string Start { get; set; }
+        public string StartTime { get; set; }
+        public string Duration { get; set; }
         public string End { get; set; }
+        public string DriverName { get; set; }
+        public int DriverAge { get; set; }
+        public string DriverPhone { get; set; }
+        public float DriverRating { get; set; }
 
-        //public ICollection<Ticket> Tickets { get; set; }
 
     }
 }

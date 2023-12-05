@@ -28,12 +28,13 @@ function Users() {
   return (
     <div>
       <h1 className="alert alert-success">Users</h1>
+      {!searchPerformed && (
       <button className="btn btn-success" onClick={getUsers}>Get All Users</button>
-
+      )}
       {searchPerformed && (
         <div>
           <center>
-          <h2>Booking History</h2>
+         
           <table className="table">
             <thead>
               <tr>

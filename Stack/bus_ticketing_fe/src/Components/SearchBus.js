@@ -33,6 +33,7 @@ function SearchBus() {
 
   const handleSearch = (event) => {
     event.preventDefault();
+
     setStartError("");
     setSearchError("");
 
@@ -50,7 +51,9 @@ function SearchBus() {
         date: selectedDate,
       })
       .then((response) => {
+        localStorage.setItem('price',response.data.cost); 
         console.log(response.data);
+
         setSearchResults(response.data);
         setSearchPerformed(true);
       })
