@@ -26,7 +26,7 @@ namespace BusTicketingWebApplication.Controllers
             _busService = busService;
             _logger = logger;
         }
-      [Authorize]
+      [Authorize(Roles = "Admin")]
       [HttpGet]
         public ActionResult GetAllBusses()
         {
@@ -45,7 +45,7 @@ namespace BusTicketingWebApplication.Controllers
             }
             return BadRequest(errorMessage);
         }
-        [Route("api/[controller]/GetBusById")]
+        [Route("GetBusById")]
 
         [HttpPost]
         public ActionResult GetBusById(BusIdDTO busIdDTO)

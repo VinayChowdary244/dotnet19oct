@@ -28,6 +28,9 @@ function Menu(){
       <li className="nav-item">
        <NavLink className="nav-link" to="/registerUser">Register</NavLink>
       </li>
+      <li className="nav-item">
+       <NavLink className="nav-link" to="/busDetails">BusDetails</NavLink>
+      </li>
       
       
 

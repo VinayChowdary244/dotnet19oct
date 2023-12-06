@@ -105,8 +105,9 @@ const handleBookClick = () => {
   };
 
   return (
+    <center>
     <div className="seat-selection-container">
-      <h2>Bus Seat Selection</h2>
+      <h2>Select your seats</h2>
       <div className="legend">
         <div className="legend-item booked">Booked Seat</div>
         <div className="legend-item selected">Selected Seat</div>
@@ -156,6 +157,7 @@ const handleBookClick = () => {
         </div>
       </div>
     </div>
+    </center>
   );
 };
 
