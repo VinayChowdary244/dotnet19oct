@@ -123,7 +123,7 @@ function RegisterUser(){
             <button className="btn btn-danger button">Cancel</button>
             <div class="container signin">
                 <br/>
-    <p>Already have an account? <a href="/UserLogin">Login</a>.</p>
+   
   </div>
         </form>
     );

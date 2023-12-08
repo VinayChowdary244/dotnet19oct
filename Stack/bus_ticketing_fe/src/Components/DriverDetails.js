@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import './BusDetails.css'
-function BusDetails() {
+import './DriverDetails.css'
+function DriverDetails() {
   const [busIdError, setBusIdError] = useState("");
   const [searchError, setSearchError] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -18,7 +18,7 @@ function BusDetails() {
   
     axios
       .post("http://localhost:5110/api/Bus/GetBusById", {
-        id: 1
+        id: 9
       })
       .then((response) => {
         console.log(response.data);
@@ -55,4 +55,4 @@ function BusDetails() {
   );
 }
 
-export default BusDetails;
+export default DriverDetails;

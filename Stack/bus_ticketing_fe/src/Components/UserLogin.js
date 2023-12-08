@@ -6,6 +6,9 @@ function UserLogin(){
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     var [role,setRole] = useState("");
+    const [thisUserName, setThisUserName] = useState(null);
+    const [thisToken, setThisToken] = useState(null);
+    const [thisCost, setThisCost] = useState(null);
     var [usernameError,setUsernameError]=useState("");
     var checkUSerData = ()=>{
         if(username=='')
@@ -13,23 +16,22 @@ function UserLogin(){
             setUsernameError("Username cannot be empty");
             return false;
         }
-       
+           
         if(password=='')
             return false;
-            if(username=="Admin-Vinay" || username=="Admin-Naga"){
+        if(username=="Admin-Vinay" || username=="Admin-Naga"){
                 role="Admin";
             }
-            else
-             {
-                role="User";
-             }
+        else{
+            role="User";
+         }
+   
+             
         return true;
     }
     const logIn = (event)=>{
         event.preventDefault();
         var checkData = checkUSerData();
-        console.log(checkData.username);
-       
         if(checkData==false)
         {
             alert('please check yor data')
@@ -46,8 +48,13 @@ function UserLogin(){
         console.log(userData);
         alert("Successfully Logged In!!")
         localStorage.setItem('thisUserName', username);
-        var token=userData.data.token;
-        localStorage.setItem('token',token); 
+        var token =userData.data.token;
+        localStorage.setItem("token",token); 
+        var cost=userData.data.cost;
+        localStorage.setItem("cost",cost);
+
+        
+        
     })
     .catch((err)=>{
         console.log(err)
@@ -70,6 +77,9 @@ return(
             <button className="btn btn-primary button" onClick={logIn}>Login</button>
             
             <button className="btn btn-danger button">Cancel</button>
+            <div class="container signin">
+    <p>New User? Register Here <a href="/">Register</a>.</p>
+  </div>
         </form>
     );
 }

@@ -1,11 +1,17 @@
-import { useState, useEffect } from "react";
 
+
+
+import { useState ,useEffect} from "react";
 import './BookingList.css';
 function BookingList(){
     const [bookingList,setBookingList]=useState([]);
     const [searchPerformed,setSearchPerformed]=useState(false);
-    var getBookings=(event)=>{
-      event.preventDefault();
+    useEffect(() => {
+      // Fetch buses when the component is mounted
+      getBookings();
+    }, []); 
+    var getBookings=(e)=>{
+     
         fetch('http://localhost:5110/api/booking',{
         method:"GET",
         headers:{
@@ -26,14 +32,12 @@ function BookingList(){
 var checkBookings = bookingList.length>0?true:false;
 return(
     <div>
-        <h1 className="alert alert-success">Bookings</h1>
-        {!searchPerformed && (
-        <button className="btn btn-success" onClick={getBookings}>Get All Bookings</button>
-        )}
+        <h1 className="alert alert-success">All Bookings</h1>
+      
         {searchPerformed && (
-        <div>
           <center>
-        
+        <div>
+       
         <table className="table">
           <thead>
             <tr>
@@ -60,12 +64,18 @@ return(
              ))}
           </tbody>
         </table>
-        </center>
       </div>
+      </center>
         )}
   </div>
+  
 );
 
     
 }
 export default BookingList;
+
+
+
+
+

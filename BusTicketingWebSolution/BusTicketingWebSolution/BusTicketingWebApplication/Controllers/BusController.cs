@@ -46,7 +46,6 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
         [Route("GetBusById")]
-
         [HttpPost]
         public ActionResult GetBusById(BusIdDTO busIdDTO)
         {

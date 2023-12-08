@@ -12,7 +12,11 @@ import UserHistory from './Components/UserHistory';
 import BookingList from './Components/BookingList';
 import Protected from './Protected';
 import Users from './Components/Users';
-import BusDetails from './Components/BusDetails';
+import BusDetails from './Components/DriverDetails';
+import AddBus from './Components/Addbus';
+import UpdateBus from './Components/UpdateBus';
+import Logout from './Components/Logout';
+import DriverDetails from './Components/DriverDetails';
 
 function App() {
  
@@ -49,7 +53,11 @@ function App() {
         <Route path="Users" element={<Protected><Users/></Protected>} />
         <Route path="BookingList" element={<Protected><BookingList /></Protected>} />
         <Route path="RedBus" element={<RedBus />} />
-        <Route path="BusDetails" element={<BusDetails />} />
+        <Route path="DriverDetails" element={<DriverDetails />} />
+        <Route path="AddBus" element={<AddBus />} />
+        <Route path="UpdateBus" element={<UpdateBus />} />
+        <Route path="Logout" element={<Logout />} />
+
 
         </Routes>
       </BrowserRouter> 

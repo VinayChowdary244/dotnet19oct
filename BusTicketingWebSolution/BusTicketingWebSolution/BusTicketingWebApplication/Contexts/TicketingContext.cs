@@ -15,6 +15,10 @@ namespace BusTicketingWebApplication.Contexts
         public DbSet<Booking>Bookings { get; set; }
         public DbSet<BusRoute>BusRoutes { get; set; }
         public DbSet<BookedSeat> BookedSeats { get; set; }
+        public DbSet<UpcomingJourney> UpcomingJourneys { get; set; }
+        public DbSet<CancelledBooking> CancelledBookings { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Booking>()

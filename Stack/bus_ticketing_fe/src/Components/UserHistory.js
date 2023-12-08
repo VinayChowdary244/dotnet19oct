@@ -1,59 +1,61 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
-// import './UserHistory.css';
 
-function UserHistory() {
-  const [searchError, setSearchError] = useState("");
-  const [searchResults, setSearchResults] = useState("");
-  const [searchPerformed, setSearchPerformed] = useState(false);
-  const thisUserName = localStorage.getItem("thisUserName");
-  const [userNameError, setUserNameError] = useState("");
 
-  const userData = () => {
-    if (thisUserName === "") {
-      setUserNameError("Please Login first!");
-      return false;
+
+function UserHistory(){
+   
+    const thisUserName = localStorage.getItem("thisUserName");
+    const [userNameError, setUserNameError] = useState("");
+    const [searchError,setSearchError]=useState("");
+    const [searchResults,setSearchResults]=useState("");
+    const [searchPerformed, setSearchPerformed] = useState(false);
+    useEffect(() => {
+      // This will run when the component is mounted
+      handleSearch();
+    }, []); // The empty dependency array ensures that it runs only once on mount
+  
+
+    const userData=()=>{
+      if (thisUserName == "") {
+        setUserNameError("Please Login first!");
+        return false;
+      }
+          
+        return true;
     }
-    return true;
-  };
+        const handleSearch = () => {
+        
+        setUserNameError("");
+        setSearchError("");
+       
+        const isValidData = userData();
+    
+        if (!isValidData) {
+          setSearchError("Please check your data");
+          return;
+        }
+    
+        axios
+          .post("http://localhost:5110/api/Customer/UserBookingHistory", {
+            userName:thisUserName,
+          })
+          .then((response) => {
+            console.log(response.data);
+            setSearchResults(response.data);
+            setSearchPerformed("true");
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    setUserNameError("");
-    setSearchError("");
-
-    const isValidData = userData();
-
-    if (!isValidData) {
-      setSearchError("Please check your data");
-      return;
-    }
-
-    axios
-      .post("http://localhost:5110/api/Customer/UserBookingHistory", {
-        userName: thisUserName,
-      })
-      .then((response) => {
-        console.log(response.data);
-        setSearchResults(response.data);
-        setSearchPerformed(true);
-      })
-      .catch((err) => {
-        console.error(err);
-        setSearchError("Error searching user. Please try again.");
-      });
-  };
-
-  return (
-    <div className="history">
-      <br />
-      {!searchPerformed && (
-        <button className="btn btn-primary button" onClick={handleSearch}>
-          Show User history
-        </button>
-      )}
-
-      {searchPerformed && (
+          })
+          .catch((err) => {
+            console.error(err);
+            setSearchError("Error searching user. Please try again.");
+          });
+      };
+      
+      return(
+        <div className="history">
+          
+          {searchPerformed && (
         <center>
           <div>
             <br />
@@ -93,3 +95,15 @@ function UserHistory() {
 }
 
 export default UserHistory;
+
+
+
+
+
+
+
+
+
+
+
+

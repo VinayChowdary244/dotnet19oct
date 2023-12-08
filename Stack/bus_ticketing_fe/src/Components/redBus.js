@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import './redBus.css'; // Import the CSS file
+import './redBus.css'; 
 import axios from 'axios';
-import fromIcon from './fromIcon.png'; // Replace with your actual path
-import toIcon from './toIcon.png'; // Replace with your actual path
+import fromIcon from './fromIcon.png'; 
+import toIcon from './toIcon.png'; 
 import { useNavigate } from 'react-router-dom';
 
 function RedBus() {

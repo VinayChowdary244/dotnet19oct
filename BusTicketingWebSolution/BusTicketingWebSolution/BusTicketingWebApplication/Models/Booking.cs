@@ -15,7 +15,7 @@ namespace BusTicketingWebApplication.Models
         public float TotalFare { get; set; }
 
         //public string? SrartTime  { get; set; }
-        //public string? EndTime { get; set; }
+        //public string? Duration { get; set; }
 
     }
 }
