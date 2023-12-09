@@ -9,18 +9,20 @@ namespace BusTicketingWebApplication.Services
     public class BookingService : IBookingService
     {
         private readonly IBookingRepository _bookingRepository;
+        private readonly ICancelledBookingRepository _cancelledBookingRepository;
         private readonly IBusRepository _busRepository;
         private readonly IUserRepository _userRepository;
         private readonly IBookedSeatRepository _bookedSeatRepository;
         
 
 
-        public BookingService(IBookingRepository bookingRepository, IBusRepository busRepository, IUserRepository userRepository, IBookedSeatRepository bookedSeatRepository)
+        public BookingService(IBookingRepository bookingRepository, IBusRepository busRepository, IUserRepository userRepository, IBookedSeatRepository bookedSeatRepository, ICancelledBookingRepository cancelledBookingRepository)
         {
             _bookingRepository = bookingRepository;
             _userRepository = userRepository;
             _busRepository = busRepository;
             _bookedSeatRepository = bookedSeatRepository;
+            _cancelledBookingRepository = cancelledBookingRepository;
         }
         public BookingDTO Add(BookingDTO bookingDTO)
         {
@@ -92,15 +94,36 @@ namespace BusTicketingWebApplication.Services
 
 
 
-        public BookingDTO RemoveBooking(BookingDTO bookingDTO)
+        public BookingIdDTO RemoveBooking(BookingIdDTO bookingIdDTO)
         {
-            var BookingToBeRemoved = _bookingRepository.GetById(bookingDTO.Id);
+            var BookingToBeRemoved = _bookingRepository.GetById(bookingIdDTO.Id);
             if (BookingToBeRemoved != null)
             {
-                var result = _bookingRepository.Delete(bookingDTO.Id);
+                CancelledBooking cancelledBooking = new CancelledBooking();
+                cancelledBooking.BookingId = BookingToBeRemoved.BookingId;
+                cancelledBooking.UserName  =BookingToBeRemoved.UserName;
+                cancelledBooking.BusId = BookingToBeRemoved.BusId;
+                cancelledBooking.Date = BookingToBeRemoved.Date;
+                cancelledBooking.CancelledSeats = BookingToBeRemoved.SelectedSeats;
+                cancelledBooking.TotalFare = BookingToBeRemoved.TotalFare;
+                cancelledBooking.CancelledDate= DateTime.Now;
+
+
+                _cancelledBookingRepository.Add(cancelledBooking);
+                var result = _bookingRepository.Delete(bookingIdDTO.Id);
                 if (result != null)
                 {
-                    return bookingDTO;
+                    var bus = _busRepository.GetById(BookingToBeRemoved.BusId);
+                    bus.AvailableSeats += BookingToBeRemoved.SelectedSeats.Count;
+                    bus.BookedSeats -= BookingToBeRemoved.SelectedSeats.Count;
+                    _busRepository.Update(bus);
+
+                    var bookedBusSeats = _bookedSeatRepository.GetById(BookingToBeRemoved.BusId);
+
+                   bookedBusSeats.BookedSeats.RemoveAll(seat => BookingToBeRemoved.SelectedSeats.Contains(seat));
+
+                    _bookedSeatRepository.Update(bookedBusSeats);
+                    return bookingIdDTO;
                 }
             }
             return null;

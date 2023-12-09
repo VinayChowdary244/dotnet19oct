@@ -152,6 +152,42 @@ namespace BusTicketingWebApplication.Migrations
                     b.ToTable("BusRoutes");
                 });
 
+            modelBuilder.Entity("BusTicketingWebApplication.Models.CancelledBooking", b =>
+                {
+                    b.Property<int>("CancellationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CancellationId"), 1L, 1);
+
+                    b.Property<int>("BookingId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BusId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CancelledDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CancelledSeats")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Date")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("TotalFare")
+                        .HasColumnType("real");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CancellationId");
+
+                    b.ToTable("CancelledBookings");
+                });
+
             modelBuilder.Entity("BusTicketingWebApplication.Models.User", b =>
                 {
                     b.Property<string>("UserName")

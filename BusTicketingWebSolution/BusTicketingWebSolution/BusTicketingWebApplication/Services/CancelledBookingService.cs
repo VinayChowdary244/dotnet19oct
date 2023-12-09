@@ -1,6 +1,8 @@
-﻿namespace BusTicketingWebApplication.Services
+﻿using BusTicketingWebApplication.Interfaces;
+
+namespace BusTicketingWebApplication.Services
 {
-    public class CancelledBookingService
+    public class CancelledBookingService: ICancelledBookingService
     {
     }
 }

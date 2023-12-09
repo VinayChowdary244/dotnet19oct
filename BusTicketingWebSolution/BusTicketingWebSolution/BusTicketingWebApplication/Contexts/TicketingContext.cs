@@ -15,7 +15,7 @@ namespace BusTicketingWebApplication.Contexts
         public DbSet<Booking>Bookings { get; set; }
         public DbSet<BusRoute>BusRoutes { get; set; }
         public DbSet<BookedSeat> BookedSeats { get; set; }
-        public DbSet<UpcomingJourney> UpcomingJourneys { get; set; }
+        //public DbSet<UpcomingJourney> UpcomingJourneys { get; set; }
         public DbSet<CancelledBooking> CancelledBookings { get; set; }
 
 
@@ -30,6 +30,13 @@ namespace BusTicketingWebApplication.Contexts
 
             modelBuilder.Entity<BookedSeat>()
                .Property(b => b.BookedSeats)
+               .HasConversion(
+                   v => string.Join(',', v),
+                   v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()
+               );
+
+            modelBuilder.Entity<CancelledBooking>()
+               .Property(b => b.CancelledSeats)
                .HasConversion(
                    v => string.Join(',', v),
                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()

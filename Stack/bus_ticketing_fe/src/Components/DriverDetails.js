@@ -18,7 +18,7 @@ function DriverDetails() {
   
     axios
       .post("http://localhost:5110/api/Bus/GetBusById", {
-        id: 9
+        id: 1
       })
       .then((response) => {
         console.log(response.data);

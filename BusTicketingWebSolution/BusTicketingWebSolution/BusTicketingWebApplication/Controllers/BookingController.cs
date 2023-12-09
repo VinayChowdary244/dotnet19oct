@@ -91,12 +91,12 @@ namespace BusTicketingWebApplication.Controllers
        // [Authorize(Roles = "Admin")]
         [Route("Cancel/DeleteBooking")]
         [HttpDelete]
-        public ActionResult DeleteBooking(BookingDTO bookingDTO)
+        public ActionResult DeleteBooking(BookingIdDTO bookingIdDTO)
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _bookingService.RemoveBooking(bookingDTO);
+                var result = _bookingService.RemoveBooking(bookingIdDTO);
                 _logger.LogInformation("Booking deleted");
 
                 return Ok(result);

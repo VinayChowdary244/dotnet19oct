@@ -6,6 +6,7 @@ namespace BusTicketingWebApplication.Models
         public int Id { get; set; }
         public List<int> BookedSeats { get; set; }
         public int BusId { get; set;}
+        public DateOnly Date { get; set; }
         //demo
         //trial for context.
 

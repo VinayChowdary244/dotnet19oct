@@ -88,6 +88,7 @@ namespace BusTicketingWebApplication
             builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();
             builder.Services.AddScoped<IBookingRepository, BookingRepository>();
             builder.Services.AddScoped<IBookedSeatRepository, BookedSeatRepository>();
+            builder.Services.AddScoped<ICancelledBookingRepository, CancelledBookingRepository>();
 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
@@ -95,6 +96,8 @@ namespace BusTicketingWebApplication
             builder.Services.AddScoped<IBusRouteService, BusRouteService>();
             builder.Services.AddScoped<IBookingService, BookingService>();
             builder.Services.AddScoped<IBookedSeatService,BookedSeatService>();
+            builder.Services.AddScoped<ICancelledBookingService, CancelledBookingService>();
+
 
             var app = builder.Build();
 
