@@ -52,8 +52,7 @@ namespace BusTicketingWebApplication.Services
             if (busData != null)
             {
                 busData.Type = busDTO.Type;
-                busData.AvailableSeats = busDTO.AvailableSeats;
-                busData.BookedSeats = busDTO.BookedSeats;
+               
                 busData.Cost = busDTO.Cost;
                 busData.Start = busDTO.Start;
                 busData.End = busDTO.End;

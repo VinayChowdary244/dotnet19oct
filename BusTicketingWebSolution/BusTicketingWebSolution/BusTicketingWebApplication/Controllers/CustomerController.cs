@@ -67,12 +67,12 @@ namespace BusTicketingWebApplication.Controllers
 
         [HttpPost]
         [Route("BusSearch")]
-        public ActionResult BusSearch(BusSearchDTO busSearchDTO) 
+        public ActionResult BusSearch(BusSearchDTO busSearchDTO)
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _userService.BusSearch( busSearchDTO);
+                var result = _userService.BusSearch(busSearchDTO);
                 _logger.LogInformation("Busses listed");
 
                 return Ok(result);
@@ -89,7 +89,7 @@ namespace BusTicketingWebApplication.Controllers
 
         [HttpPost]
         [Route("UserBookingHistory")]
-        public ActionResult BookingHistory(UserNameDTO userNameDTO )
+        public ActionResult BookingHistory(UserNameDTO userNameDTO)
         {
             string errorMessage = string.Empty;
             try
@@ -156,27 +156,28 @@ namespace BusTicketingWebApplication.Controllers
 
         }
 
-        
-        [HttpPost]
-        [Route("BookTickets")]
-        public ActionResult BookTickets(BusDTO busDTO)
-        {
-            string errorMessage = string.Empty;
-            try
-            {
-                var result = _userService.BookSeat(busDTO);
-                _logger.LogInformation("Booking done");
 
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                errorMessage = e.Message;
-                _logger.LogError("Booking not done");
+        //    [HttpPost]
+        //    [Route("BookTickets")]
+        //    public ActionResult BookTickets(BusDTO busDTO)
+        //    {
+        //        string errorMessage = string.Empty;
+        //        try
+        //        {
+        //            var result = _userService.BookSeat(busDTO);
+        //            _logger.LogInformation("Booking done");
 
-            }
-            return BadRequest(errorMessage);
+        //            return Ok(result);
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            errorMessage = e.Message;
+        //            _logger.LogError("Booking not done");
 
-        }
+        //        }
+        //        return BadRequest(errorMessage);
+
+        //    }
+        //}
     }
 }

@@ -514,18 +514,6 @@ C:\Users\vinay\OneDrive\Desktop\whole not hole\BusTicketingWebSolution\BusTicket
 C:\Users\vinay\OneDrive\Desktop\whole not hole\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.pdb
 C:\Users\vinay\OneDrive\Desktop\whole not hole\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.genruntimeconfig.cache
 C:\Users\vinay\OneDrive\Desktop\whole not hole\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\ref\BusTicketingWebApplication.dll
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.csproj.AssemblyReference.cache
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.GeneratedMSBuildEditorConfig.editorconfig
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.AssemblyInfoInputs.cache
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.AssemblyInfo.cs
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.csproj.CoreCompileInputs.cache
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.MvcApplicationPartsAssemblyInfo.cs
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.MvcApplicationPartsAssemblyInfo.cache
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.RazorAssemblyInfo.cache
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.RazorAssemblyInfo.cs
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.dll
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\refint\BusTicketingWebApplication.dll
-E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.pdb
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\log4net.config
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\appsettings.Development.json
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\appsettings.json
@@ -759,6 +747,15 @@ E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplicatio
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.csproj.AssemblyReference.cache
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.GeneratedMSBuildEditorConfig.editorconfig
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.AssemblyInfoInputs.cache
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.AssemblyInfo.cs
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.csproj.CoreCompileInputs.cache
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.MvcApplicationPartsAssemblyInfo.cs
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.MvcApplicationPartsAssemblyInfo.cache
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.RazorAssemblyInfo.cache
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.RazorAssemblyInfo.cs
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\staticwebassets\msbuild.BusTicketingWebApplication.Microsoft.AspNetCore.StaticWebAssets.props
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\staticwebassets\msbuild.build.BusTicketingWebApplication.props
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.BusTicketingWebApplication.props
@@ -770,5 +767,8 @@ E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplicatio
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\scopedcss\bundle\BusTicketingWebApplication.styles.css
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\scopedcss\projectbundle\BusTicketingWebApplication.bundle.scp.css
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.csproj.CopyComplete
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.dll
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\refint\BusTicketingWebApplication.dll
+E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.pdb
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\BusTicketingWebApplication.genruntimeconfig.cache
 E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\obj\Debug\net6.0\ref\BusTicketingWebApplication.dll

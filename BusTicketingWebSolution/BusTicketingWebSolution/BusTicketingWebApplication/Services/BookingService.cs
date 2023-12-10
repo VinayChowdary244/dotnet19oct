@@ -27,59 +27,102 @@ namespace BusTicketingWebApplication.Services
         public BookingDTO Add(BookingDTO bookingDTO)
         {
             var bus = _busRepository.GetById(bookingDTO.BusId);
-            if (bookingDTO.SelectedSeats.Count <= 0 && bookingDTO.SelectedSeats.Count > 40) throw new InvalidNoOfTicketsEnteredException();
-            if (bookingDTO.SelectedSeats.Count <= bus.AvailableSeats && bus.AvailableSeats > 0)
+            if (bookingDTO.SelectedSeats.Count <= 0 || bookingDTO.SelectedSeats.Count > 40)
+                throw new InvalidNoOfTicketsEnteredException();
+
+            if (bus != null)
             {
-                float Fare = 0;
-                if (bus != null)
+                float Fare = bus.Cost;
+
+                if (bookingDTO.SelectedSeats != null)
                 {
-                    Fare = bus.Cost;
-                    bus.AvailableSeats -= bookingDTO.SelectedSeats.Count;
-                    bus.BookedSeats += bookingDTO.SelectedSeats.Count;
-                    _busRepository.Update(bus);
-                    if (bookingDTO.SelectedSeats != null)
+                    var AllBookedSeats = _bookedSeatRepository.GetAll();
+
+                    if (AllBookedSeats != null)
                     {
-                        var bookedBusSeats = _bookedSeatRepository.GetById(bookingDTO.BusId);
-                        if (bookedBusSeats == null)
+                        bool status = false;
+
+                        foreach (var bookedSeat in AllBookedSeats)
                         {
-                            BookedSeat bookedSeat = new BookedSeat();
-                            bookedSeat.BusId = bus.Id;
-                            bookedSeat.BookedSeats = bookingDTO.SelectedSeats;
-                            _bookedSeatRepository.Add(bookedSeat);
+                            if (bookedSeat.Date == bookingDTO.Date && bookedSeat.BusId == bookingDTO.BusId )
+                            {
+                                bookedSeat.BookedSeats.AddRange(bookingDTO.SelectedSeats);
+                                bookedSeat.AvailableSeats -= bookingDTO.SelectedSeats.Count;
+                                bookedSeat.BookedSeatCount += bookingDTO.SelectedSeats.Count;
+                                status = true;
+                                _bookedSeatRepository.Update(bookedSeat);
+                               
+                                break;
+                            }
                         }
-                        else
+
+                        if (!status)
                         {
+                            BookedSeat newBookedSeat = new BookedSeat
+                            {
+                                BusId = bus.Id,
+                                Date = bookingDTO.Date,
+                                BookedSeats = bookingDTO.SelectedSeats,
+                                AvailableSeats = 37 - bookingDTO.SelectedSeats.Count,
+                                BookedSeatCount = bookingDTO.SelectedSeats.Count
+                            };
 
-                            //bookedBusSeats.BookedSeats  = new List<int>(bookedBusSeats.BookedSeats.Count +
-                            //      bookingDTO.SelectedSeats.Count );
-
-                            bookedBusSeats.BookedSeats.AddRange(bookingDTO.SelectedSeats);
-                           
-                           // bookedBusSeats.BookedSeats= bookedBusSeats.BookedSeats.Concat(bookingDTO.SelectedSeats).ToList;
-
-                            _bookedSeatRepository.Update(bookedBusSeats);
+                            _bookedSeatRepository.Add(newBookedSeat);
                         }
                     }
+                    else
+                    {
+                        // If AllBookedSeats is null, create a new BookedSeat
+                        BookedSeat newBookedSeat = new BookedSeat
+                        {
+                            BusId = bus.Id,
+                            Date = bookingDTO.Date,
+                            BookedSeats = bookingDTO.SelectedSeats,
+                            AvailableSeats = 37 - bookingDTO.SelectedSeats.Count,
+                            BookedSeatCount = bookingDTO.SelectedSeats.Count
+                        };
+
+                        _bookedSeatRepository.Add(newBookedSeat);
+                    }
+
+                    Booking booking = new Booking
+                    {
+                        UserName = bookingDTO.UserName,
+                        BusId = bookingDTO.BusId,
+                        Date = bookingDTO.Date,
+                        SelectedSeats = bookingDTO.SelectedSeats,
+                        TotalFare = bookingDTO.SelectedSeats.Count * Fare
+                    };
+
+                    var result = _bookingRepository.Add(booking);
                 }
-                else
-                {
-                    throw new InvalidBusIdException();
-                }
-                Booking booking = new Booking
-                {
-                    UserName = bookingDTO.UserName,
-                    BusId = bookingDTO.BusId,
-                    Date = bookingDTO.Date,
-                    SelectedSeats = bookingDTO.SelectedSeats,
-                    TotalFare = bookingDTO.SelectedSeats.Count * Fare
-                };
-                var result = _bookingRepository.Add(booking);
             }
             else
             {
-                throw new NotEnoughBusSeatsAvailableException();
+                throw new InvalidBusIdException();
             }
+
             return bookingDTO;
+        }
+
+
+
+        public BookedSeat BookedSeatsInTheBus(BookedSeatsDTO bookedSeatsDTO)
+        {
+            var BookedSeat = _bookedSeatRepository.GetAll();
+            if(BookedSeat != null ) {
+                for( int i = 0;i<BookedSeat.Count;i++ )
+                {
+                    if (BookedSeat[i].BusId == bookedSeatsDTO.BusId)
+                    {
+                        if (BookedSeat[i].Date == bookedSeatsDTO.Date)
+                        {
+                            return BookedSeat[i];
+                        }
+                    }
+                }
+            }
+            return null;
         }
 
         public List<Booking> GetBookings()
@@ -94,9 +137,9 @@ namespace BusTicketingWebApplication.Services
 
 
 
-        public BookingIdDTO RemoveBooking(BookingIdDTO bookingIdDTO)
+        public BookedSeatsDTO RemoveBooking(BookedSeatsDTO bookedSeatsDTO)
         {
-            var BookingToBeRemoved = _bookingRepository.GetById(bookingIdDTO.Id);
+            var BookingToBeRemoved = _bookingRepository.GetById(bookedSeatsDTO.BusId);
             if (BookingToBeRemoved != null)
             {
                 CancelledBooking cancelledBooking = new CancelledBooking();
@@ -107,26 +150,46 @@ namespace BusTicketingWebApplication.Services
                 cancelledBooking.CancelledSeats = BookingToBeRemoved.SelectedSeats;
                 cancelledBooking.TotalFare = BookingToBeRemoved.TotalFare;
                 cancelledBooking.CancelledDate= DateTime.Now;
-
-
                 _cancelledBookingRepository.Add(cancelledBooking);
-                var result = _bookingRepository.Delete(bookingIdDTO.Id);
+
+                var result = _bookingRepository.Delete(bookedSeatsDTO.BusId);
                 if (result != null)
                 {
                     var bus = _busRepository.GetById(BookingToBeRemoved.BusId);
-                    bus.AvailableSeats += BookingToBeRemoved.SelectedSeats.Count;
-                    bus.BookedSeats -= BookingToBeRemoved.SelectedSeats.Count;
-                    _busRepository.Update(bus);
+                   
 
-                    var bookedBusSeats = _bookedSeatRepository.GetById(BookingToBeRemoved.BusId);
+                    var AllBookedSeats=_bookedSeatRepository.GetAll();
+                    if (AllBookedSeats != null)
+                    {
+                        for(int i = 0; i < AllBookedSeats.Count; i++)
+                        {
+                            if (AllBookedSeats[i].Id == bookedSeatsDTO.BusId)
+                            {
+                                if (AllBookedSeats[i].Date == bookedSeatsDTO.Date)
+                                {
+                                    AllBookedSeats[i].BookedSeats.RemoveAll(seat => BookingToBeRemoved.SelectedSeats.Contains(seat));
+                                    AllBookedSeats[i].AvailableSeats += BookingToBeRemoved.SelectedSeats.Count;
+                                    AllBookedSeats[i].BookedSeatCount -= BookingToBeRemoved.SelectedSeats.Count;
 
-                   bookedBusSeats.BookedSeats.RemoveAll(seat => BookingToBeRemoved.SelectedSeats.Contains(seat));
+                                    _bookedSeatRepository.Update(AllBookedSeats[i]);
 
-                    _bookedSeatRepository.Update(bookedBusSeats);
-                    return bookingIdDTO;
+                                }
+                            }
+
+                        }
+                    }
+
+                   // var bookedBusSeats = _bookedSeatRepository.GetById(BookingToBeRemoved.BusId);
+
+                   //bookedBusSeats.BookedSeats.RemoveAll(seat => BookingToBeRemoved.SelectedSeats.Contains(seat));
+
+                   // _bookedSeatRepository.Update(bookedBusSeats);
+                    return bookedSeatsDTO;
                 }
             }
             return null;
         }
+
+        
     }
 }

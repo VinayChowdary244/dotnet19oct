@@ -91,12 +91,12 @@ namespace BusTicketingWebApplication.Controllers
        // [Authorize(Roles = "Admin")]
         [Route("Cancel/DeleteBooking")]
         [HttpDelete]
-        public ActionResult DeleteBooking(BookingIdDTO bookingIdDTO)
+        public ActionResult DeleteBooking(BookedSeatsDTO bookedSeatsDTO)
         {
             string errorMessage = string.Empty;
             try
             {
-                var result = _bookingService.RemoveBooking(bookingIdDTO);
+                var result = _bookingService.RemoveBooking(bookedSeatsDTO);
                 _logger.LogInformation("Booking deleted");
 
                 return Ok(result);
@@ -105,6 +105,26 @@ namespace BusTicketingWebApplication.Controllers
             {
                 errorMessage = e.Message;
                 _logger.LogError("Booking not deleted");
+
+            }
+            return BadRequest(errorMessage);
+        }
+        [Route("BookedSeats")]
+        [HttpPost]
+        public ActionResult BookedSeats(BookedSeatsDTO bookedSeatsDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _bookingService.BookedSeatsInTheBus(bookedSeatsDTO);
+                _logger.LogInformation("Booked Seats in the bus fetched");
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+                _logger.LogError("Booked Seats not fetched");
 
             }
             return BadRequest(errorMessage);

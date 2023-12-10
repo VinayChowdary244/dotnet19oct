@@ -108,24 +108,24 @@ namespace BusTicketingWebApplication.Services
             throw new NoUsersAvailableException();
         }
 
-        public BusDTO BookSeat(BusDTO busDTO)
-        {
-            var busData = _busrepository.GetById(busDTO.Id);
+        //public BusDTO BookSeat(BusDTO busDTO)
+        //{
+        //    var busData = _busrepository.GetById(busDTO.Id);
             
             
-            busData.BookedSeats += busDTO.BookedSeats;
-            busData.AvailableSeats -= busDTO.BookedSeats;
+        //    busData.BookedSeats += busDTO.BookedSeats;
+        //    busData.AvailableSeats -= busDTO.BookedSeats;
             
-            if (busData != null)
-            {
-                var result = _busrepository.Update(busData);
-                if (result != null)
-                {
-                    return busDTO;
-                }
-            }
-            return null;
-        }
+        //    if (busData != null)
+        //    {
+        //        var result = _busrepository.Update(busData);
+        //        if (result != null)
+        //        {
+        //            return busDTO;
+        //        }
+        //    }
+        //    return null;
+        //}
         public List<Booking> GetBookingHistory(UserNameDTO userNameDTO)
         {
             var booking = _bookingRepository.GetAll();

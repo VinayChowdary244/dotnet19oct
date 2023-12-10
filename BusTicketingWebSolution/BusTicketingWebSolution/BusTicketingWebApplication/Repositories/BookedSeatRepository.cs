@@ -38,7 +38,7 @@ namespace BusTicketingWebApplication.Repositories
 
             public BookedSeat GetById(int key)
             {
-                var cus = _context.BookedSeats.SingleOrDefault(x => x.BusId == key);
+                var cus = _context.BookedSeats.SingleOrDefault(x => x.Id == key);
                 return cus;
             }
 
@@ -54,7 +54,7 @@ namespace BusTicketingWebApplication.Repositories
 
             public BookedSeat Update(BookedSeat entity)
             {
-                var cus = GetById(entity.BusId);
+                var cus = GetById(entity.Id);
                 if (cus != null)
                 {
                     _context.Entry<BookedSeat>(cus).State = EntityState.Modified;
@@ -63,6 +63,10 @@ namespace BusTicketingWebApplication.Repositories
                 }
                 return null;
             }
-        }
+
+
+       
+
     }
+}
 

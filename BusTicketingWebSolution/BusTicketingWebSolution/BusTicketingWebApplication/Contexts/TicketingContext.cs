@@ -41,6 +41,16 @@ namespace BusTicketingWebApplication.Contexts
                    v => string.Join(',', v),
                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList()
                );
+
+            //modelBuilder.Entity<BookedSeat>()//this is for ignoring the DateOnly element which is causing an error at database 
+            //   .Ignore(b => b.Date);
+
+            //modelBuilder.Entity<Booking>()
+            //     .Ignore(b => b.Date);
+
+            //modelBuilder.Entity<CancelledBooking>()
+            //     .Ignore(b => b.Date);
+
         }
     }
 }

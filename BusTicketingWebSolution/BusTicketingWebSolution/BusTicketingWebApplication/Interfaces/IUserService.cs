@@ -10,7 +10,7 @@ namespace BusTicketingWebApplication.Interfaces
         UserDTO Register(UserDTO userDTO);
         List<Bus> BusSearch(BusSearchDTO busSearchDTO);
         UserUpdateDTO UpdateUser(UserUpdateDTO userUpdateDTO);
-        BusDTO BookSeat(BusDTO busDTO);
+        //BusDTO BookSeat(BusDTO busDTO);
         List<User> GetAllUsers();
         List<Booking> GetBookingHistory(UserNameDTO userNameDTO);
        

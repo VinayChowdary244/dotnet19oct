@@ -30,12 +30,6 @@ namespace BusTicketingWebApplication.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AvailableSeats")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BookedSeats")
-                        .HasColumnType("int");
-
                     b.Property<float>("Cost")
                         .HasColumnType("real");
 
@@ -86,12 +80,22 @@ namespace BusTicketingWebApplication.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("AvailableSeats")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("BookedSeatCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("BookedSeats")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("BusId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -110,6 +114,7 @@ namespace BusTicketingWebApplication.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Date")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SelectedSeats")
@@ -174,6 +179,7 @@ namespace BusTicketingWebApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Date")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("TotalFare")
