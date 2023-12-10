@@ -10,6 +10,5 @@ namespace BusTicketingWebApplication.Interfaces
         public BookedSeat GetById(int key);
         public IList<BookedSeat> GetAll();
         public BookedSeat Update(BookedSeat item);
-        public BookedSeat GetByBusIdAndDate(int busId, string date);
     }
 }

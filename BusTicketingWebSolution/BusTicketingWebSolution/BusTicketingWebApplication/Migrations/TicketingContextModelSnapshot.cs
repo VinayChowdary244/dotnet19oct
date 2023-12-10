@@ -117,6 +117,10 @@ namespace BusTicketingWebApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SelectedSeats")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
