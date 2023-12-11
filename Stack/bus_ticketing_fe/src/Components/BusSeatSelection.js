@@ -5,27 +5,28 @@ import { useLocation } from 'react-router-dom';
 const BusSeatSelection = () => {
   const totalRows = 8;
   const seatsPerRow = 4;
-  //const seatPrice = 200; 
-  
+  const seatPrice =localStorage.getItem("thisCost"); // Set the price per seat
+  // State for selected seats and booked seats
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [bookedSeats, setBookedSeats] = useState([]);
   const [isBooked, setIsBooked] = useState(false);
-  const location = useLocation();
+  const thisEmail=localStorage.getItem('email');
   const thisBus = localStorage.getItem('thisBus');
   const thisDate = localStorage.getItem('thisDate');
   const thisUserName = localStorage.getItem('thisUserName');
-  const price=localStorage.getItem('price');
+  const thisToken = localStorage.getItem('thisToken');
+  const cost=localStorage.getItem("cost");
+
   useEffect(() => {
-    fetch('http://localhost:5110/api/Booking/BookedSeatsList', {
+    fetch('http://localhost:5110/api/Booking/BookedSeats', {
       method: 'POST',
       headers: {
-        'Accept':'application/json',
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem("token")
-
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         id: thisBus, 
+        
+        date:thisDate
       }),
     })
       .then((response) => {
@@ -37,7 +38,6 @@ const BusSeatSelection = () => {
       .then((data) => {
         console.log('Server Response:', data);
         setBookedSeats(data || []);
-        
       })
       .catch((error) => console.error('Error fetching booked seats:', error));
   }, []);
@@ -67,8 +67,8 @@ const handleBookClick = () => {
   fetch('http://localhost:5110/api/Booking', {
     method: 'POST',
     headers: {
-      'Accept':'application/json',
-      'Content-Type':'application/json',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem("token")
     },
     
@@ -77,11 +77,12 @@ const handleBookClick = () => {
       userName: thisUserName, 
       selectedSeats: selectedSeats,
       date: thisDate, 
+      email:thisEmail,
     }),
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`HTTP error! Status: ${response.status}/-`);
       }
             
 
@@ -94,25 +95,26 @@ const handleBookClick = () => {
       // You may want to reset the selected seats state or perform other actions here
       setSelectedSeats([]);
       setIsBooked(true);
-      alert('Booking successful!');
+      alert('Booking successfull.\nPlease check your Email!!');
     })
     .catch((error) => console.error('Error booking seats:', error));
 };
 
   // Calculate total price based on selected seats
   const calculateTotalPrice = () => {
-    return selectedSeats.length * price;
+    return selectedSeats.length * cost;
   };
 
   return (
-    <center>
     <div className="seat-selection-container">
-      <h2>Select your seats</h2>
-      <div className="legend">
-        <div className="legend-item booked">Booked Seat</div>
-        <div className="legend-item selected">Selected Seat</div>
-        <div className="legend-item available">Available Seat</div>
-      </div>
+      <h2>Bus Seat Selection</h2>
+      <div>
+    <h6>Booked Seats <span class="seat-status booked"></span></h6>
+
+    <h6>Available Seats <span class="seat-status available"></span></h6>
+    
+    <h6>Selected Seats <span class="seat-status selected"></span></h6>
+</div>
       <div className="bus-seats">
         {[...Array(totalRows)].map((_, rowIndex) => (
           <div key={rowIndex} className="seat-row">
@@ -157,8 +159,8 @@ const handleBookClick = () => {
         </div>
       </div>
     </div>
-    </center>
   );
 };
 
 export default BusSeatSelection;
+

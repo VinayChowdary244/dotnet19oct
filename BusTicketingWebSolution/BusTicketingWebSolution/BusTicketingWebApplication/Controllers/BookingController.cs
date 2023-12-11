@@ -88,8 +88,8 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
 
-       // [Authorize(Roles = "Admin")]
-        [Route("Cancel/DeleteBooking")]
+       // [Authorize(Roles = "User")]
+        [Route("CancelBooking")]
         [HttpDelete]
         public ActionResult DeleteBooking(BookingIdDTO bookingIdDTO)
         {
@@ -130,5 +130,25 @@ namespace BusTicketingWebApplication.Controllers
             return BadRequest(errorMessage);
         }
 
+        [Route("CancelledBookings")]
+        [HttpPost]
+        public ActionResult CancelledBookings(UserNameDTO userNameDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _bookingService.CancelledBookingsList(userNameDTO);
+                _logger.LogInformation("Cancelled bookings fetched");
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+                _logger.LogError("Cancelled bookings fetching failed");
+
+            }
+            return BadRequest(errorMessage);
+        }
     }
 }

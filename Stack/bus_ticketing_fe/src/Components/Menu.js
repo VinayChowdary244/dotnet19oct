@@ -47,6 +47,9 @@ function Menu() {
             <li className="nav-item">
               <Link className="nav-link" to="/DriverDetails">DriverDetails</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/CancelledBookings">CancelledBookings</Link>
+            </li>
             
           </ul>
         </div>

@@ -255,5 +255,24 @@ namespace BusTicketingWebApplication.Services
             return null;
         }
 
+        public List<CancelledBooking> CancelledBookingsList(UserNameDTO userNameDTO)
+        {
+            var bookings = _cancelledBookingRepository.GetAll();
+            if (bookings != null)
+            {
+                List<CancelledBooking> CancelledBookingsList=new List<CancelledBooking>();
+                foreach (var booking in bookings)
+                {
+                    if(userNameDTO.UserName == booking.UserName)
+                    {
+                        CancelledBookingsList.Add(booking);
+                    }
+
+                }
+                if(CancelledBookingsList.Count>0) return CancelledBookingsList;
+                else throw new NoCancelledBookingsException();
+            }
+            throw new NoBookingsAvailableException();
+        }
     }
 }

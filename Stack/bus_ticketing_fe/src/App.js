@@ -17,6 +17,7 @@ import AddBus from './Components/Addbus';
 import UpdateBus from './Components/UpdateBus';
 import Logout from './Components/Logout';
 import DriverDetails from './Components/DriverDetails';
+import CancelledBookings from './Components/CancelledBookings';
 
 function App() {
  
@@ -57,6 +58,8 @@ function App() {
         <Route path="AddBus" element={<AddBus />} />
         <Route path="UpdateBus" element={<UpdateBus />} />
         <Route path="Logout" element={<Logout />} />
+        <Route path="CancelledBookings" element={<CancelledBookings />} />
+
 
 
         </Routes>
