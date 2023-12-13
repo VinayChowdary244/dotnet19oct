@@ -6,7 +6,7 @@ namespace BusTicketingWebApplication.Interfaces
 {
     public interface IUserService
     {
-        UserDTO Login(UserDTO userDTO);
+        User Login(UserDTO userDTO);
         UserDTO Register(UserDTO userDTO);
         List<Bus> BusSearch(BusSearchDTO busSearchDTO);
         UserUpdateDTO UpdateUser(UserUpdateDTO userUpdateDTO);

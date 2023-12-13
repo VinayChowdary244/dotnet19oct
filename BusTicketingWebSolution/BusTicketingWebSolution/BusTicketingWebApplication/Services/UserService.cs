@@ -23,11 +23,12 @@ namespace BusTicketingWebApplication.Services
             _busrepository = busrepository;
             _bookingRepository = bookingRepository;
         }
-        public UserDTO Login(UserDTO userDTO)
+        public User Login(UserDTO userDTO)
         {
             var user = _userrepository.GetById(userDTO.UserName);
             if (user != null)
             {
+                var User=_userrepository.GetById(userDTO.UserName);
                 HMACSHA512 hmac = new HMACSHA512(user.Key);
                 var userpass = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDTO.Password));
                 for (int i = 0; i < userpass.Length; i++)
@@ -37,7 +38,7 @@ namespace BusTicketingWebApplication.Services
                 }
                 userDTO.Token = _tokenService.GetToken(userDTO);
                 userDTO.Password = "";
-                return userDTO;
+                return User;
             }
             return null;
         }
