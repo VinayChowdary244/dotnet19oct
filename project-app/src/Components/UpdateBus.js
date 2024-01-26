@@ -1,7 +1,7 @@
 import { useState } from "react";
-import './AddBus.css'
-import { redirect } from "react-router-dom";
-function AddBus(){
+import './UpdateBus.css';
+
+function UpdateBus(){
     const [type,setType] = useState("");
     const [cost,setCost] = useState();
     const [start,setStart] = useState("");
@@ -12,13 +12,15 @@ function AddBus(){
     const [driverRating,setDriverRating] = useState("");
     const [startTime,setStartTime] = useState("");
     const [duration,setDuration] = useState("");
-
-
+    const [Id,setId]=useState("");
+   
+    
 
     var bus;
-    var clickAdd = ()=>{
+    var clickUpdate = ()=>{
         
        bus={
+        "id":Id,
         "type":type,
         "availableSeats":37,
         "bookedSeats":0,
@@ -33,21 +35,20 @@ function AddBus(){
         "driverRating":driverRating
         }
         
-        fetch('http://localhost:5041/api/bus',{
-            method:'POST',
+        fetch('http://localhost:5041/api/bus/UpdateBus',{
+            method:'PUT',
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem("token")
             },
             body:JSON.stringify(bus)
-        }).then(
-            ()=>{
-                console.log(bus);
-                alert('Bus Added');
-                
-               
-            }
+        }).then( async (data)=>{
+            var myData = await data.json();
+            await console.log(myData);
+            alert("Bus Details Updated Successfully!!");
+           
+        }
         ).catch((e)=>{
             console.log(e)
         })
@@ -55,8 +56,10 @@ function AddBus(){
 
 
     return(
-        <div className="add">
-            
+        <form className="update">
+            <div>
+            <label className="form-control" for="pname"><b>Bus Id</b></label>
+            <input id="pname" type="text" className="form-control" value={Id} onChange={(e)=>{setId(e.target.value)}}/>
             <label className="form-control" for="pname"><b>Bus Type</b></label>
             <input id="pname" type="text" className="form-control" value={type} onChange={(e)=>{setType(e.target.value)}}/>
             <label className="form-control" for="pname"><b>Start</b></label>
@@ -78,11 +81,12 @@ function AddBus(){
             <label className="form-control" for="pname"><b>DriverRating</b></label>
             <input id="pname" type="text" className="form-control" value={driverRating} onChange={(e)=>{setDriverRating(e.target.value)}}/>
             
-            <button onClick={clickAdd} className="btn btn-primary"><b>Add Bus</b></button>
+            <button onClick={clickUpdate} className="btn btn-primary"><b>Update Bus</b></button>
         </div>
+        </form>
     );
 }
-export default AddBus;
+export default UpdateBus;
 
 
 
