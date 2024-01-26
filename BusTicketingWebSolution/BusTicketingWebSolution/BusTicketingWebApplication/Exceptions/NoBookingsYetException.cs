@@ -2,11 +2,10 @@
 {
     public class NoBookingsYetException:Exception
     {
-
         string msg = "";
         public NoBookingsYetException()
         {
-            msg = "You havent booked anything yet.";
+            msg = "No Bookings done Yet!!";
         }
         public override string Message => msg;
     }

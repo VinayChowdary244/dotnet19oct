@@ -10,7 +10,5 @@ namespace BusTicketingWebApplication.Interfaces
         BusIdDTO RemoveBus( BusIdDTO busIdDTO);
         BusDTO UpdateBus(BusDTO busDTO);
         Bus GetBusById(BusIdDTO busIdDTO);
-
-
     }
 }

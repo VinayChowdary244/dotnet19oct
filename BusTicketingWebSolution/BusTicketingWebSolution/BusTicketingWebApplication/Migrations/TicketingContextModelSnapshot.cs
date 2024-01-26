@@ -17,7 +17,7 @@ namespace BusTicketingWebApplication.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.24")
+                .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -69,7 +69,7 @@ namespace BusTicketingWebApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Busses");
+                    b.ToTable("Buses");
                 });
 
             modelBuilder.Entity("BusTicketingWebApplication.Models.BookedSeat", b =>
@@ -83,7 +83,7 @@ namespace BusTicketingWebApplication.Migrations
                     b.Property<int>("AvailableSeats")
                         .HasColumnType("int");
 
-                    b.Property<int?>("BookedSeatCount")
+                    b.Property<int>("BookedSeatCount")
                         .HasColumnType("int");
 
                     b.Property<string>("BookedSeats")
@@ -114,11 +114,9 @@ namespace BusTicketingWebApplication.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Date")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SelectedSeats")
@@ -183,6 +181,9 @@ namespace BusTicketingWebApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Date")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

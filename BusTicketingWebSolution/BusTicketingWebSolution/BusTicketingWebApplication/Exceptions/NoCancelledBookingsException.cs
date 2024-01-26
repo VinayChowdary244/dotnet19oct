@@ -1,12 +1,12 @@
-﻿namespace BusTicketingWebApplication.Exceptions
-{
-    public class NoCancelledBookingsException: Exception
-    {
+﻿using Microsoft.VisualBasic;
 
+namespace BusTicketingWebApplication.Exceptions
+{
+    public class NoCancelledBookingsException :Exception
+    {
         string msg = "";
-        public NoCancelledBookingsException()
-        {
-            msg = "There are no cancelled bookings by this user.";
+        public NoCancelledBookingsException() { 
+        msg="No Cancellings Available!!";
         }
         public override string Message => msg;
     }

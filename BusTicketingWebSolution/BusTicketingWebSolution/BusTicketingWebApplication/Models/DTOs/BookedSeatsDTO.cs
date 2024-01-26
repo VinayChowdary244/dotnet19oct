@@ -2,8 +2,7 @@
 {
     public class BookedSeatsDTO
     {
-        public int? Id { get; set; }
         public int BusId { get; set; }
-        public String Date { get; set; }
+        public string Date { get; set; }
     }
 }

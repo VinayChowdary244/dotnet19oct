@@ -1,5 +1,4 @@
-﻿using BusModelLibrary;
-using BusTicketingWebApplication.Models;
+﻿using BusTicketingWebApplication.Models;
 
 namespace BusTicketingWebApplication.Interfaces
 {

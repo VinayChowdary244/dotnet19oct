@@ -5,7 +5,7 @@
         string msg = "";
         public NotEnoughBusSeatsAvailableException()
         {
-            msg = "Not enough Bus seats available for booking.";
+            msg = "No Bookings available yet.";
         }
         public override string Message => msg;
     }

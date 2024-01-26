@@ -5,9 +5,6 @@ namespace BusTicketingWebApplication.Interfaces
 {
     public interface IBookedSeatService
     {
-        
-            public List<int> GetSeatsById(BusIdDTO busIdDTO);
-            
-        
+        public List<int> GetSeatsById(BusIdDTO busIdDTO);
     }
 }

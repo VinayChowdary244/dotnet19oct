@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj": {}
+    "C:\\Users\\vinay\\Source\\Repos\\ProjectBusTicketing\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj": {}
   },
   "projects": {
-    "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj": {
+    "C:\\Users\\vinay\\Source\\Repos\\ProjectBusTicketing\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\vinay\\Source\\Repos\\ProjectBusTicketing\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
         "projectName": "BusTicketingWebApplication",
-        "projectPath": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
+        "projectPath": "C:\\Users\\vinay\\Source\\Repos\\ProjectBusTicketing\\BusTicketingWebSolution\\BusTicketingWebApplication\\BusTicketingWebApplication.csproj",
         "packagesPath": "C:\\Users\\vinay\\.nuget\\packages\\",
-        "outputPath": "E:\\HEX\\BusTicketingWebSolution\\BusTicketingWebSolution\\BusTicketingWebApplication\\obj\\",
+        "outputPath": "C:\\Users\\vinay\\Source\\Repos\\ProjectBusTicketing\\BusTicketingWebSolution\\BusTicketingWebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.24, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.25, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

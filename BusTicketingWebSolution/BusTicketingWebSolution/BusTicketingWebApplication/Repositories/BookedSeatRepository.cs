@@ -3,70 +3,94 @@ using BusTicketingWebApplication.Contexts;
 using BusTicketingWebApplication.Interfaces;
 using BusTicketingWebApplication.Models;
 using Microsoft.EntityFrameworkCore;
-using static BusTicketingWebApplication.Repositories.BookedSeatRepository;
+using System.Collections.Generic;
 
 namespace BusTicketingWebApplication.Repositories
 {
-    
+    /// <summary>
+    /// Repository class for managing booked seat operations.
+    /// </summary>
+    public class BookedSeatRepository : IBookedSeatRepository
+    {
+        private readonly TicketingContext _context;
 
-        public class BookedSeatRepository : IBookedSeatRepository
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BookedSeatRepository"/> class.
+        /// </summary>
+        /// <param name="context">The database context.</param>
+        public BookedSeatRepository(TicketingContext context)
         {
-            private readonly TicketingContext _context;
-            public BookedSeatRepository(TicketingContext context)
-            {
-                _context = context;
-            }
+            _context = context;
+        }
 
-            public BookedSeat Add(BookedSeat item)
+        /// <summary>
+        /// Adds a new booked seat.
+        /// </summary>
+        /// <param name="item">The booked seat object to be added.</param>
+        /// <returns>The added booked seat.</returns>
+        public BookedSeat Add(BookedSeat item)
+        {
+            _context.BookedSeats.Add(item);
+            _context.SaveChanges();
+            return item;
+        }
+
+        /// <summary>
+        /// Deletes a booked seat by its ID.
+        /// </summary>
+        /// <param name="key">The ID of the booked seat to be deleted.</param>
+        /// <returns>The deleted booked seat.</returns>
+        public BookedSeat Delete(int key)
+        {
+            var seat = GetById(key);
+            if (seat != null)
             {
-                _context.BookedSeats.Add(item);
+                _context.BookedSeats.Remove(seat);
                 _context.SaveChanges();
-                return item;
+                return seat;
             }
+            return null;
+        }
 
-            public BookedSeat Delete(int key)
+        /// <summary>
+        /// Gets a booked seat by its ID.
+        /// </summary>
+        /// <param name="key">The ID of the booked seat to retrieve.</param>
+        /// <returns>The booked seat with the specified ID.</returns>
+        public BookedSeat GetById(int key)
+        {
+            var seat = _context.BookedSeats.SingleOrDefault(x => x.Id == key);
+            return seat;
+        }
+
+        /// <summary>
+        /// Gets a list of all booked seats.
+        /// </summary>
+        /// <returns>The list of booked seats.</returns>
+        public IList<BookedSeat> GetAll()
+        {
+            if (_context.BookedSeats.Count() == 0)
             {
-                var bus = GetById(key);
-                if (bus != null)
-                {
-                    _context.BookedSeats.Remove(bus);
-                    _context.SaveChanges();
-                    return bus;
-                }
                 return null;
             }
+            return _context.BookedSeats.ToList();
+        }
 
-            public BookedSeat GetById(int key)
+        /// <summary>
+        /// Updates a booked seat entity.
+        /// </summary>
+        /// <param name="entity">The booked seat entity to be updated.</param>
+        /// <returns>The updated booked seat.</returns>
+        public BookedSeat Update(BookedSeat entity)
+        {
+            var seat = GetById(entity.Id);
+            if (seat != null)
             {
-                var cus = _context.BookedSeats.SingleOrDefault(x => x.Id == key);
-                return cus;
+                _context.Entry<BookedSeat>(seat).State = EntityState.Modified;
+                _context.SaveChanges();
+                return seat;
             }
-
-            public IList<BookedSeat> GetAll()
-            {
-                if (_context.BookedSeats.Count() == 0)
-                {
-                    return null;
-                }
-                return _context.BookedSeats.ToList();
-
-            }
-
-            public BookedSeat Update(BookedSeat entity)
-            {
-                var cus = GetById(entity.Id);
-                if (cus != null)
-                {
-                    _context.Entry<BookedSeat>(cus).State = EntityState.Modified;
-                    _context.SaveChanges();
-                    return cus;
-                }
-                return null;
-            }
-
-
-       
-
+            return null;
+        }
     }
 }
-

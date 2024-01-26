@@ -5,7 +5,9 @@ namespace BusTicketingWebApplication.Models.DTOs
     public class UserDTO
     {
         [Required(ErrorMessage = "Username cannot be empty")]
+        
         public string UserName { get; set; }
+
         public string? Role { get; set; }
         public string? Token { get; set; }
 
