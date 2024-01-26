@@ -26938,3 +26938,7 @@ FROM [Bookings] AS [b]
 2024-01-23 23:10:52,455 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
 2024-01-23 23:10:52,463 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
 2024-01-23 23:10:52,465 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\vinay\Source\Repos\ProjectBusTicketing\BusTicketingWebSolution\BusTicketingWebApplication\
+2024-01-26 19:17:09,118 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5041
+2024-01-26 19:17:09,275 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-01-26 19:17:09,282 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-01-26 19:17:09,285 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\
