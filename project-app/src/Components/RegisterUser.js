@@ -3,6 +3,7 @@
 import { useState } from "react";
 import './RegisterUser.css';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function RegisterUser() {
   const [username, setUsername] = useState("");
@@ -19,6 +20,7 @@ function RegisterUser() {
   const [pincodeError, setPincodeError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [repasswordError, setRePasswordError] = useState("");
+  const navigate = useNavigate();
 
   var checkUserData = () => {
     if (username === '') {
@@ -165,7 +167,7 @@ function RegisterUser() {
           <button className="btn btn-primary button" onClick={signUp}>
             Sign Up
           </button>
-          <button className="btn btn-danger button">Cancel</button>
+          <button className="btn btn-danger button"onClick={navigate('/UserLogin')}>Cancel</button>
         </div>
       </form>
     </div>

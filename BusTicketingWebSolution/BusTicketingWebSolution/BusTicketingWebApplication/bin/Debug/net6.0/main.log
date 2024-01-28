@@ -26942,3 +26942,851 @@ FROM [Bookings] AS [b]
 2024-01-26 19:17:09,275 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
 2024-01-26 19:17:09,282 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
 2024-01-26 19:17:09,285 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\
+2024-01-28 12:21:25,822 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5041
+2024-01-28 12:21:26,323 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-01-28 12:21:26,471 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-01-28 12:21:26,568 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: E:\HEX\BusTicketingWebSolution\BusTicketingWebSolution\BusTicketingWebApplication\
+2024-01-28 12:23:01,514 [.NET ThreadPool Worker] WARN Microsoft.EntityFrameworkCore.Model.Validation.?[?] - The property 'BookedSeat.BookedSeats' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2024-01-28 12:23:01,546 [.NET ThreadPool Worker] WARN Microsoft.EntityFrameworkCore.Model.Validation.?[?] - The property 'Booking.SelectedSeats' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2024-01-28 12:23:01,551 [.NET ThreadPool Worker] WARN Microsoft.EntityFrameworkCore.Model.Validation.?[?] - The property 'CancelledBooking.CancelledSeats' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2024-01-28 12:23:01,967 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:23:03,310 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:23:05,446 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (158ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:23:05,446 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (162ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:23:20,893 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:23:20,907 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (5ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:39:44,080 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:39:44,847 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (62ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:39:45,509 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 12:44:33,414 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:44:33,421 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:44:33,425 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 12:45:58,321 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:45:58,328 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:46:01,743 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:46:01,749 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:46:21,127 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:46:21,133 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:47:34,697 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:47:34,705 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:47:34,710 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 12:47:38,864 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:47:38,901 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 12:47:38,914 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 12:47:38,919 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 12:47:38,936 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:47:38,943 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 12:47:38,948 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 12:47:38,954 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 12:48:07,792 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:48:07,798 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 12:48:07,802 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 12:48:14,453 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:48:14,457 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 12:48:14,467 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 12:48:14,470 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 12:48:14,486 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 12:48:14,490 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 12:48:14,520 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 12:48:14,524 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:02:43,599 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:02:43,679 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:02:43,684 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:03:54,128 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:03:54,133 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:03:54,137 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:05:38,643 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:05:38,778 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:05:38,782 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:05:38,786 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:05:38,796 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:05:38,800 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:05:38,804 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:05:38,808 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:05:55,934 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:05:55,938 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:05:55,941 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:07:08,944 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:07:08,948 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:07:08,951 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:08:07,891 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:08:07,897 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:08:07,900 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:08:33,733 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:08:33,737 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:08:33,740 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:23:54,077 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:23:54,822 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (63ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:23:56,279 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:23:56,287 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:24:05,874 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:24:05,878 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:24:05,882 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:24:35,013 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:24:35,017 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:24:35,021 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:26:12,872 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:26:12,876 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:26:12,879 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:26:17,026 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:26:17,031 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:26:17,036 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:26:20,537 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:26:20,543 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:26:20,546 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:27:04,260 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:27:04,265 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:27:04,267 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:27:26,248 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:27:26,254 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:27:26,258 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:39:50,477 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:39:51,220 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (45ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:39:51,224 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:52:57,225 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:52:58,518 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (57ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:52:58,522 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:53:06,317 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:06,373 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:06,384 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:06,404 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:06,417 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:06,420 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:06,425 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:06,430 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:09,389 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:09,415 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:09,422 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:09,426 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:09,432 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:09,436 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:09,440 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:09,443 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:11,136 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:11,142 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:11,148 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:11,151 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:11,158 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:11,162 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:11,166 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:11,171 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:13,208 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:13,212 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:13,216 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:13,219 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:13,227 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:13,231 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:13,235 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:13,240 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:24,635 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:24,641 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:24,645 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:24,649 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:24,655 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:24,659 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:24,665 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:24,669 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:25,684 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:25,689 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:25,693 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:25,700 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:25,707 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:25,711 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:25,717 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:25,724 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:26,738 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:26,745 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:26,750 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:26,757 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:26,761 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:26,766 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:26,773 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:26,777 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:27,748 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:27,754 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:27,759 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:27,762 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:27,768 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:27,772 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:27,778 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:27,781 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:28,326 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:28,333 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:28,339 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:28,344 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:28,349 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:28,359 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:53:28,364 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:53:28,370 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:53:28,794 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:28,799 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:28,803 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:28,808 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:28,814 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:28,817 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:53:28,820 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:53:28,828 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:53:52,068 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:52,074 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:52,079 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:52,083 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:53:52,090 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:53:52,094 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:53:52,098 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:53:52,103 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:54:02,499 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:02,503 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:54:02,507 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:54:12,288 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:12,315 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:12,321 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:12,325 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:12,327 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:12,330 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:12,332 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:12,337 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:13,345 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:13,367 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:13,404 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:13,414 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:13,439 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:13,447 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:13,451 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:13,454 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:15,698 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:15,703 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:15,708 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:15,710 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:15,714 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:15,717 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:15,720 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:15,723 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:18,416 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:18,418 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:18,423 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:18,425 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:18,431 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:18,458 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:18,460 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:18,462 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:19,313 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:19,317 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:19,323 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:19,328 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:19,331 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:19,334 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:19,337 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:19,341 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:21,730 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:21,733 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:21,738 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:21,742 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:21,770 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:21,773 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:21,775 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:21,778 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:23,251 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:23,255 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:23,262 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:23,285 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:23,289 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:23,291 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:23,293 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:23,296 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:25,037 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:25,039 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:25,044 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:25,046 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:25,051 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:25,053 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:25,082 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:25,085 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BookingHistory[97] - User Booking History is Fetched!!
+2024-01-28 14:54:25,827 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:25,829 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:25,833 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:25,835 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:25,838 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:25,841 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CancellationId], [c].[BookingId], [c].[BusId], [c].[CancelledDate], [c].[CancelledSeats], [c].[Date], [c].[Email], [c].[TotalFare], [c].[UserName]
+FROM [CancelledBookings] AS [c]
+2024-01-28 14:54:25,843 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:25,845 [.NET ThreadPool Worker] INFO BookingController.CancelledBookings[98] - Cancelled Bookings are listed!!
+2024-01-28 14:54:41,914 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:41,918 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 14:54:41,922 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 14:54:46,059 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:46,064 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:54:46,068 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:54:46,072 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:54:46,077 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:46,081 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:54:46,086 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:54:46,091 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:54:47,124 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:47,130 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:47,136 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:47,141 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:47,149 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:47,155 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:47,159 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:47,164 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:51,968 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:51,976 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:51,982 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:51,988 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:51,993 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:51,997 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:52,002 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:52,006 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:53,121 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:53,127 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:54:53,134 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:54:53,139 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:54:53,147 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:53,152 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 14:54:53,156 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 14:54:53,162 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 14:54:54,145 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:54,149 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:54:54,153 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:54:54,157 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:54:54,162 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:54,166 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:54:54,170 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:54:54,175 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:54:55,166 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:55,170 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:55,174 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:55,176 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:55,181 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:55,184 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 14:54:55,188 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 14:54:55,194 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 14:54:57,948 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:57,956 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:54:57,966 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:54:57,969 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:54:57,974 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:54:57,979 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:54:57,982 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:54:57,986 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 14:59:13,315 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 14:59:14,044 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 14:59:14,054 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 14:59:14,060 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 15:10:18,054 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:18,562 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:18,734 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:10:18,741 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:10:18,747 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:10:18,775 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:18,782 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:18,785 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:18,791 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:18,818 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:10:18,826 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:18,851 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:10:18,854 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:10:18,885 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:18,890 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:18,894 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:20,850 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:20,857 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:10:20,861 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:10:20,866 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:10:20,874 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:20,879 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:10:20,885 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:10:20,892 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:10:21,518 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:21,527 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:21,532 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:21,536 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:21,543 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:21,551 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:21,556 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:21,561 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:40,643 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:40,648 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:10:40,651 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 15:10:54,613 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:54,618 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 15:10:54,623 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 15:10:54,627 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 15:10:54,632 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:54,636 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 15:10:54,640 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 15:10:54,644 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 15:10:55,127 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:55,130 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:55,133 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:55,136 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:55,141 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:55,145 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:10:55,148 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:10:55,151 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:10:57,824 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:57,829 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 15:10:57,833 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 15:10:57,839 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 15:10:57,846 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:10:57,852 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+2024-01-28 15:10:57,856 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+2024-01-28 15:10:57,860 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.GetAllUsers[118] - Users listed
+2024-01-28 15:11:05,537 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:11:05,540 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:11:05,543 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 15:25:48,563 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:25:48,631 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:25:50,132 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:25:50,135 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:25:50,138 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 15:26:08,474 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:26:08,479 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:26:08,482 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!
+2024-01-28 15:26:11,103 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:26:11,109 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:26:11,113 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:26:11,118 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:26:11,123 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:26:11,127 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Bookings] AS [b]
+2024-01-28 15:26:11,130 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BusId], [b].[Date], [b].[Email], [b].[SelectedSeats], [b].[TotalFare], [b].[UserName]
+FROM [Bookings] AS [b]
+2024-01-28 15:26:11,135 [.NET ThreadPool Worker] INFO BookingController.GetAllBookings[57] - Bookings listed
+2024-01-28 15:26:12,313 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:26:12,317 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:26:12,323 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:26:12,326 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:26:12,333 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:26:12,336 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:26:12,343 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:26:12,348 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.BusController.GetAllBusses[38] - Buses listed
+2024-01-28 15:34:29,531 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:34:30,356 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Buses] AS [b]
+2024-01-28 15:34:30,360 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Cost], [b].[DriverAge], [b].[DriverName], [b].[DriverPhone], [b].[DriverRating], [b].[Duration], [b].[End], [b].[Start], [b].[StartTime], [b].[Type]
+FROM [Buses] AS [b]
+2024-01-28 15:34:30,363 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.BusSearch[77] - Bus Search is listed!!
+2024-01-28 15:34:44,759 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.25 initialized 'TicketingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-01-28 15:34:44,778 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (14ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[UserName], [u].[City], [u].[Email], [u].[Key], [u].[Password], [u].[Phone], [u].[Pincode], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__key_0
+2024-01-28 15:34:44,781 [.NET ThreadPool Worker] INFO BusTicketingWebApplication.Controllers.CustomerController.Login[62] - Customers are Logged In!!

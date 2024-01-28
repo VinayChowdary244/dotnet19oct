@@ -20,18 +20,18 @@ import AddBus from './Components/AddBus';
 import UpdateBus from './Components/UpdateBus';
 import BusDetails from './Components/BusDetails';
 import AdminMenu from './Components/AdminMenu';
-import DashBoard from './Components/DashBoard';
 import { AuthProvider } from './Components/AuthContext';
 import CancelledBookings from './Components/CancelledBookings';
 import TicketCard from './Components/TicketCard.js';
+import MainMenu from './Components/MainMenu.js';
 
 function App() {
   return (
-  
     <AuthProvider>
     <BrowserRouter>
     <div>
-      <DashBoard/>
+      
+      <MainMenu/>
       <Routes>
       <Route path="Buses" element={<Protected><Buses /></Protected>} />
       <Route path="addBus" element={<Protected><AddBus/></Protected>}/>
@@ -50,6 +50,8 @@ function App() {
         <Route path="RedBus" element={<RedBus />} />
         <Route path="AdminMenu" element={<Protected><AdminMenu /></Protected>} />
         <Route path="Menu" element={<Protected><Menu /></Protected>} />
+        <Route path="MainMenu" element={<Protected><MainMenu /></Protected>} />
+
         <Route path="Logout" element={<Logout/>}/>
         <Route path="TicketCard" element={<TicketCard/>}/>
 

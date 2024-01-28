@@ -4,7 +4,6 @@ function Users() {
   const [userList, setUserList] = useState([]);
   const [searchPerformed, setSearchPerformed] = useState(false);
   useEffect(() => {
-    // Fetch buses when the component is mounted
     getUsers();
   }, []);
   
