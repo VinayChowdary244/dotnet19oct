@@ -36,6 +36,9 @@ function Menu() {
              <li className="nav-item">
               <Link className="nav-link" to="/Logout">Logout</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/BusTicket">Ticket</Link>
+            </li>
             
           </ul>}
         </div>

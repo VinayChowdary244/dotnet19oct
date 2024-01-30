@@ -36,19 +36,17 @@ function RedBus() {
 
   const navigate = useNavigate();
 
-  const handleBook = (id, selectedDate,cost) => {
+  const handleBook = (id, selectedDate, cost) => {
     setThisBus(id);
     setThisDate(selectedDate);
-    
-    console.log(thisBus,thisDate);
-    localStorage.setItem("cost",cost);
+  
+    localStorage.setItem('cost', cost);
     localStorage.setItem('thisBus', id);
-    localStorage.setItem('thisDate', selectedDate,cost);
-    
-
-    // Additional logic for booking if needed
-    // ...
-    // Navigate to the component where you can select seats
+    localStorage.setItem('thisDate', selectedDate);
+  
+    localStorage.setItem('toLocation', toLocation);
+    localStorage.setItem('fromLocation', fromLocation);
+  
     navigate('/BusSeatSelection');
   };
 

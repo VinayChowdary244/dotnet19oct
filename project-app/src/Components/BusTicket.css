@@ -1,0 +1,18 @@
+/* BusTicket.css */
+
+.bus-ticket {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+  }
+  
+  .ticket-details {
+    margin-top: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
