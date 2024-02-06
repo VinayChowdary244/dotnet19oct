@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './CancelledBookings.css'
 
 function CancelledBookings() {
   const [bookingList, setBookingList] = useState([]);
@@ -38,41 +39,27 @@ function CancelledBookings() {
 
   return (
     <div>
-      {searchPerformed && (
-        <div>
-          <h2 className="list-heading">Cancelled Bookings</h2>
-          <center>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>BookingId</th>
-                  <th>UserName</th>
-                  <th>BusId</th>
-                  <th>Date</th>
-                  <th>TotalCost</th>
-                  <th>Cancelled Date</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                {bookingList.map((booking, index) => (
-                  <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{booking.bookingId}</td>
-                    <td>{booking.userName}</td>
-                    <td>{booking.busId}</td>
-                    <td>{booking.date}</td>
-                    <td>{booking.totalFare}</td>
-                    <td>{booking.cancelledDate}</td>
-                    
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </center>
+   {searchPerformed && (
+  <div className="list-container">
+    <h2 className="list-heading">Cancelled Bookings</h2>
+    {bookingList.map((booking, index) => (
+      <div key={index} className="cancelled-booking-card">
+        <div className="booking-row">
+          <span><strong>Booking ID:</strong> {booking.bookingId}</span>
+          <span><strong>User Name:</strong> {booking.userName}</span>
         </div>
-      )}
+        <div className="booking-row">
+          <span><strong>Bus ID:</strong> {booking.busId}</span>
+          <span><strong>Date:</strong> {booking.date}</span>
+        </div>
+        <div className="booking-row">
+          <span><strong>Total Cost:</strong> {booking.totalFare}</span>
+          <span><strong>Cancelled Date:</strong> {booking.cancelledDate}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
     </div>
   );
 }

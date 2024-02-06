@@ -1,0 +1,50 @@
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .cancelled-booking-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 70%; /* Adjust the width as needed */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cancelled-booking-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .list-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for individual booking row */
+  .booking-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+
+  }
+  
+  /* Adjust the styles for table cells if needed */
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  

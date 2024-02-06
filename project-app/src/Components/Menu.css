@@ -63,9 +63,9 @@
 }
 
 body {
-    
   background-size: cover;
+  background-attachment: fixed; /* Set background attachment to fixed */
   font-family: 'Arial', sans-serif;
-  margin: 0; /* Added to remove default body margin */
+  margin: 0;
   background: url('https://wallpapercave.com/dwp2x/wp5563912.jpg');
 }
