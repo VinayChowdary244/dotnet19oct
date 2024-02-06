@@ -93,7 +93,8 @@ const handleBookClick = () => {
       console.log('Booking response from server:', data);
 
       setSelectedSeats([]);
-      localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));     
+      localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
+
       setIsBooked(true);
       navigate('/TicketCard');
       

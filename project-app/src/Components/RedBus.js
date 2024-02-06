@@ -17,6 +17,9 @@ function RedBus() {
   const [searchPerformed, setSearchPerformed] = useState(false);
   const [thisBus, setThisBus] = useState(null);
   const [thisDate, setThisDate] = useState(null);
+  const [type, setType] = useState(null);
+  const [startTime, setStarttime] = useState(null);
+
   
 
   const checkUserData = () => {
@@ -36,17 +39,18 @@ function RedBus() {
 
   const navigate = useNavigate();
 
-  const handleBook = (id, selectedDate, cost) => {
+  const handleBook = (id, selectedDate, cost,type,startTime) => {
     setThisBus(id);
     setThisDate(selectedDate);
   
     localStorage.setItem('cost', cost);
     localStorage.setItem('thisBus', id);
     localStorage.setItem('thisDate', selectedDate);
+    localStorage.setItem('type', type);
+    localStorage.setItem('startTime', startTime);
+
   
-    localStorage.setItem('toLocation', toLocation);
-    localStorage.setItem('fromLocation', fromLocation);
-  
+    
     navigate('/BusSeatSelection');
   };
 
@@ -63,11 +67,16 @@ function RedBus() {
     }
     const selectedDateObject = new Date(selectedDate);
     const currentDate = new Date();
-  
-    // Check if the selected date is less than today
-    if (selectedDateObject < currentDate) {
+    localStorage.setItem('toLocation', toLocation);
+    localStorage.setItem('fromLocation', fromLocation);
+
+
+    var yesterday = new Date(currentDate);
+    yesterday.setDate(currentDate.getDate() - 1);
+    
+    if (selectedDateObject < yesterday) {
       alert('Please enter a valid date (today or later).');
-      return ;
+      return;
     }
 
     axios
@@ -126,7 +135,7 @@ function RedBus() {
                 value={toLocation}
                 onChange={(e) => setToLocation(e.target.value)}
               />
-            </div>
+            </div> 
           </div>
           <div className="date-container">
             <div className="calendar-icon">
@@ -181,7 +190,7 @@ function RedBus() {
                       <center>
                         <button
                           className="book-button"
-                          onClick={() => handleBook(bus.id, selectedDate,bus.cost)}
+                          onClick={() => handleBook(bus.id, selectedDate,bus.cost,bus.type,bus.startTime)}
                         >
                           Book
                         </button>

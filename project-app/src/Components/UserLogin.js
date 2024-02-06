@@ -59,7 +59,7 @@ function UserLogin() {
 
         // if (userRole === "Admin") navigate('/AdminMenu');
         // else navigate('/MainMenu');
-        navigate('/Home');
+        navigate('/Redbus');
       })
       .catch((err) => {
         console.log(err);
