@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './RedBus.css'; // Import the CSS file
+import axios from 'axios';
+
 import { useNavigate } from 'react-router-dom';
 
 function SearchedBusses() {
@@ -7,13 +9,41 @@ function SearchedBusses() {
   const [toLocation, setToLocation] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [searchError, setSearchError] = useState('');
+
   const [searchPerformed, setSearchPerformed] = useState(false);
   const [thisBus, setThisBus] = useState(null);
   const [thisDate, setThisDate] = useState(null);
   const [type, setType] = useState(null);
   const [startTime, setStartTime] = useState(null);
-
+ 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+
+
+        
+        const response = await axios.post('http://localhost:5041/api/Customer/BusSearch', {
+          start: localStorage.getItem('fromLocation'),
+          end: localStorage.getItem('toLocation'),
+          date: localStorage.getItem('selectedDate')
+         
+
+        });
+        
+        console.log(response.data);
+        setSearchResults(response.data);
+        setSearchPerformed(true);
+      } catch (error) {
+        console.error(error);
+        setSearchError('Error searching buses. Please try again.');
+      }
+    };
+
+    fetchData();
+  }, [fromLocation, toLocation, selectedDate]);
 
   const handleBook = (id, selectedDate, cost, type, startTime) => {
     setThisBus(id);
@@ -27,7 +57,6 @@ function SearchedBusses() {
 
     navigate('/BusSeatSelection');
   };
-
 return(
 <div>
       <h2>Available Busses</h2>

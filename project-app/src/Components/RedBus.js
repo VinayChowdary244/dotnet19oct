@@ -52,6 +52,7 @@ function RedBus() {
     const currentDate = new Date();
     localStorage.setItem('toLocation', toLocation);
     localStorage.setItem('fromLocation', fromLocation);
+    localStorage.setItem('selectedDate', selectedDate);
 
     var yesterday = new Date(currentDate);
     yesterday.setDate(currentDate.getDate() - 1);
@@ -62,21 +63,21 @@ function RedBus() {
     
     }
 
-    axios
-      .post('http://localhost:5041/api/Customer/BusSearch', {
-        start: fromLocation,
-        end: toLocation,
-        date: selectedDate,
-      })
-      .then((response) => {
-        console.log(response.data);
-        setSearchResults(response.data);
-        setSearchPerformed(true);
-      })
-      .catch((err) => {
-        console.error(err);
-        setSearchError('Error searching buses. Please try again.');
-      });
+    // axios
+    //   .post('http://localhost:5041/api/Customer/BusSearch', {
+    //     start: fromLocation,
+    //     end: toLocation,
+    //     date: selectedDate,
+    //   })
+    //   .then((response) => {
+    //     console.log(response.data);
+    //     setSearchResults(response.data);
+    //     setSearchPerformed(true);
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //     setSearchError('Error searching buses. Please try again.');
+    //   });
       navigate('/SearchedBusses') ; 
   };
 
