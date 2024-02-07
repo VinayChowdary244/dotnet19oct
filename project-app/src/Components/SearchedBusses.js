@@ -16,23 +16,18 @@ function SearchedBusses() {
   const [thisDate, setThisDate] = useState(null);
   const [type, setType] = useState(null);
   const [startTime, setStartTime] = useState(null);
- 
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-
-
-        
         const response = await axios.post('http://localhost:5041/api/Customer/BusSearch', {
           start: localStorage.getItem('fromLocation'),
           end: localStorage.getItem('toLocation'),
-          date: localStorage.getItem('selectedDate')
-         
-
+          date: localStorage.getItem('selectedDate'),
         });
-        
+
         console.log(response.data);
         setSearchResults(response.data);
         setSearchPerformed(true);
@@ -57,62 +52,37 @@ function SearchedBusses() {
 
     navigate('/BusSeatSelection');
   };
-return(
-<div>
-      <h2>Available Busses</h2>
-      <center>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>S.No</th>
-              <th>BusId</th>
-              <th>Type</th>
-              <th>From</th>
-              <th>To</th>
-              <th>Date</th>
-              <th>Fare</th>
-              <th>
-                <center>Book now</center>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {searchResults.map((bus, index) => (
-              <tr key={bus.busId}>
-                <td>{index + 1}</td>
-                <td>{bus.id}</td>
-                <td>{bus.type}</td>
-                <td>{bus.start}</td>
-                <td>{bus.end}</td>
-                <td>{selectedDate}</td>
-                <td>₹{bus.cost}/-</td>
-                <td>
-                  <center>
-                    <button
-                      className="book-button"
-                      onClick={() =>
-                        handleBook(
-                          bus.id,
-                          selectedDate,
-                          bus.cost,
-                          bus.type,
-                          bus.startTime
-                        )
-                      }
-                    >
-                      Book
-                    </button>
-                  </center>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </center>
-    </div>
-  
 
-);
+  return (
+    <div>
+      <h2>Available Busses</h2>
+      <div className="bus-tiles">
+        {searchResults.map((bus, index) => (
+          <div key={bus.busId} className="bus-tile">
+            <div className="tile-content">
+              <p>S.No: {index + 1}</p>
+              <p>BusId: {bus.id}</p>
+              <p>Type: {bus.type}</p>
+              <p>From: {bus.start}</p>
+              <p>To: {bus.end}</p>
+              <p>Date: {selectedDate}</p>
+              <p>Fare: ₹{bus.cost}/-</p>
+            </div>
+            <center>
+              <button
+                className="book-button"
+                onClick={() =>
+                  handleBook(bus.id, selectedDate, bus.cost, bus.type, bus.startTime)
+                }
+              >
+                Book
+              </button>
+            </center>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default SearchedBusses;
