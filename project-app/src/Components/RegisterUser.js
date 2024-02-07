@@ -76,6 +76,7 @@ function RegisterUser() {
       .then((userData) => {
         console.log(userData);
         alert("Registration Successful!!");
+        navigate('/UserLogin');
       })
       .catch((err) => {
         console.log(err);
@@ -167,7 +168,7 @@ function RegisterUser() {
           <button className="btn btn-primary button" onClick={signUp}>
             Sign Up
           </button>
-          <button className="btn btn-danger button"onClick={navigate('/UserLogin')}>Cancel</button>
+          <button className="btn btn-danger button">Cancel</button>
         </div>
       </form>
     </div>

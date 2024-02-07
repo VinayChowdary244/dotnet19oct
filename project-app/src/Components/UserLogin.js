@@ -21,7 +21,7 @@ function UserLogin() {
 
     if (password === "") return false;
 
-    if (username === "Admin-Vinay" || username === "Admin-Naga") {
+    if (username === "Admin-Vinay" || username === "Admin-Naga" || username === "vinay") {
       role = "Admin";
     } else {
       role = "User";

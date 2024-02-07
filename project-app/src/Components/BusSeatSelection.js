@@ -79,6 +79,8 @@ const handleBookClick = () => {
       selectedSeats: selectedSeats,
       date: thisDate, 
       email:thisEmail,
+      start:localStorage.getItem("fromLocation"),
+      end:localStorage.getItem("toLocation")
     }),
   })
     .then((response) => {

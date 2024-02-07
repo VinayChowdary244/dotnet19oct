@@ -119,7 +119,15 @@ namespace BusTicketingWebApplication.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("End")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SelectedSeats")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Start")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -185,6 +193,12 @@ namespace BusTicketingWebApplication.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("End")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Start")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("TotalFare")

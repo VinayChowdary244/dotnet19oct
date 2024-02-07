@@ -17,8 +17,8 @@ namespace BusTicketingWebApplication.Models
        
         public string? Email { get; set; }
 
-        //public string? SrartTime  { get; set; }
-        //public string? EndTime { get; set; }
+        public string Start  { get; set; }
+        public string End { get; set; }
 
     }
 }

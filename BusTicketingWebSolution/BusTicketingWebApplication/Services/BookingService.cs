@@ -97,7 +97,10 @@ namespace BusTicketingWebApplication.Services
                         Date = bookingDTO.Date,
                         Email=bookingDTO.Email,
                         SelectedSeats = bookingDTO.SelectedSeats,
-                        TotalFare = bookingDTO.SelectedSeats.Count * Fare
+                        TotalFare = bookingDTO.SelectedSeats.Count * Fare,
+                        Start =  bookingDTO.Start,
+                        End = bookingDTO.End,
+
                     };
 
                     var result = _bookingRepository.Add(booking);
@@ -230,7 +233,11 @@ namespace BusTicketingWebApplication.Services
                 cancelledBooking.Email = BookingToBeRemoved.Email;
                 cancelledBooking.CancelledSeats = BookingToBeRemoved.SelectedSeats;
                 cancelledBooking.TotalFare = BookingToBeRemoved.TotalFare;
+                cancelledBooking.Start = BookingToBeRemoved.Start;
+                cancelledBooking.End = BookingToBeRemoved.End;
+
                 cancelledBooking.CancelledDate = DateTime.Now;
+
                 _cancelledBookingRepository.Add(cancelledBooking);
 
                 var result = _bookingRepository.Delete(bookingIdDTO.Id);

@@ -11,7 +11,8 @@ namespace BusTicketingWebApplication.Models
         public string UserName { get; set; }
         public int BusId { get; set; }
         public string? Date { get; set; }
-
+        public string? Start { get; set; }
+        public string? End { get; set; }
         public float TotalFare { get; set; }
         public List<int> CancelledSeats { get; set; }
 

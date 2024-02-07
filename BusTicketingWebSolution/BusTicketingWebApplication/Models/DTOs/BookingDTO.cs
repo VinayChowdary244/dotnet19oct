@@ -6,7 +6,9 @@
         public string UserName { get; set; }
         public int BusId { get; set; }
         public string Date { get; set; }
-       public string Email { get; set; }
+        public string Start { get; set; }
+        public string End { get; set; }
+        public string Email { get; set; }
      
         public List<int> SelectedSeats { get; set; }
     }
