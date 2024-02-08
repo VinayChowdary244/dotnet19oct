@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import './RedBus.css'; // Import the CSS file
+// SearchedBusses.js
+import React, { useState, useEffect } from 'react';
+import './SearchedBusses.css'; // Import the CSS file
 import axios from 'axios';
-
 import { useNavigate } from 'react-router-dom';
 
 function SearchedBusses() {
@@ -60,13 +60,27 @@ function SearchedBusses() {
         {searchResults.map((bus, index) => (
           <div key={bus.busId} className="bus-tile">
             <div className="tile-content">
-              <p>S.No: {index + 1}</p>
-              <p>BusId: {bus.id}</p>
-              <p>Type: {bus.type}</p>
-              <p>From: {bus.start}</p>
-              <p>To: {bus.end}</p>
-              <p>Date: {selectedDate}</p>
-              <p>Fare: ₹{bus.cost}/-</p>
+              {/* Placeholder for Bus Image */}
+              <img
+                src="https://via.placeholder.com/50"  // Replace with actual bus image link
+                alt="Bus"
+                style={{ marginRight: '10px' }}
+              />
+              <div className="tile-details">
+                <div>
+                  <p>S.No: {index + 1}</p>
+                  <p>BusId: {bus.id}</p>
+                  <p>Type: {bus.type}</p>
+                </div>
+                <div>
+                  <p>From: {bus.start}</p>
+                  <p>To: {bus.end}</p>
+                  <p>Date: {selectedDate}</p>
+                </div>
+                <div>
+                  <p>Fare: ₹{bus.cost}/-</p>
+                </div>
+              </div>
             </div>
             <center>
               <button
